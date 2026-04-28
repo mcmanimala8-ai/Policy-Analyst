@@ -34,8 +34,11 @@ export function ContactSection() {
             <h2 className="font-serif text-3xl md:text-4xl tracking-tight mb-6">
               Get in Touch
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            <p className="text-muted-foreground leading-relaxed mb-4">
               Interested in collaborating on research, or just want to discuss policy? I&apos;d love to hear from you.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Open to roles in policy research, data analysis, and writing — fellowships, think tanks, civil society, and government projects welcome.
             </p>
 
             <div className="space-y-4">
