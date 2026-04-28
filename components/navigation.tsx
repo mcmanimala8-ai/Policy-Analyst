@@ -6,10 +6,8 @@ import { motion, AnimatePresence } from "framer-motion"
 
 const navLinks = [
   { href: "#about", label: "About" },
-  { href: "#work", label: "Work" },
   { href: "#writing", label: "Writing" },
   { href: "#data", label: "Data" },
-  { href: "#quiz", label: "Quiz" },
   { href: "#contact", label: "Contact" },
 ]
 
@@ -113,7 +111,7 @@ export function Navigation() {
           >
             <div className="px-6 py-4 flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
+                
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
@@ -122,7 +120,7 @@ export function Navigation() {
                   {link.label}
                 </a>
               ))}
-              <a
+              
                 href="/Manimala_C_Resume.pdf"
                 download
                 className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground text-sm font-medium w-fit"
