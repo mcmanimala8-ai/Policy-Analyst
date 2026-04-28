@@ -30,7 +30,7 @@ export function AvailableForSection() {
         <div className="grid lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-4">
             <p className="text-sm uppercase tracking-widest text-muted-foreground mb-4">
-              Available For
+              Open To
             </p>
             <h2 className="font-serif text-3xl md:text-4xl tracking-tight mb-4">
               Research, writing, and policy projects
