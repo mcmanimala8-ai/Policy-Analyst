@@ -1,5 +1,5 @@
 "use client"
-//v2
+
 import { motion } from "framer-motion"
 import { Download, ArrowRight } from "lucide-react"
 
@@ -55,7 +55,7 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <span className="block text-2xl md:text-3xl text-accent font-serif">
-              Policy Researcher & Analyst
+              Policy Researcher &amp; Analyst
             </span>
           </motion.div>
 
