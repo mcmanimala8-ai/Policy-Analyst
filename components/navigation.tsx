@@ -6,10 +6,11 @@ import { motion, AnimatePresence } from "framer-motion"
 
 const navLinks = [
   { href: "#about", label: "About" },
+  { href: "#work", label: "Work" },
   { href: "#writing", label: "Articles" },
-  { href: "#data", label: "Data Lab" },
+  { href: "#data", label: "Data" },
   { href: "#quiz", label: "Quiz" },
-  { href: "#reading", label: "Reading" },
+  { href: "#available", label: "Available" },
   { href: "#contact", label: "Contact" },
 ]
 
@@ -53,7 +54,7 @@ export function Navigation() {
         </motion.a>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-5">
           {navLinks.map((link, index) => (
             <motion.a
               key={link.href}
@@ -68,7 +69,7 @@ export function Navigation() {
             </motion.a>
           ))}
           
-          <div className="w-px h-6 bg-border mx-2" />
+          <div className="w-px h-6 bg-border mx-1" />
           
           <motion.button
             onClick={toggleTheme}
