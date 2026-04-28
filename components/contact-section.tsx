@@ -114,7 +114,7 @@ export function ContactSection() {
                   type="submit"
                   className="w-full md:w-auto px-8 py-3 bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors"
                 >
-                  Send Message
+                  Email Me
                 </button>
                 {status && (
                   <p className="text-sm text-muted-foreground" role="status">
