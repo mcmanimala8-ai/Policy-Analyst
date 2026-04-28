@@ -30,10 +30,10 @@ export function Navigation() {
   }
 
   return (
-    <motion.nav 
+    <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? "bg-background/95 backdrop-blur-md border-b border-border shadow-lg" 
+        scrolled
+          ? "bg-background/95 backdrop-blur-md border-b border-border shadow-lg"
           : "bg-transparent"
       }`}
       initial={{ y: -100 }}
@@ -41,8 +41,8 @@ export function Navigation() {
       transition={{ duration: 0.5 }}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <motion.a 
-          href="#" 
+        <motion.a
+          href="#"
           className="font-serif text-xl tracking-tight hover:text-accent transition-colors"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -50,7 +50,6 @@ export function Navigation() {
           MC
         </motion.a>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6">
           {navLinks.map((link, index) => (
             <motion.a
@@ -65,9 +64,9 @@ export function Navigation() {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full" />
             </motion.a>
           ))}
-          
+
           <div className="w-px h-6 bg-border mx-2" />
-          
+
           <motion.button
             onClick={toggleTheme}
             className="p-2 text-muted-foreground hover:text-foreground transition-colors"
@@ -90,7 +89,6 @@ export function Navigation() {
           </motion.a>
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden p-2 -mr-2"
@@ -100,10 +98,9 @@ export function Navigation() {
         </button>
       </div>
 
-      {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div 
+          <motion.div
             className="md:hidden border-t border-border bg-background"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
@@ -111,7 +108,7 @@ export function Navigation() {
           >
             <div className="px-6 py-4 flex flex-col gap-4">
               {navLinks.map((link) => (
-                
+                <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
@@ -120,7 +117,7 @@ export function Navigation() {
                   {link.label}
                 </a>
               ))}
-              
+              <a
                 href="/Manimala_C_Resume.pdf"
                 download
                 className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground text-sm font-medium w-fit"
