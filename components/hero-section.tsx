@@ -2,42 +2,17 @@
 
 import { motion } from "framer-motion"
 import { Download, ArrowRight } from "lucide-react"
-import { useEffect, useState } from "react"
 
-const roles = [
-  "Policy Researcher & Analyst",
+const topics = [
+  "Policy Research",
+  "Data Analytics",
+  "State Planning",
+  "Governance",
+  "Federal Equity",
+  "Public Policy",
 ]
 
 export function HeroSection() {
-  const [roleIndex, setRoleIndex] = useState(0)
-  const [isVisible, setIsVisible] = useState(true)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsVisible(false)
-      setTimeout(() => {
-        setRoleIndex((prev) => (prev + 1) % roles.length)
-        setIsVisible(true)
-      }, 300)
-    }, 3000)
-    return () => clearInterval(interval)
-  }, [])
-
-  const topics = [
-    "Policy Research",
-    "Data Analytics", 
-    "State Planning",
-    "Governance",
-    "Federal Equity",
-    "Public Policy",
-  ]
-
-  const stats = [
-    { value: "37,000+", label: "Units Managed" },
-    { value: "2026", label: "IMPRI Fellow" },
-    { value: "2", label: "Years Experience" },
-  ]
-
   return (
     <section className="min-h-screen flex flex-col justify-center pt-20 relative overflow-hidden">
       {/* Background gradient accent */}
@@ -70,21 +45,14 @@ export function HeroSection() {
             Manimala Chithamanan
           </motion.h1>
 
-          {/* Animated Role */}
-          <motion.div 
-            className="h-10 overflow-hidden"
+          <motion.p
+            className="text-2xl md:text-3xl text-accent font-serif"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <span 
-              className={`block text-2xl md:text-3xl text-accent font-serif transition-all duration-300 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
-              }`}
-            >
-              {roles[roleIndex]}
-            </span>
-          </motion.div>
+            Policy Researcher & Analyst
+          </motion.p>
 
           <motion.div 
             className="max-w-xl"
@@ -97,35 +65,14 @@ export function HeroSection() {
             </p>
           </motion.div>
 
-          {/* Stats */}
-          <motion.div 
-            className="flex flex-wrap gap-8 pt-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-          >
-            {stats.map((stat, index) => (
-              <motion.div 
-                key={stat.label}
-                className="flex flex-col"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
-              >
-                <span className="text-3xl md:text-4xl font-serif text-accent">{stat.value}</span>
-                <span className="text-sm text-muted-foreground">{stat.label}</span>
-              </motion.div>
-            ))}
-          </motion.div>
-
           {/* CTAs */}
           <motion.div 
             className="flex flex-wrap items-center gap-4 pt-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.7 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <a
+            
               href="/Manimala_C_Resume.pdf"
               download
               className="group inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-all hover:gap-3"
@@ -133,14 +80,14 @@ export function HeroSection() {
               <Download className="w-4 h-4" />
               Download Resume
             </a>
-            <a
+            
               href="#writing"
               className="group inline-flex items-center gap-2 px-6 py-3 border border-border text-sm font-medium hover:bg-secondary hover:border-accent transition-all"
             >
               Read Articles
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
-            <a
+            
               href="#contact"
               className="inline-flex items-center gap-2 px-6 py-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
