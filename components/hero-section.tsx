@@ -5,10 +5,7 @@ import { Download, ArrowRight } from "lucide-react"
 import { useEffect, useState } from "react"
 
 const roles = [
-  "Policy Researcher",
-  "Impact Analyst",
-  "Regulatory & Policy Strategy",
-  "IMPRI Fellow",
+  "Policy Researcher & Analyst",
 ]
 
 export function HeroSection() {
