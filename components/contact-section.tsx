@@ -9,11 +9,18 @@ export function ContactSection() {
     email: "",
     message: "",
   })
+  const [status, setStatus] = useState("")
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
+
+    const subject = encodeURIComponent(`Portfolio message from ${formData.name}`)
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    )
+
+    window.location.href = `mailto:mcmanimala8@gmail.com?subject=${subject}&body=${body}`
+    setStatus("Your email app should open with the message ready to send.")
   }
 
   return (
@@ -102,12 +109,19 @@ export function ContactSection() {
                   required
                 />
               </div>
-              <button
-                type="submit"
-                className="w-full md:w-auto px-8 py-3 bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors"
-              >
-                Send Message
-              </button>
+              <div className="space-y-3">
+                <button
+                  type="submit"
+                  className="w-full md:w-auto px-8 py-3 bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors"
+                >
+                  Send Message
+                </button>
+                {status && (
+                  <p className="text-sm text-muted-foreground" role="status">
+                    {status}
+                  </p>
+                )}
+              </div>
             </form>
           </div>
         </div>
