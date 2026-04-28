@@ -73,7 +73,7 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             
-              href="/Manimala_C_Resume.pdf"
+              <a href="/Manimala_C_Resume.pdf"
               download
               className="group inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-all hover:gap-3"
             >
@@ -81,14 +81,14 @@ export function HeroSection() {
               Download Resume
             </a>
             
-              href="#writing"
+              <a href="#writing"
               className="group inline-flex items-center gap-2 px-6 py-3 border border-border text-sm font-medium hover:bg-secondary hover:border-accent transition-all"
             >
               Read Articles
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
             
-              href="#contact"
+              <a href="#contact"
               className="inline-flex items-center gap-2 px-6 py-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               Get in Touch
