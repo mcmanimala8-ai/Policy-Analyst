@@ -14,7 +14,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Manimala Chithamanan | Policy Analyst',
+  title: 'Manimala Chithamanan | Policy Researcher & Analyst',
   description: 'Policy researcher and analyst based in Chennai, Tamil Nadu. Focus areas include social welfare, gender justice, federalism, education, and fiscal policy.',
 }
 
