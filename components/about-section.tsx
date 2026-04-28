@@ -39,10 +39,10 @@ export function AboutSection() {
                 href="https://www.linkedin.com/in/manimala-c-29205b223/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-3 bg-[#0A66C2] text-white text-sm font-medium hover:bg-[#004182] transition-colors"
               >
                 <Linkedin className="w-5 h-5" />
-                <span>Connect on LinkedIn</span>
+                <span>View Profile</span>
               </a>
             </div>
           </div>
