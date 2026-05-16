@@ -13,7 +13,9 @@ interface WritingItem {
   excerpt: string
   link: string
 }
-{
+
+const writings: WritingItem[] = [
+  {
     title: "When the Algorithm Beat the Alliance: Tamil Nadu 2026",
     category: "essay",
     publication: "Political Analysis",
@@ -21,7 +23,6 @@ interface WritingItem {
     excerpt: "The 2026 election results shocked Tamil Nadu. DMK fell from 159 to 59 seats. TVK swept Chennai. MK Stalin lost Kolathur. This piece examines the communication failure, the startup-style campaign that beat a governing party, and what the Dravidian movement must do before 2031.",
     link: "/writing/algorithm-beat-alliance",
   },
-const writings: WritingItem[] = [
   {
     title: "The Success Trap: Performance, Population and the Future of Indian Federalism",
     category: "essay",
@@ -67,8 +68,8 @@ const categories: { value: WritingCategory; label: string }[] = [
 export function WritingSection() {
   const [activeCategory, setActiveCategory] = useState<WritingCategory>("all")
 
-  const filteredWritings = activeCategory === "all" 
-    ? writings 
+  const filteredWritings = activeCategory === "all"
+    ? writings
     : writings.filter(w => w.category === activeCategory)
 
   return (
