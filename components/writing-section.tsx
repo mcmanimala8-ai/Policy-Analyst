@@ -16,6 +16,14 @@ interface WritingItem {
 
 const writings: WritingItem[] = [
   {
+    title: "When the Algorithm Beat the Alliance: Tamil Nadu 2026",
+    category: "op-ed",
+    publication: "Policy Commentary",
+    date: "May 2026",
+    excerpt: "A post-election analysis of Tamil Nadu 2026 arguing that anti-incumbency was amplified by algorithmic campaigning, narrative velocity, and failures in trust maintenance between elections.",
+    link: "/writing/algorithm-alliance",
+  },
+  {
     title: "The Success Trap: Performance, Population and the Future of Indian Federalism",
     category: "essay",
     publication: "Research Paper",
