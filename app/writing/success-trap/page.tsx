@@ -4,6 +4,24 @@ import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import { useEffect } from "react"
 
+
+function CommentsSection({ pageId, pageUrl, pageTitle }: { pageId: string, pageUrl: string, pageTitle: string }) {
+  return (
+    <div className="mt-16 border-t border-border pt-10">
+      <h2 className="font-serif text-2xl text-foreground mb-8">Comments</h2>
+      <div
+        id="cusdis_thread"
+        data-host="https://cusdis.com"
+        data-app-id="0e0f2871-7f53-4458-ba1e-2c2b3ce8126b"
+        data-page-id={pageId}
+        data-page-url={pageUrl}
+        data-page-title={pageTitle}
+      />
+      <script async defer src="https://cusdis.com/js/cusdis.es.js" />
+    </div>
+  )
+}
+
 export default function SuccessTrapPage() {
   useEffect(() => {
     const handleContextMenu = (e: MouseEvent) => e.preventDefault()
