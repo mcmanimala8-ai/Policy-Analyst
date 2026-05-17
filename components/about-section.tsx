@@ -26,13 +26,13 @@ export function AboutSection() {
           <div className="md:col-span-8">
             <div className="prose prose-lg max-w-none">
               <p className="text-muted-foreground leading-relaxed mb-6">
-                I research the governance structures that decide whether policy actually reaches people — or disappears somewhere between a Union scheme and a Panchayat.
+                I work on the unglamorous part of governance — the structures that decide whether a scheme actually reaches someone or quietly disappears in transit. Fiscal federalism, platform economy, last-mile delivery, state capacity. That's my space.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Currently an IMPRI Data Analytics Fellow (2026), I work at the intersection of fiscal federalism, platform economy regulation, and state-level program delivery. I've managed government programs across 37,000+ units in Tamil Nadu — which taught me that the gap between policy design and last-mile execution is where most good intentions go to die.
+                I'm an IMPRI Data Analytics Fellow (2026), based in Chennai. I've spent time inside a Government of Tamil Nadu programme managing coordination across 37,000+ school units, which gave me a ground-level education in how policy actually works — or doesn't. I also write. Political analysis, governance commentary, the occasional provocation.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                MA in Politics & International Relations, Central University of Gujarat. BA in History & Tourism, Stella Maris College, Chennai.
+                MA in Politics & International Relations, Central University of Gujarat. BA in History, Stella Maris College.
               </p>
               
               <a 
