@@ -76,7 +76,7 @@ export default function AlgorithmBeatAlliancePage() {
         <p className="text-muted-foreground text-lg mb-4">By Manimala Chithamanan</p>
         <p className="text-muted-foreground text-sm italic mb-12">On anti-incumbency, digital campaigns, and what the left missed</p>
 
-        <div className="space-y-6 text-muted-foreground leading-relaxed" style={{fontFamily: "Georgia, 'Times New Roman', serif", fontSize: "1.05rem", lineHeight: "1.9"}}>
+        <div className="space-y-6 text-muted-foreground leading-relaxed">
 
           <p>The 2026 election results shocked a lot of people in Tamil Nadu. A strong anti-incumbency wave overturned what many believed was politically impossible: a government with welfare delivery, administrative resources, and five full years in power still suffered a major collapse.</p>
           <p>What happened was not simply a defeat. It was a communication failure as much as a political one.</p>
