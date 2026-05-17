@@ -1,8 +1,39 @@
 "use client"
 
 import Link from "next/link"
-import { ArrowLeft } from "lucide-react"
+import { ArrowLeft, Heart, Share2, MessageCircle, Linkedin } from "lucide-react"
 import { useEffect } from "react"
+import React from "react"
+
+
+function LikeButton() {
+  const [liked, setLiked] = React.useState(false)
+  const [count, setCount] = React.useState(0)
+
+  const handleLike = () => {
+    if (!liked) {
+      setLiked(true)
+      setCount(c => c + 1)
+    } else {
+      setLiked(false)
+      setCount(c => c - 1)
+    }
+  }
+
+  return (
+    <button
+      onClick={handleLike}
+      className={`inline-flex items-center gap-2 px-4 py-2 border text-sm transition-colors ${
+        liked
+          ? "border-accent text-accent bg-accent/10"
+          : "border-border text-muted-foreground hover:text-foreground hover:border-accent"
+      }`}
+    >
+      <Heart className={`w-4 h-4 ${liked ? "fill-accent" : ""}`} />
+      {liked ? "Liked" : "Like"} {count > 0 && <span className="text-xs">{count}</span>}
+    </button>
+  )
+}
 
 export default function AlgorithmBeatAlliancePage() {
   useEffect(() => {
@@ -45,7 +76,7 @@ export default function AlgorithmBeatAlliancePage() {
         <p className="text-muted-foreground text-lg mb-4">By Manimala Chithamanan</p>
         <p className="text-muted-foreground text-sm italic mb-12">On anti-incumbency, digital campaigns, and what the left missed</p>
 
-        <div className="space-y-6 text-muted-foreground leading-relaxed">
+        <div className="space-y-6 text-muted-foreground leading-relaxed" style={{fontFamily: "Georgia, 'Times New Roman', serif", fontSize: "1.05rem", lineHeight: "1.9"}}>
 
           <p>The 2026 election results shocked a lot of people in Tamil Nadu. A strong anti-incumbency wave overturned what many believed was politically impossible: a government with welfare delivery, administrative resources, and five full years in power still suffered a major collapse.</p>
           <p>What happened was not simply a defeat. It was a communication failure as much as a political one.</p>
@@ -109,7 +140,7 @@ export default function AlgorithmBeatAlliancePage() {
 
           <section>
             <h2 className="font-serif text-2xl text-foreground mb-4 mt-10">The Debate Within the Secular and Left Space</h2>
-            <p>After the results, divisions emerged among supporters of the secular alliance and left-leaning circles. Some blamed the DMK government. Others argued the focus should remain on protecting Tamil Nadu from national majoritarian politics. Another section responded by criticising voters directly, using words like "Thankuvi" and "Reels-knowledge" to belittle those who chose TVK. That reaction may become politically dangerous. Dismissing voters rarely helps rebuild political trust.</p>
+            <p>After the results, divisions emerged among supporters of the secular alliance and left-leaning circles. Some blamed the DMK government. Others argued the focus should remain on protecting Tamil Nadu from national majoritarian politics. Another section responded by criticising voters directly, using words like "Tharkuri" and "Reels-knowledge" to belittle those who chose TVK. That reaction may become politically dangerous. Dismissing voters rarely helps rebuild political trust.</p>
 
             <div className="border-l-2 border-accent pl-6 my-8">
               <p className="text-foreground italic">"When does a Secular Alliance stop being a coalition of values and start being a life jacket for parties the algorithm left behind?"</p>
@@ -159,6 +190,48 @@ export default function AlgorithmBeatAlliancePage() {
             © 2026 Manimala Chithamanan. All rights reserved. This work may not be reproduced, distributed, or transmitted in any form without prior written permission from the author.
           </div>
 
+        </div>
+
+        {/* Engagement Bar */}
+        <div className="border-t border-border mt-16 pt-8">
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div className="flex items-center gap-4">
+              <LikeButton />
+              <button
+                onClick={() => {
+                  if (navigator.share) {
+                    navigator.share({
+                      title: "When the Algorithm Beat the Alliance: Tamil Nadu 2026",
+                      url: window.location.href,
+                    })
+                  } else {
+                    navigator.clipboard.writeText(window.location.href)
+                    alert("Link copied to clipboard!")
+                  }
+                }}
+                className="inline-flex items-center gap-2 px-4 py-2 border border-border text-sm text-muted-foreground hover:text-foreground hover:border-accent transition-colors"
+              >
+                <Share2 className="w-4 h-4" />
+                Share
+              </button>
+              <a
+                href="https://www.linkedin.com/in/manimala-c-29205b223/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 border border-border text-sm text-muted-foreground hover:text-foreground hover:border-accent transition-colors"
+              >
+                <Linkedin className="w-4 h-4" />
+                Follow
+              </a>
+            </div>
+            <a
+              href="/#contact"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-accent text-accent-foreground text-sm font-medium hover:bg-accent/90 transition-colors"
+            >
+              <MessageCircle className="w-4 h-4" />
+              Discuss this piece
+            </a>
+          </div>
         </div>
       </article>
     </main>
