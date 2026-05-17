@@ -116,7 +116,11 @@ export default function AlgorithmBeatAlliancePage() {
           <p>The numbers tell the story clearly. DMK fell from 159 seats in 2021 to just 59 in 2026. Fifteen ministers lost their constituencies. Nowhere was this more visible than in Chennai, historically an impenetrable DMK fortress. Out of the 16 core constituencies within Chennai district, TVK swept 14. The only exceptions were Harbour, shielded by P.K. Sekarbabu, and Chepauk-Thiruvallikeni, where Deputy Chief Minister Udhayanidhi Stalin managed to hold on. The ultimate symbol came at the top: then-Chief Minister MK Stalin lost Kolathur, a seat he had held since 2011, to TVK's V.S. Babu by over 9,000 votes.</p>
 
           <div className="border border-border bg-secondary/20 p-6 my-8">
-            <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">Tamil Nadu 2026: The Final Tally</p>
+  
+            <div className="border-l-4 border-accent pl-6 my-8 py-2">
+              <p className="font-serif text-xl md:text-2xl text-foreground italic leading-relaxed">"The DMK was busy building the state's plumbing. They forgot to write the state's story."</p>
+            </div>
+          <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">Tamil Nadu 2026: The Final Tally</p>
             <div className="grid grid-cols-2 gap-2 text-sm">
               <span className="text-foreground font-medium">TVK</span><span>108 seats</span>
               <span className="text-foreground font-medium">DMK</span><span>59 seats</span>
@@ -135,8 +139,29 @@ export default function AlgorithmBeatAlliancePage() {
             <h2 className="font-serif text-2xl text-foreground mb-4 mt-10">The Campaign That Functioned Like a Startup</h2>
             <p>TVK's campaign did not operate like a traditional political party. It functioned more like a fast-growing digital startup, what we can rightly call an algorithmic insurgency.</p>
             <p className="mt-4">From late 2025 onwards, TVK built 34,000+ WhatsApp communities coordinated by digitally active young volunteers aged 19 to 35, trained in content sharing, emotional messaging, and fact-checking protocols. Their digital war room produced 120 to 150 pieces of vernacular video content daily, optimised for different platforms and demographic segments. They hired engineers and data scientists poached from Swiggy and PhonePe's growth teams to build proprietary sentiment tracking tools.</p>
-            <p className="mt-4">But TVK did not just have a digital machine. It had an entire ecosystem of allied organisations doing different jobs simultaneously. Route Mafia built street-level presence. Voice of Commons built credibility with educated urban voters. The production company handled the content machine. DMK had PEN. TVK had an ecosystem. That difference is underreported.</p>
+            <p className="mt-4">But TVK did not just have a digital machine. It had an entire ecosystem of allied organisations doing different jobs simultaneously. TVK's ground-level youth networks built physical constituency presence. Voice of Commons built credibility with educated urban voters. The production company handled the content machine. DMK had PEN. TVK had an ecosystem. That difference is underreported.</p>
             <p className="mt-4">The algorithmic precision yielded micro-level results that tell the full story. In Tiruppattur, TVK's Seenivasa Sethupathy unseated DMK heavyweight K.R. Periyakaruppan, who had held the seat for 20 years, by a margin of exactly one single vote: 83,365 to 83,364. When a historical stronghold is dismantled by one ballot, the optimisation of an algorithm is no longer a metaphor. It is the definitive margin of victory.</p>
+
+            {/* Tiruppattur One Vote Visual */}
+            <div className="my-10 border border-border bg-secondary/20 p-8 text-center">
+              <p className="text-xs uppercase tracking-widest text-muted-foreground mb-6">Tiruppattur Constituency, 2026</p>
+              <div className="flex items-center justify-center gap-6 mb-6">
+                <div className="text-center">
+                  <p className="font-serif text-5xl md:text-7xl text-accent font-bold">83,365</p>
+                  <p className="text-sm text-muted-foreground mt-2">TVK — Seenivasa Sethupathy</p>
+                  <p className="text-xs text-accent mt-1">Winner</p>
+                </div>
+                <div className="text-center px-4">
+                  <p className="font-serif text-3xl text-muted-foreground">vs</p>
+                </div>
+                <div className="text-center">
+                  <p className="font-serif text-5xl md:text-7xl text-muted-foreground font-bold">83,364</p>
+                  <p className="text-sm text-muted-foreground mt-2">DMK — K.R. Periyakaruppan</p>
+                  <p className="text-xs text-muted-foreground mt-1">20-year incumbent</p>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground italic">Margin of victory: 1 vote. This is what algorithmic precision looks like.</p>
+            </div>
             <p className="mt-4">The UI was Vijay, the celebrity, the face, the parasocial connection. The UX was the 34,000 WhatsApp communities, the daily content machine, the sentiment tracking. DMK had the UI/UX gap: their governance delivery was real, but the user experience of being a DMK voter in 2026 had broken down completely.</p>
           </section>
 
@@ -145,7 +170,7 @@ export default function AlgorithmBeatAlliancePage() {
             <p>One of the biggest strategic failures of this election has received almost no attention: DMK campaigned against AIADMK, not TVK.</p>
             <p className="mt-4">DMK's entire campaign machinery was calibrated to fight the opponent they knew. They kept attacking AIADMK's record, Edappadi's credibility, the ten-year AIADMK government. Meanwhile TVK was quietly eating into DMK's own vote bank and DMK barely responded. By the time they took TVK seriously, the narrative had already shifted. It is like preparing for the last war while a completely different battle was happening.</p>
             <p className="mt-4">Breaking the binary was also structurally easier than people acknowledge, and Vijay's hero image is the reason why. In Tamil cinema, the hero always stands outside the corrupt system and defeats it. Vijay had spent over 20 years playing exactly that character. When he entered politics, voters did not need to be convinced he was different. They had already watched him be different 30 times in a theatre. The political persona was pre-built through storytelling over two decades.</p>
-            <p className="mt-4">But this cinematic trust did not just bypass traditional party structures. It also allowed TVK to mask a glaring ideological contradiction that few are willing to voice openly. TVK campaigned on Dravidian ideology, Periyar references, Ambedkarite politics, social justice. But during the campaign, TVK voices also told voters they do not need welfare, that they want dignity not handouts, targeting the very welfare model that Dravidian politics built its legitimacy on. The Dravidian welfare state exists precisely because the state intervened to lift marginalised communities. TVK campaigned against that intervention while claiming the ideology that justified it. As TVK assumes governance, they confront a welfare architecture they cannot dismantle. They are bound to continue it quietly, letting the no-freebies campaign rhetoric fade into institutional reality.</p>
+            <p className="mt-4">But this cinematic trust did not just bypass traditional party structures. It also allowed TVK to sidestep a significant ideological contradiction that few are willing to voice openly. TVK campaigned on Dravidian ideology, Periyar references, Ambedkarite politics, social justice. But during the campaign, TVK voices also told voters they do not need welfare, that they want dignity not handouts, targeting the very welfare model that Dravidian politics built its legitimacy on. The Dravidian welfare state exists precisely because the state intervened to lift marginalised communities. TVK campaigned against that intervention while claiming the ideology that justified it. As TVK assumes governance, they confront a welfare architecture they cannot dismantle. They are bound to continue it quietly, letting the no-freebies campaign rhetoric fade into institutional reality.</p>
           </section>
 
 
@@ -155,7 +180,7 @@ export default function AlgorithmBeatAlliancePage() {
             <p className="mt-4">With TVK stopping at 108 seats, just short of the majority mark, behind-the-scenes conversations began buzzing about an institutional arrangement that once seemed politically impossible: a tactical post-poll understanding between the DMK and the AIADMK to freeze the actor-politician out of power. Feelers were sent, numbers were crunched, and factions within both Dravidian giants actively debated forming a united legislative front to protect the traditional bipolar duopoly.</p>
             <p className="mt-4">The rationale was pure realpolitik. Factions within the DMK openly feared that allowing Vijay to anchor a government would trigger a modern repetition of the MGR era — a charismatic cinematic phenomenon permanently locking them out of Fort St. George. On the other side, sections of the AIADMK leadership weighed whether a temporary compromise could secure them structural leverage. It was a moment where the system attempted to close ranks against a digital insurgent.</p>
             <p className="mt-4">But the structural friction proved too heavy to sustain. The proposal collapsed almost as fast as it was floated. The AIADMK immediately fractured under the weight of the rumour; rebel legislators led by C.V. Shanmugam and S.P. Velumani revolted, citing that an alliance with the DMK directly violated the foundational core of what MGR and Jayalalithaa built. By the time the DMK leadership formally rejected the overtures and declared a firm stance to sit in opposition, the damage was done. The old guard could not unify, and the structural collapse of the AIADMK legislative bloc effectively handed Vijay the mathematical runway to clear his floor test.</p>
-            <p className="mt-4">The brief, desperate flirtation with a DMK-AIADMK pact exposed a deep vulnerability. It proved that when the algorithm shifts the ground rapidly enough, traditional ideological structures will contemplate their own total reinvention — or dilution — just to preserve institutional survival.</p>
+            <p className="mt-4">The brief flirtation with a DMK-AIADMK pact exposed a deep vulnerability. It proved that when the algorithm shifts the ground rapidly enough, traditional ideological structures will contemplate their own total reinvention — or dilution — just to preserve institutional survival.</p>
           </section>
 
           <section>
@@ -165,6 +190,10 @@ export default function AlgorithmBeatAlliancePage() {
             <p className="mt-4">The 10% employee contribution was not experienced as a reasonable pension design. It was felt as a penalty for stability, a signal that security would come but at a personal cost after decades of waiting. The DMK treated TAPS as a closing argument. Employees experienced it as a legacy debt finally, partially, reluctantly paid. The postal ballots, the votes of the very people who administer elections, were the first signal of this shift on counting day. When the people who run Tamil Nadu's 37,000 government schools and staff its hospitals vote against you after you gave them a pension scheme, the problem is not the Reels. It is the User Experience of governance itself.</p>
           </section>
 
+
+            <div className="border-l-4 border-accent pl-6 my-8 py-2">
+              <p className="font-serif text-xl md:text-2xl text-foreground italic leading-relaxed">"When the people who run Tamil Nadu's 37,000 government schools vote against you after you gave them a pension scheme, the problem is not the Reels. It is the User Experience of governance itself."</p>
+            </div>
           <section>
             <h2 className="font-serif text-2xl text-foreground mb-4 mt-10">The Anti-Caste Party That Lost the Anti-Caste Vote</h2>
             <p>This is the contradiction that cuts deepest, because it strikes at the core of what DMK claims to be.</p>
@@ -208,7 +237,7 @@ export default function AlgorithmBeatAlliancePage() {
             <h2 className="font-serif text-2xl text-foreground mb-4 mt-10">What Should Return to Tamil Nadu Politics</h2>
             <p>One important lesson from 2026 is that politics cannot survive only through algorithms and content cycles. Grassroots activism still matters. But being specific about what that means matters too, because "grassroots" has become a word politicians use when they mean nothing in particular.</p>
             <p className="mt-4">Trust has to come first. It is not rebuilt through manifesto launches or pre-election announcements. It is rebuilt through consistent, unglamorous presence at the constituency level. Showing up when there is no camera. Solving the problems that will never trend.</p>
-            <p className="mt-4">Law and order was a real and legitimate grievance that TVK exploited and DMK never adequately addressed. A government that delivers welfare but cannot deliver safety has only solved half the problem.</p>
+            <p className="mt-4">Law and order was a real and legitimate grievance that TVK capitalised on and DMK never adequately addressed. A government that delivers welfare but cannot deliver safety has only solved half the problem.</p>
             <p className="mt-4">Student unions in colleges are the most urgent piece of all. Tamil Nadu's college campuses are where the next political generation should be formed. But student union elections have largely disappeared from the state's colleges and universities. The decline began under MGR, whose administration systematically suppressed student movements through the late 1970s and into the 1980s, with institutional bans on campus unions solidifying into entrenched policy. While the Supreme Court mandated implementation of the Lyngdoh Committee recommendations nationwide, Tamil Nadu institutions largely do not comply <em>(Frontline, 2024)</em>. The result is no elected student bodies, no institutional representation, and no formal pipeline for developing future political leaders on campus.</p>
             <p className="mt-4">DMK-affiliated student wings have become increasingly hollow, present on paper and absent in practice. It is a policy failure that the DMK government itself could have addressed in five years and chose not to. Content without organisation produces consumers of politics, not practitioners of it. If the Dravidian movement truly believes in its own model, that belief has to be transmitted somewhere. It used to be transmitted on campuses. If DMK's student wings are not doing that work, TVK's content machine will continue to fill the vacuum. And the next generation of Dravidian voters will have no memory of what the movement actually stood for.</p>
           </section>
