@@ -61,6 +61,7 @@ function CusdisComments({ pageId, pageUrl, pageTitle }: { pageId: string, pageUr
         data-page-id={pageId}
         data-page-url={pageUrl}
         data-page-title={pageTitle}
+        data-theme="dark"
       />
     </div>
   )
