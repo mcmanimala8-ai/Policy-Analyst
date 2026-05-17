@@ -36,10 +36,24 @@ function LikeButton() {
 }
 
 
-function CommentsSection({ pageId, pageUrl, pageTitle }: { pageId: string, pageUrl: string, pageTitle: string }) {
+
+function CusdisComments({ pageId, pageUrl, pageTitle }: { pageId: string, pageUrl: string, pageTitle: string }) {
+  useEffect(() => {
+    // Load Cusdis script
+    const script = document.createElement('script')
+    script.src = 'https://cusdis.com/js/cusdis.es.js'
+    script.async = true
+    script.defer = true
+    document.body.appendChild(script)
+
+    return () => {
+      document.body.removeChild(script)
+    }
+  }, [])
+
   return (
-    <div className="mt-16 border-t border-border pt-10">
-      <h2 className="font-serif text-2xl text-foreground mb-8">Comments</h2>
+    <div className="mt-16 pt-8 border-t border-border">
+      <h3 className="font-serif text-xl text-foreground mb-6">Comments</h3>
       <div
         id="cusdis_thread"
         data-host="https://cusdis.com"
@@ -48,7 +62,6 @@ function CommentsSection({ pageId, pageUrl, pageTitle }: { pageId: string, pageU
         data-page-url={pageUrl}
         data-page-title={pageTitle}
       />
-      <script async defer src="https://cusdis.com/js/cusdis.es.js" />
     </div>
   )
 }
@@ -251,6 +264,12 @@ export default function AlgorithmBeatAlliancePage() {
             </a>
           </div>
         </div>
+
+        <CusdisComments
+          pageId="algorithm-beat-alliance"
+          pageUrl="https://manimalachithamanan.in/writing/algorithm-beat-alliance"
+          pageTitle="When the Algorithm Beat the Alliance: Tamil Nadu 2026"
+        />
       </article>
     </main>
   )

@@ -5,10 +5,24 @@ import { ArrowLeft } from "lucide-react"
 import { useEffect } from "react"
 
 
-function CommentsSection({ pageId, pageUrl, pageTitle }: { pageId: string, pageUrl: string, pageTitle: string }) {
+
+function CusdisComments({ pageId, pageUrl, pageTitle }: { pageId: string, pageUrl: string, pageTitle: string }) {
+  useEffect(() => {
+    // Load Cusdis script
+    const script = document.createElement('script')
+    script.src = 'https://cusdis.com/js/cusdis.es.js'
+    script.async = true
+    script.defer = true
+    document.body.appendChild(script)
+
+    return () => {
+      document.body.removeChild(script)
+    }
+  }, [])
+
   return (
-    <div className="mt-16 border-t border-border pt-10">
-      <h2 className="font-serif text-2xl text-foreground mb-8">Comments</h2>
+    <div className="mt-16 pt-8 border-t border-border">
+      <h3 className="font-serif text-xl text-foreground mb-6">Comments</h3>
       <div
         id="cusdis_thread"
         data-host="https://cusdis.com"
@@ -17,7 +31,6 @@ function CommentsSection({ pageId, pageUrl, pageTitle }: { pageId: string, pageU
         data-page-url={pageUrl}
         data-page-title={pageTitle}
       />
-      <script async defer src="https://cusdis.com/js/cusdis.es.js" />
     </div>
   )
 }
@@ -144,6 +157,12 @@ export default function SuccessTrapPage() {
             © 2026 Manimala Chithamanan. All rights reserved. This work may not be reproduced, distributed, or transmitted in any form without prior written permission from the author.
           </div>
         </div>
+
+        <CusdisComments
+          pageId="success-trap"
+          pageUrl="https://manimalachithamanan.in/writing/success-trap"
+          pageTitle="The Success Trap"
+        />
       </article>
     </main>
   )
