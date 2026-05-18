@@ -106,7 +106,14 @@ export default function AlgorithmBeatAlliancePage() {
           When the Algorithm Beat the Alliance: Tamil Nadu 2026
         </h1>
         <p className="text-muted-foreground text-lg mb-4">By Manimala Chithamanan</p>
-        <p className="text-muted-foreground text-sm italic mb-12">On anti-incumbency, digital campaigns, and what the left missed</p>
+        <p className="text-muted-foreground text-sm italic mb-4">On anti-incumbency, digital campaigns, and what the left missed</p>
+        <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground mb-12">
+          <span>18 May 2026</span>
+          <span>·</span>
+          <span>15 min read</span>
+          <span>·</span>
+          <span>Political Analysis</span>
+        </div>
 
         <div className="space-y-6 text-muted-foreground leading-relaxed">
 

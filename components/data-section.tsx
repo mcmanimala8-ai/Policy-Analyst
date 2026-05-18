@@ -41,6 +41,17 @@ const tfrTrend = [
   { year: "2019", india: 2.0, tn: 1.8 },
 ]
 
+
+// 2026 TN Election: Seat swing from 2021 to 2026
+const electionSwingData = [
+  { party: "TVK", seats2021: 0, seats2026: 108 },
+  { party: "DMK", seats2021: 133, seats2026: 59 },
+  { party: "AIADMK", seats2021: 66, seats2026: 47 },
+  { party: "INC", seats2021: 18, seats2026: 5 },
+  { party: "PMK", seats2021: 5, seats2026: 4 },
+  { party: "Others", seats2021: 12, seats2026: 11 },
+]
+
 const CustomTooltip = ({ active, payload, label }: any) => {
   if (active && payload && payload.length) {
     return (
@@ -57,7 +68,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
   return null
 }
 
-const charts = ["TFR by State", "TFR Trend", "Delimitation Impact"]
+const charts = ["TFR by State", "TFR Trend", "Delimitation Impact", "2026 Election Swing"]
 
 export function DataSection() {
   const [activeChart, setActiveChart] = useState("TFR by State")
@@ -176,6 +187,24 @@ export function DataSection() {
           )}
 
           {/* Chart 3: Delimitation Impact */}
+          {activeChart === "2026 Election Swing" && (
+            <div>
+              <p className="text-sm text-muted-foreground mb-6">Seat count comparison: 2021 vs 2026 Tamil Nadu Assembly Elections. TVK did not contest in 2021.</p>
+              <ResponsiveContainer width="100%" height={320}>
+                <BarChart data={electionSwingData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
+                  <XAxis dataKey="party" tick={{ fill: "var(--muted-foreground)", fontSize: 12 }} />
+                  <YAxis tick={{ fill: "var(--muted-foreground)", fontSize: 12 }} />
+                  <Tooltip content={<CustomTooltip />} />
+                  <Legend />
+                  <Bar dataKey="seats2021" name="2021" fill="#6b7280" radius={[2,2,0,0]} />
+                  <Bar dataKey="seats2026" name="2026" fill="var(--accent)" radius={[2,2,0,0]} />
+                </BarChart>
+              </ResponsiveContainer>
+              <p className="text-xs text-muted-foreground mt-4">Source: Election Commission of India, Tamil Nadu 2021 & 2026 General Assembly Results</p>
+            </div>
+          )}
+
           {activeChart === "Delimitation Impact" && (
             <div>
               <h3 className="font-serif text-xl mb-2">

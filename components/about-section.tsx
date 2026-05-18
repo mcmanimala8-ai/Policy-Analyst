@@ -34,6 +34,14 @@ export function AboutSection() {
               <p className="text-muted-foreground leading-relaxed mb-8">
                 MA in Politics & International Relations, Central University of Gujarat. BA in History, Stella Maris College.
               </p>
+              <a
+                href="/Manimala_C_Resume.pdf"
+                download
+                className="inline-flex items-center gap-2 px-5 py-2.5 border border-border text-sm text-muted-foreground hover:text-foreground hover:border-accent transition-colors mb-8"
+              >
+                <Download className="w-4 h-4" />
+                Download CV
+              </a>
               
               <a 
                 href="https://www.linkedin.com/in/manimala-c-29205b223/" 
