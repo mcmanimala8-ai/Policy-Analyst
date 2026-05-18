@@ -209,6 +209,13 @@ export default function AlgorithmBeatAlliancePage() {
             <p className="mt-4">The question is not whether TVK is simply old politics repackaged. Clearly it is not entirely. The question is whether Vijay has the political discipline to hold the new people to the ideology while managing the exceptions. New people with no governance experience, surrounded by a minority of old-network politicians who know how the system works. Who ends up teaching whom how things get done?</p>
           </section>
 
+
+          <section>
+            <h2 className="font-serif text-2xl text-foreground mb-4 mt-10">The Gen Z and Gen Alpha Influence</h2>
+            <p>One striking feature of the election was the influence of younger generations, including children who are not yet voters themselves.</p>
+            <p className="mt-4">Stories circulated of children encouraging parents and grandparents to support Vijay because of their familiarity with him through cinema and online content. Politics increasingly entered households through Reels, fan edits, memes, and YouTube clips rather than traditional campaign meetings. Sociologists call this reverse socialisation: the younger generation shaping political preferences of elders rather than inheriting them. Traditional ward-level mobilisation models have no counter-strategy for this.</p>
+            <p className="mt-4">TVK successfully understood this cultural shift. Its campaign reached audiences emotionally before it reached them politically. It hauled vote banks from both DMK and AIADMK, pulling youth, women, urban, and first-time voters across caste and religious lines. That cross-cutting coalition was not accidental. It was the result of deliberate targeting across demographic segments.</p>
+          </section>
           <section>
             <h2 className="font-serif text-2xl text-foreground mb-4 mt-10">The Debate Within the Secular and Left Space</h2>
             <p>After the results, divisions emerged among supporters of the secular alliance and left-leaning circles. Some blamed the DMK government. Others argued the focus should remain on protecting Tamil Nadu from national majoritarian politics. Another section responded by criticising voters directly, using words like "Tharkuri" and "Reels-knowledge" to belittle those who chose TVK. That reaction may become politically dangerous. Dismissing voters rarely helps rebuild political trust, raising a deeper systemic question:</p>
