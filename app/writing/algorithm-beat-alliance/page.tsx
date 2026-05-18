@@ -147,7 +147,7 @@ export default function AlgorithmBeatAlliancePage() {
               <div className="flex items-center justify-center gap-6 mb-6">
                 <div className="text-center">
                   <p className="font-serif text-5xl md:text-7xl text-accent font-bold">83,365</p>
-                  <p className="text-sm text-muted-foreground mt-2">TVK — Seenivasa Sethupathy</p>
+                  <p className="text-sm text-muted-foreground mt-2">TVK: Seenivasa Sethupathy</p>
                   <p className="text-xs text-accent mt-1">Winner</p>
                 </div>
                 <div className="text-center px-4">
@@ -155,7 +155,7 @@ export default function AlgorithmBeatAlliancePage() {
                 </div>
                 <div className="text-center">
                   <p className="font-serif text-5xl md:text-7xl text-muted-foreground font-bold">83,364</p>
-                  <p className="text-sm text-muted-foreground mt-2">DMK — K.R. Periyakaruppan</p>
+                  <p className="text-sm text-muted-foreground mt-2">DMK: K.R. Periyakaruppan</p>
                   <p className="text-xs text-muted-foreground mt-1">20-year incumbent</p>
                 </div>
               </div>
@@ -177,9 +177,9 @@ export default function AlgorithmBeatAlliancePage() {
             <h2 className="font-serif text-2xl text-foreground mb-4 mt-10">The Night the Unthinkable Almost Happened: The Post-Poll Panic</h2>
             <p className="mt-4">Nothing illustrates the absolute disruption of the 2026 verdict more than the existential panic that unfolded in the 72 hours following the May 4 results. For over half a century, the political manual of Tamil Nadu was built on a single unshakeable axiom: the DMK and the AIADMK are mutually exclusive, mortal rivals. Yet when the reality of a hung assembly set in, the survival instinct of the old guard briefly overrode fifty years of ideological warfare.</p>
             <p className="mt-4">With TVK stopping at 108 seats, just short of the majority mark, behind-the-scenes conversations began buzzing about an institutional arrangement that once seemed politically impossible: a tactical post-poll understanding between the DMK and the AIADMK to freeze the actor-politician out of power. Feelers were sent, numbers were crunched, and factions within both Dravidian giants actively debated forming a united legislative front to protect the traditional bipolar duopoly.</p>
-            <p className="mt-4">The rationale was pure realpolitik. Factions within the DMK openly feared that allowing Vijay to anchor a government would trigger a modern repetition of the MGR era — a charismatic cinematic phenomenon permanently locking them out of Fort St. George. On the other side, sections of the AIADMK leadership weighed whether a temporary compromise could secure them structural leverage. It was a moment where the system attempted to close ranks against a digital insurgent.</p>
+            <p className="mt-4">The rationale was pure realpolitik. Factions within the DMK openly feared that allowing Vijay to anchor a government would trigger a modern repetition of the MGR era, a charismatic cinematic phenomenon permanently locking them out of Fort St. George. On the other side, sections of the AIADMK leadership weighed whether a temporary compromise could secure them structural leverage. It was a moment where the system attempted to close ranks against a digital insurgent.</p>
             <p className="mt-4">But the structural friction proved too heavy to sustain. The proposal collapsed almost as fast as it was floated. The AIADMK immediately fractured under the weight of the rumour; rebel legislators led by C.V. Shanmugam and S.P. Velumani revolted, citing that an alliance with the DMK directly violated the foundational core of what MGR and Jayalalithaa built. By the time the DMK leadership formally rejected the overtures and declared a firm stance to sit in opposition, the damage was done. The old guard could not unify, and the structural collapse of the AIADMK legislative bloc effectively handed Vijay the mathematical runway to clear his floor test.</p>
-            <p className="mt-4">The brief flirtation with a DMK-AIADMK pact exposed a deep vulnerability. It proved that when the algorithm shifts the ground rapidly enough, traditional ideological structures will contemplate their own total reinvention — or dilution — just to preserve institutional survival.</p>
+            <p className="mt-4">The brief flirtation with a DMK-AIADMK pact exposed a deep vulnerability. It proved that when the algorithm shifts the ground rapidly enough, traditional ideological structures will contemplate their own total reinvention, or dilution, just to preserve institutional survival.</p>
           </section>
 
           <section>
@@ -204,7 +204,7 @@ export default function AlgorithmBeatAlliancePage() {
           <section>
             <h2 className="font-serif text-2xl text-foreground mb-4 mt-10">TVK: New Party, Real Contradictions</h2>
             <p>TVK is largely a party of new people. First-time politicians, young candidates, no prior party affiliation, people from outside the traditional political class. That is real and it matters.</p>
-            <p className="mt-4">But there are exceptions. Some elected members came with criminal records. Some had held right-wing ideological positions before joining TVK, views that directly contradict the Dravidian social justice politics TVK campaigns on. These exceptions are a minority. But they are a visible and damaging minority, precisely because they contradict the new politics brand so sharply.</p>
+            <p className="mt-4">But there are exceptions. Some elected members came with criminal records. Some had held right-wing ideological positions before joining TVK, views that directly contradict the Dravidian social justice politics TVK campaigns on. These exceptions are a minority. They are a visible and damaging minority, precisely because they contradict the new politics brand so sharply.</p>
             <p className="mt-4">The question is not whether TVK is simply old politics repackaged. Clearly it is not entirely. The question is whether Vijay has the political discipline to hold the new people to the ideology while managing the exceptions. New people with no governance experience, surrounded by a minority of old-network politicians who know how the system works. Who ends up teaching whom how things get done?</p>
           </section>
 
@@ -223,13 +223,13 @@ export default function AlgorithmBeatAlliancePage() {
               <p className="text-foreground italic">"When does a Secular Alliance stop being a coalition of values and start being a life jacket for parties the algorithm left behind?"</p>
             </div>
 
-            <p>Instead of misreading voter frustration as mere online manipulation, the internal discourse is beginning to shift toward structural vulnerability — specifically regarding the party's future leadership pipeline. A major question rising within the left concerns Kanimozhi Karunanidhi's role, which was not projected well this time. The DMK cadre hopes to see Kanimozhi as the next leader of the party. Why, then, have senior leaders remained silent on succession? The silence is not just a party management question. It is a legitimacy gap. In a moment when DMK needs to rebuild its identity and its base, the absence of a clear next-generation narrative is itself a political choice, and not a neutral one.</p>
+            <p>Instead of misreading voter frustration as mere online manipulation, the internal discourse is beginning to shift toward structural vulnerability, specifically regarding the party's future leadership pipeline. A major question rising within the left concerns Kanimozhi Karunanidhi's role, which was not projected well this time. The DMK cadre hopes to see Kanimozhi as the next leader of the party. Why, then, have senior leaders remained silent on succession? The silence is not just a party management question. It is a legitimacy gap. In a moment when DMK needs to rebuild its identity and its base, the absence of a clear next-generation narrative is itself a political choice, and not a neutral one.</p>
           </section>
 
           <section>
             <h2 className="font-serif text-2xl text-foreground mb-4 mt-10">What DMK Needs to Understand Before 2031</h2>
             <p>For DMK, the lesson is not that social media alone wins elections. But ignoring digital political culture is no longer possible. The future belongs to hybrid politics.</p>
-            <p className="mt-4">Former Chief Minister Stalin recently launched a public feedback initiative inviting citizens to share suggestions for party improvement through a dedicated website. The intent signals some acknowledgment that the party needs to listen differently. But a website consultation risks becoming another one-way communication exercise dressed in digital clothing. The real test is whether the feedback actually changes internal party behaviour, candidate selection, and ground presence between elections, not just before them.</p>
+            <p className="mt-4">Former Chief Minister Stalin recently launched a public feedback initiative inviting citizens to share suggestions for party improvement through a dedicated website. The intent signals some acknowledgment that the party needs to listen differently. A website consultation risks becoming another one-way communication exercise dressed in digital clothing. The real test is whether the feedback actually changes internal party behaviour, candidate selection, and ground presence between elections, not just before them.</p>
             <p className="mt-4">Compounding this challenge is the growing spread of fake news targeting the current government's welfare schemes. Misinformation about scheme eligibility and implementation is circulating actively on the same platforms that TVK used so effectively. DMK must now govern under constant narrative attack while rebuilding public trust. Managing this requires a proactive content strategy that reaches people before the misinformation does.</p>
             <p className="mt-4">The global parallel is instructive. In New York City's 2025 mayoral race, Zohran Mamdani proved that the left can win decisively, but only as a disruptor, not as an administrator. The 2026 Tamil Nadu results prove the same point from the other direction. The left fails when it defends, when it governs by spreadsheet, when it mistakes service delivery for political narrative. The left only wins when it is the protagonist. The DMK forgot that somewhere along the way. TVK never had to learn it because it was born as a disruptor of the binary.</p>
             <p className="mt-4">There is also a question worth asking about why Modi's strategy, which TVK essentially borrowed and localised, has never worked directly in Tamil Nadu. The BJP has tried for decades and consistently failed. Language and cultural identity run too deep. Vijay succeeded where Modi could not precisely because Vijay is Tamil first, entirely rooted in Tamil culture, cinema, and language. TVK used Modi's playbook to build a wall against Modi in Tamil Nadu. The algorithmic insurgency that BJP perfected nationally got turned into a specifically Tamil, culturally grounded tool.</p>
@@ -250,8 +250,8 @@ export default function AlgorithmBeatAlliancePage() {
           </section>
 
           <section className="border-t border-border pt-8 mt-10">
-            <p>TVK won in 2026 with digital infrastructure. But digital infrastructure without ground presence is brittle. The algorithm defeated the alliance this time.</p>
-            <p className="mt-4">The question for 2031 is not whether DMK will build a better algorithm. It is whether any party will build a politics worthy of the 85.1% who showed up. And whether the Dravidian movement will find its next generation in a classroom or a comment section.</p>
+            <p>TVK won in 2026 with digital infrastructure. Digital infrastructure without ground presence is brittle. The algorithm defeated the alliance this time.</p>
+            <p className="mt-4">The question for 2031 is not whether DMK will build a better algorithm. It is whether any party will build a politics worthy of the 85.1% who showed up, and whether the Dravidian movement will find its next generation in a classroom or a comment section.</p>
           </section>
 
           <section className="border-t border-border pt-8 mt-8">
