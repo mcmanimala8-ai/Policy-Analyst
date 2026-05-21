@@ -111,33 +111,59 @@ export function Navigation() {
 
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            className="md:hidden border-t border-border bg-background"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-          >
-            <div className="px-6 py-4 flex flex-col gap-4">
-              {navLinks.map((link) => (
+          <>
+            {/* Backdrop - closes menu when tapped outside */}
+            <motion.div
+              className="fixed inset-0 bg-black/60 z-40 md:hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsOpen(false)}
+            />
+            {/* Menu panel */}
+            <motion.div
+              className="fixed top-0 left-0 right-0 bg-background border-b border-border z-50 md:hidden"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.2 }}
+            >
+              <div className="flex items-center justify-between px-6 py-4 border-b border-border">
+                <span className="font-serif text-xl">MC</span>
+                <button onClick={() => setIsOpen(false)} aria-label="Close menu">
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+              <div className="px-6 py-6 flex flex-col gap-6">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="text-lg text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                ))}
                 <a
-                  key={link.href}
-                  href={link.href}
+                  href="/now"
                   onClick={() => setIsOpen(false)}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-lg text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  {link.label}
+                  Now
                 </a>
-              ))}
-              <a
-                href="/Manimala_C_Resume.pdf"
-                download
-                className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground text-sm font-medium w-fit"
-              >
-                <Download className="w-4 h-4" />
-                Download Resume
-              </a>
-            </div>
-          </motion.div>
+                <a
+                  href="/Manimala_C_Resume.pdf"
+                  download
+                  onClick={() => setIsOpen(false)}
+                  className="inline-flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground text-sm font-medium w-fit mt-2"
+                >
+                  <Download className="w-4 h-4" />
+                  Download Resume
+                </a>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </motion.nav>
