@@ -11,10 +11,6 @@ const navLinks = [
   { href: "#contact", label: "Contact" },
 ]
 
-const externalLinks = [
-  { href: "/now", label: "Now" },
-]
-
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
@@ -81,14 +77,7 @@ export function Navigation() {
             {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </motion.button>
 
-          <a
-            href="/now"
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Now
-          </a>
-
-          <motion.a
+<motion.a
             href="/Manimala_C_Resume.pdf"
             download
             className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors"
@@ -145,14 +134,7 @@ export function Navigation() {
                     {link.label}
                   </a>
                 ))}
-                <a
-                  href="/now"
-                  onClick={() => setIsOpen(false)}
-                  className="text-lg text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Now
-                </a>
-                <a
+<a
                   href="/Manimala_C_Resume.pdf"
                   download
                   onClick={() => setIsOpen(false)}

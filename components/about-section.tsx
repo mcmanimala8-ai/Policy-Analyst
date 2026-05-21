@@ -1,4 +1,4 @@
-import { Linkedin, Download } from "lucide-react"
+import { Linkedin } from "lucide-react"
 import Image from "next/image"
 
 export function AboutSection() {
@@ -11,7 +11,7 @@ export function AboutSection() {
               About
             </p>
             <h2 className="font-serif text-3xl md:text-4xl tracking-tight mb-8">
-              Policy Research & Analysis
+              Policy Researcher · Political Analyst · Tamil Nadu
             </h2>
             <div className="relative w-48 h-48 md:w-full md:h-72 overflow-hidden border border-border">
               <Image
@@ -34,14 +34,7 @@ export function AboutSection() {
               <p className="text-muted-foreground leading-relaxed mb-8">
                 MA in Politics & International Relations, Central University of Gujarat. BA in History, Stella Maris College.
               </p>
-              <a
-                href="/Manimala_C_Resume.pdf"
-                download
-                className="inline-flex items-center gap-2 px-5 py-2.5 border border-border text-sm text-muted-foreground hover:text-foreground hover:border-accent transition-colors mb-8"
-              >
-                <Download className="w-4 h-4" />
-                Download CV
-              </a>
+
               
               <a 
                 href="https://www.linkedin.com/in/manimala-c-29205b223/" 
