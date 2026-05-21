@@ -83,42 +83,7 @@ export default function PlatformEconomyPage() {
           </p>
         </div>
 
-        <div 
-        {/* Hero Illustration */}
-        <div className="w-full my-8 border border-border overflow-hidden" style={{height: "280px", background: "linear-gradient(135deg, #0a0a1a 0%, #1a0a0a 50%, #0a1a1a 100%)"}}>
-          <svg width="100%" height="100%" viewBox="0 0 800 280" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-            {/* Gig worker represented as isolated node */}
-            <circle cx="400" cy="140" r="20" fill="none" stroke="#c0392b" strokeWidth="1.5" opacity="0.8"/>
-            <circle cx="400" cy="140" r="6" fill="#c0392b" opacity="0.8"/>
-
-            {/* Platform nodes above - connected */}
-            {[200, 320, 480, 600].map((x, i) => (
-              <g key={i}>
-                <rect x={x-25} y="30" width="50" height="30" fill="none" stroke="#888" strokeWidth="1" opacity="0.5"/>
-                <line x1={x} y1="60" x2="400" y2="120" stroke="#666" strokeWidth="0.5" strokeDasharray="3,5" opacity="0.3"/>
-                <text x={x} y="49" fill="#666" fontSize="7" fontFamily="Arial" textAnchor="middle">PLATFORM</text>
-              </g>
-            ))}
-
-            {/* Worker nodes below - disconnected */}
-            {[150, 280, 400, 520, 650].map((x, i) => (
-              <g key={i}>
-                <circle cx={x} cy="220" r="8" fill="none" stroke="#444" strokeWidth="1" opacity="0.5"/>
-                <circle cx={x} cy="220" r="2.5" fill="#444" opacity="0.4"/>
-              </g>
-            ))}
-
-            {/* Gap line */}
-            <line x1="80" y1="155" x2="720" y2="155" stroke="#333" strokeWidth="0.5" strokeDasharray="6,4" opacity="0.5"/>
-            <text x="90" y="150" fill="#555" fontSize="7" fontFamily="Arial" opacity="0.6">PROTECTION GAP</text>
-
-            {/* Labels */}
-            <text x="400" y="22" fill="#888" fontSize="9" fontFamily="Arial" textAnchor="middle" letterSpacing="3" opacity="0.6">PLATFORM ECONOMY</text>
-            <text x="400" y="268" fill="#444" fontSize="8" fontFamily="Arial" textAnchor="middle" letterSpacing="2">YOUTH · LABOUR · INDIA</text>
-          </svg>
-        </div>
-
-        className="space-y-10 text-muted-foreground leading-relaxed">
+        <div className="space-y-10 text-muted-foreground leading-relaxed">
           <section>
             <h2 className="font-serif text-2xl text-foreground mb-4">Introduction</h2>
             <p>India's economic transformation over the past three decades has fundamentally altered employment patterns for educated youth. The shift towards service sector-led growth, combined with rapid expansion of platform-based work, has created new forms of economic participation — but also new vulnerabilities. Understanding these changes requires examining not just macroeconomic indicators, but the lived realities of communities navigating this transformation.</p>
