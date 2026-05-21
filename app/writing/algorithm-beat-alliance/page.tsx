@@ -115,6 +115,76 @@ export default function AlgorithmBeatAlliancePage() {
           <span>Political Analysis</span>
         </div>
 
+
+        {/* Hero Illustration */}
+        <div className="w-full my-8 border border-border overflow-hidden" style={{height: "280px", background: "linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 50%, #0a1a0a 100%)"}}>
+          <svg width="100%" height="100%" viewBox="0 0 800 280" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            {/* Network nodes - representing WhatsApp communities */}
+            <g opacity="0.6">
+              {/* Central node - TVK */}
+              <circle cx="400" cy="140" r="18" fill="none" stroke="#c0392b" strokeWidth="2"/>
+              <circle cx="400" cy="140" r="6" fill="#c0392b"/>
+
+              {/* Outer ring nodes */}
+              {[0,1,2,3,4,5,6,7,8,9,10,11].map((i) => {
+                const angle = (i * 30) * Math.PI / 180
+                const r = 90
+                const x = 400 + r * Math.cos(angle)
+                const y = 140 + r * Math.sin(angle)
+                return (
+                  <g key={i}>
+                    <line x1="400" y1="140" x2={x} y2={y} stroke="#c0392b" strokeWidth="0.5" strokeDasharray="4,4" opacity="0.4"/>
+                    <circle cx={x} cy={y} r="4" fill="#c0392b" opacity="0.7"/>
+                  </g>
+                )
+              })}
+
+              {/* Second ring - smaller nodes */}
+              {[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23].map((i) => {
+                const angle = (i * 15 + 7.5) * Math.PI / 180
+                const r = 160
+                const x = 400 + r * Math.cos(angle)
+                const y = 140 + r * Math.sin(angle)
+                const midR = 90
+                const closestIdx = Math.round(i / 2)
+                const midAngle = (closestIdx * 30) * Math.PI / 180
+                const mx = 400 + midR * Math.cos(midAngle)
+                const my = 140 + midR * Math.sin(midAngle)
+                return (
+                  <g key={i}>
+                    <line x1={mx} y1={my} x2={x} y2={y} stroke="#666" strokeWidth="0.3" opacity="0.3"/>
+                    <circle cx={x} cy={y} r="2.5" fill="#888" opacity="0.5"/>
+                  </g>
+                )
+              })}
+            </g>
+
+            {/* Fragmented binary text suggesting data */}
+            <text x="60" y="50" fill="#c0392b" opacity="0.15" fontSize="11" fontFamily="monospace">01001000 01100001</text>
+            <text x="500" y="240" fill="#c0392b" opacity="0.15" fontSize="11" fontFamily="monospace">11010011 00101010</text>
+            <text x="80" y="220" fill="#888" opacity="0.1" fontSize="10" fontFamily="monospace">108 · 72 · 54 · 234</text>
+
+            {/* DMK side - fading blue nodes on left */}
+            <g opacity="0.3">
+              <circle cx="150" cy="80" r="12" fill="none" stroke="#3b82f6" strokeWidth="1.5"/>
+              <circle cx="150" cy="80" r="4" fill="#3b82f6"/>
+              <circle cx="120" cy="140" r="8" fill="none" stroke="#3b82f6" strokeWidth="1"/>
+              <circle cx="120" cy="140" r="3" fill="#3b82f6"/>
+              <circle cx="160" cy="190" r="10" fill="none" stroke="#3b82f6" strokeWidth="1"/>
+              <circle cx="160" cy="190" r="3" fill="#3b82f6"/>
+              <line x1="150" y1="80" x2="120" y2="140" stroke="#3b82f6" strokeWidth="0.5"/>
+              <line x1="120" y1="140" x2="160" y2="190" stroke="#3b82f6" strokeWidth="0.5"/>
+            </g>
+
+            {/* Vertical line dividing old and new */}
+            <line x1="270" y1="20" x2="270" y2="260" stroke="#333" strokeWidth="0.5" strokeDasharray="3,6"/>
+
+            {/* Labels */}
+            <text x="400" y="24" fill="#c0392b" opacity="0.5" fontSize="9" fontFamily="Arial" textAnchor="middle" letterSpacing="3">ALGORITHMIC INSURGENCY</text>
+            <text x="400" y="270" fill="#666" opacity="0.4" fontSize="8" fontFamily="Arial" textAnchor="middle" letterSpacing="2">TAMIL NADU 2026</text>
+          </svg>
+        </div>
+
         <div className="space-y-6 text-muted-foreground leading-relaxed">
 
           <p>The 2026 election results shocked a lot of people in Tamil Nadu. A strong anti-incumbency wave overturned what many believed was politically impossible: a government with welfare delivery, administrative resources, and five full years in power still suffered a major collapse.</p>

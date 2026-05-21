@@ -84,7 +84,55 @@ export default function SuccessTrapPage() {
           </p>
         </div>
 
-        <div className="space-y-10 text-muted-foreground leading-relaxed">
+        <div 
+        {/* Hero Illustration */}
+        <div className="w-full my-8 border border-border overflow-hidden" style={{height: "280px", background: "linear-gradient(135deg, #0a1a0a 0%, #0a0a1a 50%, #1a1a0a 100%)"}}>
+          <svg width="100%" height="100%" viewBox="0 0 800 280" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            {/* Declining bar chart - population vs seats */}
+            <g transform="translate(100, 40)">
+              <text x="0" y="-10" fill="#888" fontSize="9" fontFamily="Arial" letterSpacing="2" opacity="0.6">PERFORMANCE vs REPRESENTATION</text>
+
+              {/* Bars */}
+              {[
+                {x:0, h:180, label:"TFR
+Achievement", color:"#c0392b"},
+                {x:80, h:60, label:"Seats
+Allocation", color:"#444"},
+              ].map((b, i) => (
+                <g key={i}>
+                  <rect x={b.x} y={200-b.h} width="50" height={b.h} fill={b.color} opacity="0.7"/>
+                  <text x={b.x+25} y={215} fill="#666" fontSize="8" fontFamily="Arial" textAnchor="middle">{b.label}</text>
+                </g>
+              ))}
+
+              {/* Arrow showing inverse relationship */}
+              <path d="M 55 110 Q 80 140 105 170" stroke="#c0392b" strokeWidth="1.5" fill="none" strokeDasharray="4,3" opacity="0.6"/>
+              <text x="75" y="135" fill="#c0392b" fontSize="8" fontFamily="Arial" opacity="0.5">inverse</text>
+            </g>
+
+            {/* Right side - fragmented India outline suggestion */}
+            <g transform="translate(350, 30)" opacity="0.4">
+              {[0,1,2,3,4,5].map(i => (
+                <rect key={i}
+                  x={Math.sin(i*1.2)*60 + 150}
+                  y={i*35}
+                  width={80 - i*8}
+                  height="20"
+                  fill="none"
+                  stroke={i < 2 ? "#c0392b" : "#444"}
+                  strokeWidth="0.8"
+                  opacity={1 - i*0.12}
+                />
+              ))}
+              <text x="150" y="230" fill="#888" fontSize="8" fontFamily="Arial" textAnchor="middle" opacity="0.5" letterSpacing="2">DELIMITATION 2026</text>
+            </g>
+
+            {/* Bottom text */}
+            <text x="400" y="265" fill="#444" fontSize="8" fontFamily="Arial" textAnchor="middle" letterSpacing="3">THE SUCCESS TRAP · FISCAL FEDERALISM</text>
+          </svg>
+        </div>
+
+        className="space-y-10 text-muted-foreground leading-relaxed">
           <section>
             <h2 className="font-serif text-2xl text-foreground mb-4">The Historical Covenant and the Genesis of the Crisis</h2>
             <p>The foundation of this crisis lies in the country's post-independence population growth concern of the 1960s–70s, which brought food insecurity and economic instability. When the Union government set targets to overcome this, the actual "heavy lifting" of the national policy of population control was handed over to the states.</p>
