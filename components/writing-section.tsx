@@ -16,6 +16,14 @@ interface WritingItem {
 
 const writings: WritingItem[] = [
   {
+    title: "Understanding India's Workforce: Political Passivity and Policy Preferences",
+    category: "op-ed",
+    publication: "LinkedIn",
+    date: "May 2026",
+    excerpt: "82% of housewives describe themselves as not at all active in politics. Students at 68%. Yet Lokniti-CSDS data shows workers hold nuanced, balanced views on welfare and governance. What does political passivity really mean — and what does it tell us about Tamil Nadu's 2026 result?",
+    link: "https://www.linkedin.com/posts/manimalachithamanan_tamilnadupolitics-politicalanalysis-governance-share-7463362958190878720-Kv0v",
+  },
+  {
     title: "When the Algorithm Beat the Alliance: Tamil Nadu 2026",
     category: "essay",
     publication: "Political Analysis",
