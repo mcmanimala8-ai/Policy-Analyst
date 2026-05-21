@@ -1,4 +1,4 @@
-import { Linkedin } from "lucide-react"
+import { Linkedin, Download } from "lucide-react"
 import Image from "next/image"
 
 export function AboutSection() {
