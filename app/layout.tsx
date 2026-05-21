@@ -11,7 +11,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://manimalachithamanan.in'),
-  title: 'Manimala Chithamanan | Policy Researcher & Analyst',
+  title: 'Manimala Chithamanan | Policy Researcher · Political Analyst · Tamil Nadu',
   description: 'Policy researcher and analyst in Chennai working on welfare delivery, federalism, gender justice, public data, and platform economy regulation.',
   keywords: [
     'Manimala Chithamanan',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Manimala Chithamanan' }],
   openGraph: {
-    title: 'Manimala Chithamanan | Policy Researcher & Analyst',
+    title: 'Manimala Chithamanan | Policy Researcher · Political Analyst · Tamil Nadu',
     description: 'Research, writing, data analysis, and policy commentary on governance, federalism, welfare delivery, and public institutions.',
     url: 'https://manimalachithamanan.in',
     siteName: 'Manimala Chithamanan',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Manimala Chithamanan | Policy Researcher & Analyst',
+    title: 'Manimala Chithamanan | Policy Researcher · Political Analyst · Tamil Nadu',
     description: 'Policy research, writing, and data-led analysis on governance and public institutions.',
   },
 }
