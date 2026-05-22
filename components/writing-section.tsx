@@ -29,7 +29,7 @@ const writings: WritingItem[] = [
     publication: "LinkedIn",
     date: "May 2026",
     excerpt: "82% of housewives describe themselves as not at all active in politics. Students at 68%. Yet Lokniti-CSDS data shows workers hold nuanced, balanced views on welfare and governance. What does political passivity really mean and what does it tell us about Tamil Nadu's 2026 result?",
-    link: "https://www.linkedin.com/posts/manimalachithamanan_tamilnadupolitics-politicalanalysis-governance-share-7463362958190878720-Kv0v",
+    link: "https://www.linkedin.com/posts/manimalachithamanan_tamilnadupolitics-politicalanalysis-governance-activity-7463362961298919424-FaWb",
   },
   {
     title: "The Success Trap: Performance, Population and the Future of Indian Federalism",
@@ -61,7 +61,7 @@ const writings: WritingItem[] = [
     publication: "LinkedIn",
     date: "May 2026",
     excerpt: "82% of housewives describe themselves as not at all active in politics. Students at 68%. Yet Lokniti-CSDS data shows workers hold nuanced, balanced views on welfare and governance. What does political passivity really mean — and what does it tell us about Tamil Nadu's 2026 result?",
-    link: "https://www.linkedin.com/posts/manimalachithamanan_tamilnadupolitics-politicalanalysis-governance-share-7463362958190878720-Kv0v",
+    link: "https://www.linkedin.com/posts/manimalachithamanan_tamilnadupolitics-politicalanalysis-governance-activity-7463362961298919424-FaWb",
   },
   {
     title: "Success is a Liability: The 2026 'Performance Tax'",
