@@ -5,11 +5,11 @@ import { Menu, X, Download, Sun, Moon } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#writing", label: "Writing" },
-  { href: "#data", label: "Data" },
-  { href: "/education", label: "Education" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#writing", label: "Writing" },
+  { href: "/data", label: "Data" },
+  { href: "/data#education", label: "Education" },
+  { href: "/#contact", label: "Contact" },
 ]
 
 export function Navigation() {
@@ -43,7 +43,7 @@ export function Navigation() {
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <motion.a
-          href="#"
+          href="/"
           className="font-serif text-xl tracking-tight hover:text-accent transition-colors"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
