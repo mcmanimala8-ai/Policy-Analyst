@@ -4,40 +4,16 @@ import {
   Bar,
   BarChart,
   CartesianGrid,
-  Cell,
   Legend,
   Line,
   LineChart,
-  ReferenceLine,
   ResponsiveContainer,
   Tooltip,
   XAxis,
   YAxis,
 } from "recharts"
 
-type ChartType = "fertility" | "delimitation" | "education-reading" | "education-facilities"
-
-const tfrData = [
-  { state: "Bihar", tfr: 3.0, color: "#ef4444" },
-  { state: "UP", tfr: 2.4, color: "#f97316" },
-  { state: "Rajasthan", tfr: 2.0, color: "#eab308" },
-  { state: "MP", tfr: 2.0, color: "#eab308" },
-  { state: "India Avg", tfr: 2.0, color: "#6b7280" },
-  { state: "Gujarat", tfr: 1.9, color: "#84cc16" },
-  { state: "Karnataka", tfr: 1.7, color: "#22c55e" },
-  { state: "Kerala", tfr: 1.8, color: "#10b981" },
-  { state: "Tamil Nadu", tfr: 1.8, color: "#f59e0b" },
-]
-
-const delimitationData = [
-  { state: "UP", population: 16.5, currentSeats: 14.7 },
-  { state: "Bihar", population: 8.6, currentSeats: 7.3 },
-  { state: "Maharashtra", population: 9.3, currentSeats: 9.3 },
-  { state: "Tamil Nadu", population: 6.0, currentSeats: 7.3 },
-  { state: "Kerala", population: 2.8, currentSeats: 3.6 },
-  { state: "Karnataka", population: 5.2, currentSeats: 5.5 },
-  { state: "AP+TS", population: 7.0, currentSeats: 8.5 },
-]
+type ChartType = "education-reading" | "education-facilities"
 
 const educationReadingData = [
   { year: "2014", govt: 16.8, pvt: 14.4, all: 15.9 },
@@ -74,49 +50,6 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 }
 
 export function DataTopicChart({ type }: { type: ChartType }) {
-  if (type === "fertility") {
-    return (
-      <div className="mt-6 border border-border bg-background p-4 md:p-5">
-        <h3 className="font-serif text-xl mb-2">Total fertility rate by state</h3>
-        <p className="text-sm text-muted-foreground mb-5">NFHS-5, 2019-21. Replacement level marked at 2.1.</p>
-        <ResponsiveContainer width="100%" height={340}>
-          <BarChart data={tfrData} margin={{ top: 10, right: 10, left: -10, bottom: 55 }}>
-            <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.08)" />
-            <XAxis dataKey="state" tick={{ fill: "#94a3b8", fontSize: 11 }} angle={-35} textAnchor="end" interval={0} />
-            <YAxis tick={{ fill: "#94a3b8", fontSize: 11 }} domain={[0, 3.5]} />
-            <Tooltip content={<CustomTooltip />} />
-            <ReferenceLine y={2.1} stroke="#f59e0b" strokeDasharray="6 3" />
-            <Bar dataKey="tfr" name="TFR" radius={[3, 3, 0, 0]}>
-              {tfrData.map((entry) => (
-                <Cell key={entry.state} fill={entry.color} />
-              ))}
-            </Bar>
-          </BarChart>
-        </ResponsiveContainer>
-      </div>
-    )
-  }
-
-  if (type === "delimitation") {
-    return (
-      <div className="mt-6 border border-border bg-background p-4 md:p-5">
-        <h3 className="font-serif text-xl mb-2">Current seat share vs population share</h3>
-        <p className="text-sm text-muted-foreground mb-5">A simple way to see the representation tension behind delimitation.</p>
-        <ResponsiveContainer width="100%" height={340}>
-          <BarChart data={delimitationData} margin={{ top: 10, right: 10, left: -10, bottom: 55 }}>
-            <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.08)" />
-            <XAxis dataKey="state" tick={{ fill: "#94a3b8", fontSize: 11 }} angle={-35} textAnchor="end" interval={0} />
-            <YAxis tick={{ fill: "#94a3b8", fontSize: 11 }} />
-            <Tooltip content={<CustomTooltip />} />
-            <Legend wrapperStyle={{ color: "#94a3b8", fontSize: 12, paddingTop: 12 }} />
-            <Bar dataKey="currentSeats" name="Current seat share %" fill="#f59e0b" radius={[3, 3, 0, 0]} />
-            <Bar dataKey="population" name="Population share %" fill="#6b7280" radius={[3, 3, 0, 0]} />
-          </BarChart>
-        </ResponsiveContainer>
-      </div>
-    )
-  }
-
   if (type === "education-reading") {
     return (
       <div className="mt-8 border border-border bg-background p-4 md:p-5">
