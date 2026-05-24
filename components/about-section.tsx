@@ -11,7 +11,7 @@ export function AboutSection() {
               About
             </p>
             <h2 className="font-serif text-3xl md:text-4xl tracking-tight mb-8">
-              Policy Researcher · Political Analyst · Tamil Nadu
+              Founder & Principal Analyst at Manimalachithamanan.in
             </h2>
             <div className="relative w-48 h-48 md:w-full md:h-72 overflow-hidden border border-border">
               <Image
@@ -26,16 +26,15 @@ export function AboutSection() {
           <div className="md:col-span-8">
             <div className="prose prose-lg max-w-none">
               <p className="text-muted-foreground leading-relaxed mb-6">
-                I work on the unglamorous part of governance — the structures that decide whether a scheme actually reaches someone or quietly disappears in transit. Fiscal federalism, platform economy, last-mile delivery, state capacity. That's my space.
+                I run Manimalachithamanan.in as an independent Tamil Nadu governance desk focused on sub-national public sector operations, department-level execution, and political risk strategy. The work combines clean public data, field-level administrative understanding, and institutional writing.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                I'm an IMPRI Data Analytics Fellow (2026), based in Chennai. I've spent time inside a Government of Tamil Nadu programme managing coordination across 37,000+ school units, which gave me a ground-level education in how policy actually works — or doesn't. I also write. Political analysis, governance commentary, the occasional provocation.
+                My focus is the space between policy announcement and public outcome: fiscal flows, district implementation, school and welfare delivery systems, and the operational bottlenecks that shape political trust. The aim is to produce technical briefs that are useful to think tanks, public sector professionals, journalists, and political consultancy teams.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                MA in Politics & International Relations, Central University of Gujarat. BA in History, Stella Maris College.
+                I am an IMPRI Data Analytics Fellow (2026), based in Chennai, with experience inside a Government of Tamil Nadu programme coordinating across 37,000+ school units. MA in Politics & International Relations, Central University of Gujarat. BA in History, Stella Maris College.
               </p>
 
-              
               <a 
                 href="https://www.linkedin.com/in/manimala-c-29205b223/" 
                 target="_blank" 
