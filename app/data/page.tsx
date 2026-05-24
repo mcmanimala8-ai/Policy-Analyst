@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import { DataTopicChart } from "@/components/data-topic-chart"
 import { Database } from "lucide-react"
 
 const sidebarLinks = [
@@ -82,6 +83,7 @@ export default function DataPage() {
             <p className="text-muted-foreground leading-relaxed">
               The existing data lab charts compare Tamil Nadu's low fertility trajectory with India and selected states. The political question is whether demographic success becomes a representation penalty under future delimitation.
             </p>
+            <DataTopicChart type="fertility" />
           </section>
 
           <section id="delimitation" className="scroll-mt-28 border border-border bg-card p-6 md:p-8">
@@ -90,6 +92,7 @@ export default function DataPage() {
             <p className="text-muted-foreground leading-relaxed max-w-3xl">
               This section tracks the argument that states which reduced fertility earlier may lose relative parliamentary weight if future seat allocation follows population alone. It belongs here as a federal equity dataset, not only as a chart.
             </p>
+            <DataTopicChart type="delimitation" />
           </section>
 
           <section id="education" className="scroll-mt-28 border border-border bg-card p-6 md:p-8">
@@ -120,7 +123,10 @@ export default function DataPage() {
               ))}
             </div>
 
-            <div className="grid md:grid-cols-2 gap-4">
+            <DataTopicChart type="education-reading" />
+            <DataTopicChart type="education-facilities" />
+
+            <div className="grid md:grid-cols-2 gap-4 mt-8">
               <div className="border border-border bg-secondary/30 p-5">
                 <h3 className="font-serif text-xl mb-3">Success column</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
