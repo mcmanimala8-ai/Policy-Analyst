@@ -1,3 +1,5 @@
+import { DataDrawbacksSection } from "@/components/data-drawbacks-section"
+
 const highlights = [
   {
     label: "Access success",
@@ -142,6 +144,8 @@ export default function EducationRepositoryPage() {
           </div>
         </div>
       </section>
+
+      <DataDrawbacksSection />
 
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-6">
