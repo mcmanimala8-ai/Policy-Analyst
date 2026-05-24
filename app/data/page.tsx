@@ -1,6 +1,6 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { ArrowUpRight, Database } from "lucide-react"
+import { Database } from "lucide-react"
 
 const sidebarLinks = [
   { href: "#overview", label: "Overview" },
@@ -79,13 +79,9 @@ export default function DataPage() {
           <section id="fertility" className="scroll-mt-28 border border-border bg-card p-6 md:p-8">
             <p className="text-sm uppercase tracking-widest text-muted-foreground mb-4">Dataset theme</p>
             <h2 className="font-serif text-3xl tracking-tight mb-4">Fertility and federalism</h2>
-            <p className="text-muted-foreground leading-relaxed mb-6">
+            <p className="text-muted-foreground leading-relaxed">
               The existing data lab charts compare Tamil Nadu's low fertility trajectory with India and selected states. The political question is whether demographic success becomes a representation penalty under future delimitation.
             </p>
-            <a href="/#data" className="inline-flex items-center gap-2 text-sm text-accent hover:text-foreground transition-colors">
-              View current homepage charts
-              <ArrowUpRight className="w-4 h-4" />
-            </a>
           </section>
 
           <section id="delimitation" className="scroll-mt-28 border border-border bg-card p-6 md:p-8">
