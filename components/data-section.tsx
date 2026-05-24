@@ -42,6 +42,35 @@ const tfrTrend = [
 ]
 
 
+
+// ASER 2024: Tamil Nadu vs Key States - Learning Outcomes
+const aserReadingData = [
+  { state: "Tamil Nadu", std3: 12.0, std5: 35.6, std8: 62.2 },
+  { state: "Kerala", std3: 44.4, std5: 58.2, std8: 82.0 },
+  { state: "Karnataka", std3: 15.9, std5: 34.0, std8: 62.1 },
+  { state: "Andhra", std3: 14.7, std5: 37.5, std8: 53.0 },
+  { state: "Himachal", std3: 49.7, std5: 70.1, std8: 87.7 },
+  { state: "All India", std3: 27.0, std5: 48.8, std8: 71.1 },
+]
+
+// ASER Tamil Nadu Trends: % children reading at Std II level - Std III
+const aserTNTrendData = [
+  { year: "2014", govt: 16.8, pvt: 14.4, all: 15.9 },
+  { year: "2016", govt: 20.2, pvt: 13.5, all: 17.7 },
+  { year: "2018", govt: 11.6, pvt: 7.6, all: 10.2 },
+  { year: "2022", govt: 4.7, pvt: 5.0, all: 4.8 },
+  { year: "2024", govt: 13.2, pvt: 9.4, all: 12.0 },
+]
+
+// ASER Tamil Nadu: % Std V children reading at Std II level
+const aserStd5TrendData = [
+  { year: "2014", govt: 49.9, pvt: 40.2, all: 46.9 },
+  { year: "2016", govt: 49.4, pvt: 37.0, all: 45.3 },
+  { year: "2018", govt: 46.3, pvt: 28.8, all: 40.8 },
+  { year: "2022", govt: 26.0, pvt: 22.4, all: 25.2 },
+  { year: "2024", govt: 37.0, pvt: 32.3, all: 35.6 },
+]
+
 // 2026 TN Election: Seat swing from 2021 to 2026
 const electionSwingData = [
   { party: "TVK", seats2021: 0, seats2026: 108 },
@@ -68,7 +97,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
   return null
 }
 
-const charts = ["TFR by State", "TFR Trend", "Delimitation Impact", "2026 Election Swing"]
+const charts = ["TFR by State", "TFR Trend", "Delimitation Impact", "2026 Election Swing", "ASER: TN vs States", "ASER: TN Reading Trends"]
 
 export function DataSection() {
   const [activeChart, setActiveChart] = useState("TFR by State")
@@ -187,6 +216,46 @@ export function DataSection() {
           )}
 
           {/* Chart 3: Delimitation Impact */}
+          {activeChart === "ASER: TN vs States" && (
+            <div>
+              <p className="text-sm text-muted-foreground mb-2">% Children who can read Std II level text, 2024. Government schools. Tamil Nadu vs selected states.</p>
+              <p className="text-xs text-muted-foreground mb-6 italic">Source: ASER 2024 Report, Rural India</p>
+              <ResponsiveContainer width="100%" height={340}>
+                <BarChart data={aserReadingData} margin={{ top: 10, right: 10, left: -10, bottom: 20 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
+                  <XAxis dataKey="state" tick={{ fill: "var(--muted-foreground)", fontSize: 11 }} />
+                  <YAxis tick={{ fill: "var(--muted-foreground)", fontSize: 11 }} domain={[0, 100]} unit="%" />
+                  <Tooltip content={<CustomTooltip />} />
+                  <Legend wrapperStyle={{ color: "var(--muted-foreground)", fontSize: 12, paddingTop: 16 }} />
+                  <Bar dataKey="std3" name="Std III" fill="#c0392b" radius={[2,2,0,0]} />
+                  <Bar dataKey="std5" name="Std V" fill="#e67e22" radius={[2,2,0,0]} />
+                  <Bar dataKey="std8" name="Std VIII" fill="#f39c12" radius={[2,2,0,0]} />
+                </BarChart>
+              </ResponsiveContainer>
+              <p className="text-xs text-muted-foreground mt-4">Tamil Nadu puts nearly every child in school. But learning outcomes lag behind Kerala and the national average at Std III and Std V — the Dravidian success-failure paradox in one chart.</p>
+            </div>
+          )}
+
+          {activeChart === "ASER: TN Reading Trends" && (
+            <div>
+              <p className="text-sm text-muted-foreground mb-2">Tamil Nadu: % Std V children who can read Std II level text. Government vs Private schools. 2014–2024.</p>
+              <p className="text-xs text-muted-foreground mb-6 italic">Source: ASER 2024 Report, Rural Tamil Nadu</p>
+              <ResponsiveContainer width="100%" height={320}>
+                <LineChart data={aserStd5TrendData} margin={{ top: 10, right: 10, left: -10, bottom: 0 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
+                  <XAxis dataKey="year" tick={{ fill: "var(--muted-foreground)", fontSize: 12 }} />
+                  <YAxis tick={{ fill: "var(--muted-foreground)", fontSize: 12 }} domain={[0, 60]} unit="%" />
+                  <Tooltip content={<CustomTooltip />} />
+                  <Legend wrapperStyle={{ color: "var(--muted-foreground)", fontSize: 12, paddingTop: 16 }} />
+                  <Line type="monotone" dataKey="govt" name="Govt Schools" stroke="#c0392b" strokeWidth={2} dot={{ r: 4 }} />
+                  <Line type="monotone" dataKey="pvt" name="Private Schools" stroke="#3b82f6" strokeWidth={2} dot={{ r: 4 }} />
+                  <Line type="monotone" dataKey="all" name="All Children" stroke="#f39c12" strokeWidth={2} strokeDasharray="5 5" dot={{ r: 3 }} />
+                </LineChart>
+              </ResponsiveContainer>
+              <p className="text-xs text-muted-foreground mt-4">Learning outcomes collapsed in 2022 — likely pandemic fallout — and have partially recovered by 2024. Government school children consistently trail private school peers despite higher enrollment in government schools.</p>
+            </div>
+          )}
+
           {activeChart === "2026 Election Swing" && (
             <div>
               <p className="text-sm text-muted-foreground mb-6">Seat count comparison: 2021 vs 2026 Tamil Nadu Assembly Elections. TVK did not contest in 2021.</p>
