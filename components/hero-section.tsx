@@ -1,15 +1,15 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Download, ArrowRight } from "lucide-react"
+import { Download, ArrowRight, Database } from "lucide-react"
 
 const topics = [
-  "Policy Research",
-  "Data Analytics",
-  "State Planning",
-  "Governance",
-  "Federal Equity",
-  "Public Policy",
+  "Sub-National Governance",
+  "Tamil Nadu Data",
+  "Operational Blueprints",
+  "Political Risk",
+  "Policy Performance",
+  "District Execution",
 ]
 
 export function HeroSection() {
@@ -21,18 +21,14 @@ export function HeroSection() {
       
       <div className="max-w-6xl mx-auto px-6 py-20 relative z-10">
         <div className="flex flex-col gap-8">
-          {/* Open to Work Badge */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/30 text-green-400 text-sm font-medium">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-              </span>
-              Open to Work
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/30 text-accent text-sm font-medium">
+              <Database className="w-4 h-4" />
+              Independent Tamil Nadu Governance Desk
             </span>
           </motion.div>
 
@@ -46,22 +42,22 @@ export function HeroSection() {
           </motion.h1>
 
           <motion.p
-            className="text-2xl md:text-3xl text-accent font-serif"
+            className="text-2xl md:text-3xl text-accent font-serif max-w-4xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            Policy Researcher · Political Analyst · Tamil Nadu
+            Founder & Principal Analyst at Manimalachithamanan.in
           </motion.p>
 
           <motion.div 
-            className="max-w-xl"
+            className="max-w-3xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Making sense of the systems we live in.
+              Sub-national governance data, operational frameworks, and political risk strategy for Tamil Nadu's public sector systems.
             </p>
           </motion.div>
 
@@ -73,25 +69,26 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             <a
-              href="/Manimala_C_Resume.pdf"
-              download
+              href="/data"
               className="group inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-all hover:gap-3"
             >
-              <Download className="w-4 h-4" />
-              Download Resume
+              Open Data Lab
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
               href="#writing"
               className="group inline-flex items-center gap-2 px-6 py-3 border border-border text-sm font-medium hover:bg-secondary hover:border-accent transition-all"
             >
-              Read Articles
+              Read Briefs
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href="#contact"
+              href="/Manimala_C_Resume.pdf"
+              download
               className="inline-flex items-center gap-2 px-6 py-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              Get in Touch
+              <Download className="w-4 h-4" />
+              Resume
             </a>
           </motion.div>
         </div>
