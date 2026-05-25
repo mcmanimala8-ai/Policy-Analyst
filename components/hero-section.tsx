@@ -47,7 +47,7 @@ export function HeroSection() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            Founder & Principal Analyst at Manimalachithamanan.in
+            Founder, Tamil Nadu Governance Desk
           </motion.p>
 
           <motion.div 
@@ -57,7 +57,7 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Sub-national governance data, operational frameworks, and political risk strategy for Tamil Nadu's public sector systems.
+              Independent research on Tamil Nadu's governance systems — data, policy, and political analysis.
             </p>
           </motion.div>
 

@@ -97,10 +97,10 @@ const CustomTooltip = ({ active, payload, label }: any) => {
   return null
 }
 
-const charts = ["TFR by State", "TFR Trend", "Delimitation Impact", "2026 Election Swing", "ASER: TN vs States", "ASER: TN Reading Trends"]
+const charts = ["2026 Election", "ASER: TN vs States", "ASER: TN Trends", "TFR by State", "TFR Trend", "Delimitation"]
 
 export function DataSection() {
-  const [activeChart, setActiveChart] = useState("TFR by State")
+  const [activeChart, setActiveChart] = useState("2026 Election")
 
   return (
     <section id="data" className="py-24 border-b border-border">
@@ -114,8 +114,7 @@ export function DataSection() {
             Policy in Numbers
           </h2>
           <p className="text-muted-foreground max-w-xl leading-relaxed">
-            Visualising the data behind India's most pressing governance debates —
-            delimitation, demographic dividend, and federal equity.
+            Tamil Nadu in numbers — elections, education, demographics, and federal equity. All charts sourced from official government data.
           </p>
         </div>
 
@@ -236,7 +235,7 @@ export function DataSection() {
             </div>
           )}
 
-          {activeChart === "ASER: TN Reading Trends" && (
+          {activeChart === "ASER: TN Trends" && (
             <div>
               <p className="text-sm text-muted-foreground mb-2">Tamil Nadu: % Std V children who can read Std II level text. Government vs Private schools. 2014–2024.</p>
               <p className="text-xs text-muted-foreground mb-6 italic">Source: ASER 2024 Report, Rural Tamil Nadu</p>
@@ -256,7 +255,7 @@ export function DataSection() {
             </div>
           )}
 
-          {activeChart === "2026 Election Swing" && (
+          {activeChart === "2026 Election" && (
             <div>
               <p className="text-sm text-muted-foreground mb-6">Seat count comparison: 2021 vs 2026 Tamil Nadu Assembly Elections. TVK did not contest in 2021.</p>
               <ResponsiveContainer width="100%" height={320}>
@@ -274,7 +273,7 @@ export function DataSection() {
             </div>
           )}
 
-          {activeChart === "Delimitation Impact" && (
+          {activeChart === "Delimitation" && (
             <div>
               <h3 className="font-serif text-xl mb-2">
                 Delimitation 2026: Who Gains, Who Loses?

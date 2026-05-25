@@ -11,7 +11,7 @@ export function AboutSection() {
               About
             </p>
             <h2 className="font-serif text-3xl md:text-4xl tracking-tight mb-8">
-              Founder & Principal Analyst at Manimalachithamanan.in
+              Founder, Tamil Nadu Governance Desk
             </h2>
             <div className="relative w-48 h-48 md:w-full md:h-72 overflow-hidden border border-border">
               <Image
@@ -26,7 +26,7 @@ export function AboutSection() {
           <div className="md:col-span-8">
             <div className="prose prose-lg max-w-none">
               <p className="text-muted-foreground leading-relaxed mb-6">
-                I run Manimalachithamanan.in as an independent Tamil Nadu governance desk focused on sub-national public sector operations, department-level execution, and political risk strategy. The work combines clean public data, field-level administrative understanding, and institutional writing.
+                Manimalachithamanan.in is an independent Tamil Nadu governance desk — tracking the space between policy announcement and public outcome. The work combines public data, field-level administrative understanding, and direct political analysis.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 My focus is the space between policy announcement and public outcome: fiscal flows, district implementation, school and welfare delivery systems, and the operational bottlenecks that shape political trust. The aim is to produce technical briefs that are useful to think tanks, public sector professionals, journalists, and political consultancy teams.
