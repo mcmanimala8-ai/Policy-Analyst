@@ -106,13 +106,13 @@ export function DataSection() {
     <section id="data" className="py-24 border-b border-border">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
-        <div className="mb-12">
+        <div className="mb-12 pt-8 border-b border-border pb-10">
           <p className="text-sm uppercase tracking-widest text-muted-foreground mb-4">
-            Data Lab
+            Tamil Nadu Governance Desk
           </p>
-          <h2 className="font-serif text-3xl md:text-4xl tracking-tight mb-4">
-            Policy in Numbers
-          </h2>
+          <h1 className="font-serif text-4xl md:text-5xl tracking-tight mb-4">
+            Data Lab
+          </h1>
           <p className="text-muted-foreground max-w-xl leading-relaxed">
             Tamil Nadu in numbers — elections, education, demographics, and federal equity. All charts sourced from official government data.
           </p>
