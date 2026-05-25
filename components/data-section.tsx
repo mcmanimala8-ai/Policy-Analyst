@@ -214,10 +214,13 @@ export function DataSection() {
             </div>
           )}
 
-          {/* Chart 3: Delimitation Impact */}
+          {/* Chart 3: ASER TN vs States */}
           {activeChart === "ASER: TN vs States" && (
             <div>
-              <p className="text-sm text-muted-foreground mb-2">% Children who can read Std II level text, 2024. Government schools. Tamil Nadu vs selected states.</p>
+              <h3 className="font-serif text-xl mb-2">
+                Learning Levels: Tamil Nadu vs. Southern &amp; Major States
+              </h3>
+              <p className="text-sm text-muted-foreground mb-2">An analytical breakdown comparing Tamil Nadu's foundation literacy and basic arithmetic among children aged 8–14 with neighbouring southern peers and national norms, using ASER 2024 survey data.</p>
               <p className="text-xs text-muted-foreground mb-6 italic">Source: ASER 2024 Report, Rural India</p>
               <ResponsiveContainer width="100%" height={340}>
                 <BarChart data={aserReadingData} margin={{ top: 10, right: 10, left: -10, bottom: 20 }}>
@@ -237,7 +240,10 @@ export function DataSection() {
 
           {activeChart === "ASER: TN Trends" && (
             <div>
-              <p className="text-sm text-muted-foreground mb-2">Tamil Nadu: % Std V children who can read Std II level text. Government vs Private schools. 2014–2024.</p>
+              <h3 className="font-serif text-xl mb-2">
+                The Decadal Trajectory: Foundation Skills Fluctuations in TN
+              </h3>
+              <p className="text-sm text-muted-foreground mb-2">Mapping school learning trends from 2014 through 2024 in rural Tamil Nadu. Highlighted drops during critical Covid semesters and the partial rebounds spurred by state interventions like Illam Thedi Kalvi.</p>
               <p className="text-xs text-muted-foreground mb-6 italic">Source: ASER 2024 Report, Rural Tamil Nadu</p>
               <ResponsiveContainer width="100%" height={320}>
                 <LineChart data={aserStd5TrendData} margin={{ top: 10, right: 10, left: -10, bottom: 0 }}>
@@ -257,7 +263,10 @@ export function DataSection() {
 
           {activeChart === "2026 Election" && (
             <div>
-              <p className="text-sm text-muted-foreground mb-6">Seat count comparison: 2021 vs 2026 Tamil Nadu Assembly Elections. TVK did not contest in 2021.</p>
+              <h3 className="font-serif text-xl mb-2">
+                Polarization and Pluralism: 2026 TN Electoral Projections
+              </h3>
+              <p className="text-sm text-muted-foreground mb-6">A data-driven model analysing multi-cornered seat distributions and coalition vote-shares shaping the 2026 Tamil Nadu Legislative Assembly election. Seat count comparison: 2021 vs 2026. TVK did not contest in 2021.</p>
               <ResponsiveContainer width="100%" height={320}>
                 <BarChart data={electionSwingData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
