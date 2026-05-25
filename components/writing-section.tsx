@@ -47,15 +47,7 @@ const writings: WritingItem[] = [
     excerpt: "As Tamil Nadu State Elections 2026 approach, a structural shift is happening between the Union, State, and Local Bodies. Three policy red flags — the MLA patronage trap, fiscal federalism vs. direct grants, and the lawmaker gap — reveal why subsidiarity is the answer for TN's trillion-dollar ambitions.",
     link: "https://www.linkedin.com/posts/manimala-c-29205b223_publicpolicy-delimitation2026-tfr-ugcPost-7450590915561304064-knwU?utm_source=share&utm_medium=member_android&rcm=ACoAADgSEM4BK-2mNL9kuSc9oh9Aj_5lCkImQu0",
   },
-  {
-    title: "Understanding India's Workforce: Political Passivity and Policy Preferences",
-    category: "op-ed",
-    publication: "LinkedIn",
-    date: "May 2026",
-    excerpt: "82% of housewives describe themselves as not at all active in politics. Students at 68%. Yet Lokniti-CSDS data shows workers hold nuanced, balanced views on welfare and governance. What does political passivity really mean — and what does it tell us about Tamil Nadu's 2026 result?",
-    link: "https://www.linkedin.com/posts/manimalachithamanan_tamilnadupolitics-politicalanalysis-governance-activity-7463362961298919424-FaWb",
-  },
-  {
+{
     title: "Success is a Liability: The 2026 'Performance Tax'",
     category: "op-ed",
     publication: "LinkedIn",
