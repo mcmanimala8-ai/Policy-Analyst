@@ -190,20 +190,74 @@ export function IntercasteMarriagePipeline() {
         <div className="border border-border bg-card p-6 md:p-8 space-y-6">
           <div>
             <h2 className="font-serif text-2xl mb-4">
-              Explaining the Paradox: Three Hypotheses
+              Explaining the Paradox: Why Demographics Matter More Than You Think
             </h2>
+
+            <div className="bg-card border border-border p-6 rounded-lg mb-6">
+              <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3">Tamil Nadu's Caste Structure (Census 2011)</p>
+              <div className="grid grid-cols-4 gap-3">
+                <div className="bg-secondary/20 p-3 rounded text-center">
+                  <p className="font-bold text-2xl text-accent">70%</p>
+                  <p className="text-xs text-muted-foreground">OBC</p>
+                </div>
+                <div className="bg-secondary/20 p-3 rounded text-center">
+                  <p className="font-bold text-2xl text-amber-600">15%</p>
+                  <p className="text-xs text-muted-foreground">SC</p>
+                </div>
+                <div className="bg-secondary/20 p-3 rounded text-center">
+                  <p className="font-bold text-2xl text-cyan-600">3%</p>
+                  <p className="text-xs text-muted-foreground">UC</p>
+                </div>
+                <div className="bg-secondary/20 p-3 rounded text-center">
+                  <p className="font-bold text-2xl text-orange-600">1%</p>
+                  <p className="text-xs text-muted-foreground">ST</p>
+                </div>
+              </div>
+              <p className="text-xs text-muted-foreground mt-4 italic">
+                This dominance of a single category (OBC) changes the math of intercaste marriage fundamentally.
+              </p>
+            </div>
 
             <div className="space-y-4">
               <div className="border border-border bg-background p-5 rounded">
                 <h3 className="font-semibold text-lg mb-2 flex items-start gap-2">
                   <span className="text-accent font-bold">1.</span>
-                  <span>Demographic Structure Hypothesis</span>
+                  <span>Demographic Structure Hypothesis: The OBC Marriage Trap</span>
                 </h3>
-                <p className="text-sm text-muted-foreground mb-3">
-                  TN is 70%+ OBC, only ~15% SC, ~3% UC, ~1% ST. With such skewed distribution, most "within-caste" marriages are between OBCs. The "low within-caste rate" at sub-caste level might be hidden.
+                <p className="text-sm text-muted-foreground mb-4">
+                  TN's caste distribution is radically skewed: 70%+ OBC, ~15% SC, ~3% UC, ~1% ST. This creates a mathematical constraint on intercaste marriage.
                 </p>
+
+                <div className="bg-secondary/10 p-4 rounded mb-4 text-sm space-y-3">
+                  <div>
+                    <p className="font-semibold text-foreground mb-2">The Mechanics:</p>
+                    <p className="text-muted-foreground">
+                      When 70% of the population is OBC, simple probability means most people (especially OBCs) will marry within their own caste just by numbers. An OBC woman meets OBC men more often than SC or UC men. So even if she has <strong>no preference for caste endogamy</strong>, she'll likely end up marrying OBC.
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground mb-2">Compare to Other States:</p>
+                    <p className="text-muted-foreground">
+                      In UP, Bihar, etc.: SC ~20%, ST ~15%, OBC ~45%, UC ~20%. More even distribution = more cross-caste marriage opportunities = higher "intercaste" rates, even if people are equally caste-conscious.
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground mb-2">TN's Hidden Diversity:</p>
+                    <p className="text-muted-foreground">
+                      The 70% OBC label hides 100+ different jatis (sub-castes): Vellalas, Muppanar, Vaniyars, Padayatchis, etc. Some of these jatis are small and dispersed. Within-OBC marriage is actually <strong>cross-jati marriage</strong> — real caste boundary crossing that doesn't show up in the aggregate "same-caste" number.
+                    </p>
+                  </div>
+                </div>
+
                 <div className="bg-secondary/30 p-3 rounded text-xs text-muted-foreground italic">
-                  <strong>Need to test:</strong> Sub-caste/jati endogamy rates in TN. Do OBCs marry within their own jati? Are there hidden caste boundaries within the OBC category?
+                  <strong>The Reddit Argument:</strong> If you look at within-OBC jati endogamy, TN might show lower rates than other states. But the IHDS asks "Did you marry outside your <strong>caste</strong>?" not outside your <strong>jati</strong>. So 70% of "within-caste" marriages are actually between different jatis within the OBC category — real caste boundary crossing.
+                </div>
+
+                <div className="border-t border-border pt-3 mt-3">
+                  <p className="font-semibold text-foreground mb-2 text-xs uppercase tracking-widest">What This Means</p>
+                  <p className="text-xs text-muted-foreground">
+                    TN's 97.4% "same-caste" rate might not reflect strong caste endogamy. It could reflect demographic reality: with 70% OBC, most marriages will be "OBC-OBC". But if those OBC marriages are between Vellalas and Vaniyars (different jatis), they're actually intercaste unions.
+                  </p>
                 </div>
               </div>
 
@@ -236,24 +290,35 @@ export function IntercasteMarriagePipeline() {
           </div>
 
           <div className="border-t border-border pt-6">
-            <h3 className="font-serif text-xl mb-4">Most Likely Reality</h3>
+            <h3 className="font-serif text-xl mb-4">Most Likely Reality: The OBC-Driven Endogamy</h3>
             <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-              All three factors are probably at play. TN's 97.4% same-caste marriage rate reflects:
+              TN's 97.4% same-caste marriage rate is largely driven by demographics, not necessarily caste rigidity. Here's what's likely:
             </p>
-            <ul className="space-y-2 text-sm text-muted-foreground">
+            <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex gap-3">
-                <span className="text-accent">•</span>
-                <span><strong>Real caste endogamy:</strong> People still prefer marrying within caste, even if they vote for anti-caste parties.</span>
+                <span className="text-accent font-bold">1.</span>
+                <span><strong>OBC marriage dominance:</strong> 70% of the population is OBC. So 70% of all marriages are OBC-OBC. This is not caste endogamy in the Varna sense (upper vs lower), but jati (sub-caste) boundaries matter.</span>
               </li>
               <li className="flex gap-3">
-                <span className="text-accent">•</span>
-                <span><strong>Hidden sub-caste boundaries:</strong> The 70% OBC population may have strong jati (sub-caste) boundaries that function like caste.</span>
+                <span className="text-accent font-bold">2.</span>
+                <span><strong>Within-OBC jati variation:</strong> 100+ jatis exist within TN's OBC category. Some may be rigidly endogamous (marry within jati). Others may be more open. The aggregate "97.4%" masks this diversity.</span>
               </li>
               <li className="flex gap-3">
-                <span className="text-accent">•</span>
-                <span><strong>Measurement issues:</strong> The way the question is asked might make TN look worse than it is.</span>
+                <span className="text-accent font-bold">3.</span>
+                <span><strong>SC/UC margins are small:</strong> Only 15% SC and 3% UC. Even if they all married out, it would move the needle by ~18 percentage points. Not enough to explain the gap between TN (97.4%) and Kerala (78.7%).</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-accent font-bold">4.</span>
+                <span><strong>Hidden caste boundaries:</strong> The real question is: within that 70% OBC population, how much jati endogamy is there? Until we have that data, we can't say whether TN's endogamy is driven by rigid caste practice or demographic structure.</span>
               </li>
             </ul>
+
+            <div className="mt-6 p-4 bg-secondary/20 border border-border rounded">
+              <p className="text-xs uppercase tracking-widest text-muted-foreground mb-2">The Data Gap</p>
+              <p className="text-sm text-foreground">
+                The IHDS doesn't publish sub-caste/jati-level marriage data by state. So we can't definitively say whether TN's high endogamy reflects strong caste boundaries or strong OBC population share. This is a genuinely important unknown — and it's honest to name it.
+              </p>
+            </div>
           </div>
         </div>
       )}
