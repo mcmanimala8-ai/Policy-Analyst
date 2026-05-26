@@ -303,7 +303,7 @@ export function SocialJusticePipeline() {
           <div className="space-y-2 text-sm text-muted-foreground">
             <p>✓ <strong>Dedicated judges:</strong> One special court per district, not shared with regular criminal docket.</p>
             <p>✓ <strong>Witness protection wage:</strong> Pay victims/witnesses for time lost to court. Remove economic coercion to abandon cases.</p>
-            <p>✓ <strong>Case management:</strong> Mandate monthly hearings, eliminate continuances, move cases in <2 years not 5.</p>
+            <p>✓ <strong>Case management:</strong> Mandate monthly hearings, eliminate continuances, move cases in {`<`}2 years not 5.</p>
             <p>✓ <strong>Central support:</strong> This requires fiscal support from Centre. Does it match TN's effort in police investigation?</p>
           </div>
         </div>
