@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export const metadata = {
   title: "Social Justice in Tamil Nadu | Tamil Nadu Governance Desk",
-  description: "Two case studies on social justice in Tamil Nadu: SC/ST convictions and intercaste marriage. Where ideology meets reality.",
+  description: "Data-driven analysis of social justice in Tamil Nadu: SC/ST convictions and the justice pipeline. Where ideology meets reality.",
 }
 
 export default function SocialJusticeHubPage() {
@@ -65,48 +65,7 @@ export default function SocialJusticeHubPage() {
                 </div>
               </div>
             </Link>
-
-            {/* Case Study 2: Marriage */}
-            <Link href="/intercaste-marriage" className="group">
-              <div className="border border-border bg-card hover:border-accent transition-colors p-8 rounded-lg space-y-4">
-                <div>
-                  <p className="text-xs uppercase tracking-widest text-muted-foreground mb-2">Case Study 2</p>
-                  <h2 className="font-serif text-3xl group-hover:text-accent transition-colors">
-                    Caste and Marriage: The Dravidian Paradox
-                  </h2>
-                </div>
-                
-                <p className="text-muted-foreground">
-                  Tamil Nadu claims to be the birthplace of anti-caste politics. Yet IHDS data shows TN has the strongest caste boundaries in Indian marriage — the lowest intercaste rates, virtually no cross-caste unions. The ideology of breaking caste hasn't translated to marriage, the deepest kinship practice.
-                </p>
-
-                <div className="grid md:grid-cols-3 gap-4 pt-4 border-t border-border">
-                  <div>
-                    <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1">Same-Caste Marriage</p>
-                    <p className="font-semibold text-lg">97.4%</p>
-                    <p className="text-xs text-muted-foreground">Highest in India</p>
-                  </div>
-                  <div>
-                    <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1">Intercaste Rate</p>
-                    <p className="font-semibold text-lg">2.6%</p>
-                    <p className="text-xs text-muted-foreground">Lowest in India</p>
-                  </div>
-                  <div>
-                    <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1">National Comparison</p>
-                    <p className="font-semibold text-lg">TN vs 9.9%</p>
-                    <p className="text-xs text-muted-foreground">India average</p>
-                  </div>
-                </div>
-
-                <div className="pt-4">
-                  <p className="text-sm font-semibold text-accent group-hover:underline">
-                    Explore the full analysis →
-                  </p>
-                </div>
-              </div>
-            </Link>
-
-            {/* What This Means */}
+{/* What This Means */}
             <div className="border border-border bg-card p-8 rounded-lg space-y-6">
               <div>
                 <h3 className="font-serif text-2xl mb-4">What These Two Cases Tell Us</h3>
@@ -138,11 +97,7 @@ export default function SocialJusticeHubPage() {
                 The Social Justice domain will expand to include:
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li className="flex gap-2">
-                  <span className="text-accent">→</span>
-                  <span><strong>Intercaste Marriage Trends:</strong> Has the rate changed over time? Are younger cohorts marrying out more?</span>
-                </li>
-                <li className="flex gap-2">
+<li className="flex gap-2">
                   <span className="text-accent">→</span>
                   <span><strong>Caste-Wise Conviction Rates:</strong> Do SC victims see higher conviction rates than OBCs? Which castes see justice?</span>
                 </li>
