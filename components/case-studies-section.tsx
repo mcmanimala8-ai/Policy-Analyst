@@ -6,18 +6,6 @@ import { ArrowRight } from "lucide-react"
 export function CaseStudiesSection() {
   const caseStudies = [
     {
-      id: "social-justice",
-      title: "SC/ST Justice: The Conviction Pipeline Collapse",
-      subtitle: "Social Justice Domain",
-      description: "Tamil Nadu files more SC/ST atrocity cases than most states. Police investigate seriously. But only 8.5% end in conviction. Where does justice disappear?",
-      findings: [
-        "100 FIRs → 79.7% charge sheets → 23.4% trials → 8.5% convictions",
-        "Every year in trial = 4x lower conviction rate",
-        "Rural districts worst hit: only 4-7% convictions"
-      ],
-      cta: "Read Case Study"
-    },
-    {
       id: "caste-marriage",
       title: "Caste & Marriage: The Dravidian Paradox",
       subtitle: "Social Justice Domain",
