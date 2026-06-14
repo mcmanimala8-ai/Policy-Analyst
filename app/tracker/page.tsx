@@ -4,9 +4,9 @@ import { TrackerHero } from "@/components/tracker/tracker-hero"
 import { TrackerDashboard } from "@/components/tracker/tracker-dashboard"
 
 export const metadata = {
-  title: "TN MP Watch | Tamil Nadu Governance Desk",
+  title: "Tamil Nadu MP Tracker (18th Lok Sabha) | Tamil Nadu Governance Desk",
   description:
-    "Track how Tamil Nadu's 39 Lok Sabha MPs perform across attendance, questions, debates, and MPLADS fund utilisation. Built for the 2029 elections.",
+    "An independent tracker of the parliamentary performance of Tamil Nadu's 39 Members of Parliament in the 18th Lok Sabha.",
 }
 
 export default function TrackerPage() {
