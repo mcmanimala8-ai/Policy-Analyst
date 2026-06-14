@@ -1,20 +1,19 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { TrackerHero } from "@/components/tracker/tracker-hero"
-import { TrackerDashboard } from "@/components/tracker/tracker-dashboard"
+import { MPTracker } from "@/components/mp-tracker"
 
 export const metadata = {
-  title: "Tamil Nadu MP Tracker (18th Lok Sabha) | Tamil Nadu Governance Desk",
-  description:
-    "An independent tracker of the parliamentary performance of Tamil Nadu's 39 Members of Parliament in the 18th Lok Sabha.",
+  title: "MP Watch | Manimala Chithamanan",
+  description: "Live legislative performance tracker for all 39 Tamil Nadu Lok Sabha MPs — attendance, questions, debates, and bills.",
 }
 
 export default function TrackerPage() {
   return (
-    <main>
+    <main className="min-h-screen bg-background text-foreground">
       <Navigation />
-      <TrackerHero />
-      <TrackerDashboard />
+      <div className="pt-20">
+        <MPTracker />
+      </div>
       <Footer />
     </main>
   )
