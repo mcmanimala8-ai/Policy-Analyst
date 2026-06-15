@@ -257,10 +257,10 @@ function TNMap({ data, selected, onSelect }: { data: ScoredMP[]; selected: Score
             return (
               <path key={name} d={d}
                 fill={mp ? pc(mp.party).mapColor : "#334155"}
-                fillOpacity={isSelected ? 1 : 0.55}
-                stroke={isSelected ? "#fff" : "#0f172a"}
-                strokeWidth={isSelected ? 1.5 : 0.6}
-                className="cursor-pointer transition-all duration-150"
+                fillOpacity={isSelected ? 1 : 0.85}
+                stroke={isSelected ? "#fff" : "#1e293b"}
+                strokeWidth={isSelected ? 2 : 1.2}
+                className="cursor-pointer transition-all duration-150" vectorEffect="non-scaling-stroke"
                 onMouseEnter={e => {
                   const r = svgRef.current?.getBoundingClientRect();
                   if (r) setTooltip({ x: e.clientX - r.left + 8, y: e.clientY - r.top - 32, text: mp ? `${mp.constituency} — ${mp.mp_name} | Score: ${mp.score}/100` : name });
