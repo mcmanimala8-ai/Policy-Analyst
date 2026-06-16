@@ -1,19 +1,17 @@
+import { HeroSection } from "@/components/hero-section"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { MPTracker } from "@/components/mp-tracker"
 
 export const metadata = {
-  title: "MP Watch | Manimala Chithamanan",
-  description: "Live legislative performance tracker for all 39 Tamil Nadu Lok Sabha MPs.",
+  title: "Manimala Chithamanan | Tamil Nadu Governance Data & Political Risk Strategy",
+  description: "Independent Tamil Nadu governance desk focused on sub-national public sector data, operational frameworks, technical policy briefs, and political risk strategy.",
 }
 
-export default function TrackerPage() {
+export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <Navigation />
-      <div className="pt-20">
-        <MPTracker />
-      </div>
+      <HeroSection />
       <Footer />
     </main>
   )
