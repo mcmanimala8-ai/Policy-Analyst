@@ -145,7 +145,7 @@ const MP_BRIEFS: Record<string, string> = {
 
 // ── MP Photos — add filename when photo is available ─────────────────────────
 const MP_PHOTOS: Record<string, string> = {
-  "Thoothukkudi": "/kanimozhi.jpg",
+  "Thoothukkudi": "/kanimozhi-121234996-16x9_0.avif",
 };
 const STATE_AVG = { attendance: 79.2, questions_asked: 113, debates_participated: 24 };
 
