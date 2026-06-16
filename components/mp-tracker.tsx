@@ -142,10 +142,7 @@ const MP_BRIEFS: Record<string, string> = {
   "Thoothukkudi": "/tracker/kanimozhi-thoothukkudi",
 };
 
-// ── MP Photos — add filename when photo is available ─────────────────────────
-const MP_PHOTOS: Record<string, string> = {
-  "Thoothukkudi": "/kanimozhi.jpg",
-};
+
 const STATE_AVG = { attendance: 79.2, questions_asked: 113, debates_participated: 24 };
 
 // ── Sub-components ────────────────────────────────────────────────────────────
@@ -466,18 +463,9 @@ export function MPTracker() {
                   <div className="rounded-2xl border border-slate-700 bg-gradient-to-br from-slate-800 to-slate-900 p-6 flex flex-col justify-between">
                     <div className="flex items-start justify-between gap-4 mb-4">
                       <div className="flex-1 min-w-0">
-                        {/* Photo or fallback icon */}
-                        {MP_PHOTOS[selected.constituency] ? (
-                          <img
-                            src={MP_PHOTOS[selected.constituency]}
-                            alt={selected.mp_name}
-                            className="w-full h-32 rounded-xl object-cover object-top mb-3 border border-slate-600"
-                          />
-                        ) : (
-                          <div className="w-16 h-16 rounded-xl bg-slate-700 flex items-center justify-center mb-3">
+                        <div className="w-16 h-16 rounded-xl bg-slate-700 flex items-center justify-center mb-3">
                             <User className="w-7 h-7 text-slate-300" />
                           </div>
-                        )}
                         <h2 className="text-xl font-bold text-white leading-tight mb-1">{selected.mp_name}</h2>
                         <p className="text-slate-400 text-sm mb-3">{selected.constituency} Constituency</p>
                         <PartyBadge party={selected.party} />
