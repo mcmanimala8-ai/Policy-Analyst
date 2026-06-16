@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect, useRef, useMemo } from "react";
@@ -145,7 +144,7 @@ const MP_BRIEFS: Record<string, string> = {
 
 // ── MP Photos — add filename when photo is available ─────────────────────────
 const MP_PHOTOS: Record<string, string> = {
-  "Thoothukkudi": "/kanimozhi-121234996-16x9_0.avif",
+  "Thoothukkudi": "/kanimozhi.jpg",
 };
 const STATE_AVG = { attendance: 79.2, questions_asked: 113, debates_participated: 24 };
 
@@ -472,7 +471,7 @@ export function MPTracker() {
                           <img
                             src={MP_PHOTOS[selected.constituency]}
                             alt={selected.mp_name}
-                            className="w-16 h-16 rounded-xl object-cover object-top mb-3 border border-slate-600"
+                            className="w-full h-32 rounded-xl object-cover object-top mb-3 border border-slate-600"
                           />
                         ) : (
                           <div className="w-16 h-16 rounded-xl bg-slate-700 flex items-center justify-center mb-3">
