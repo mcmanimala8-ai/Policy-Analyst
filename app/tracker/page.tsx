@@ -1,21 +1,6 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import dynamic from "next/dynamic"
-
-const MPTracker = dynamic(
-  () => import("@/components/mp-tracker").then(m => ({ default: m.MPTracker })),
-  { 
-    ssr: false,
-    loading: () => (
-      <div className="bg-slate-900 min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-8 h-8 border-2 border-slate-600 border-t-slate-300 rounded-full animate-spin mx-auto mb-3" />
-          <p className="text-sm text-slate-400">Loading MP Watch…</p>
-        </div>
-      </div>
-    )
-  }
-)
+import { MPTracker } from "@/components/mp-tracker"
 
 export const metadata = {
   title: "MP Watch | Manimala Chithamanan",
