@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect, useRef, useMemo } from "react";
@@ -136,6 +137,16 @@ const PARTY_CONFIG: Record<string, { bg: string; text: string; border: string; d
 const DP = { bg: "bg-slate-500/15", text: "text-slate-300", border: "border-slate-500/30", dot: "bg-slate-400", mapColor: "#94a3b8" };
 const pc = (p: string) => PARTY_CONFIG[p] ?? DP;
 const norm = (s: string) => s.toLowerCase().replace(/[^a-z]/g, "");
+
+// ── MP Briefs — add slug when brief is published ──────────────────────────────
+const MP_BRIEFS: Record<string, string> = {
+  "Thoothukkudi": "/tracker/kanimozhi-thoothukkudi",
+};
+
+// ── MP Photos — add filename when photo is available ─────────────────────────
+const MP_PHOTOS: Record<string, string> = {
+  "Thoothukkudi": "/kanimozhi.jpg",
+};
 const STATE_AVG = { attendance: 79.2, questions_asked: 113, debates_participated: 24 };
 
 // ── Sub-components ────────────────────────────────────────────────────────────
@@ -455,10 +466,19 @@ export function MPTracker() {
                   {/* Identity + Score */}
                   <div className="rounded-2xl border border-slate-700 bg-gradient-to-br from-slate-800 to-slate-900 p-6 flex flex-col justify-between">
                     <div className="flex items-start justify-between gap-4 mb-4">
-                      <div>
-                        <div className="w-12 h-12 rounded-xl bg-slate-700 flex items-center justify-center mb-3">
-                          <User className="w-6 h-6 text-slate-300" />
-                        </div>
+                      <div className="flex-1 min-w-0">
+                        {/* Photo or fallback icon */}
+                        {MP_PHOTOS[selected.constituency] ? (
+                          <img
+                            src={MP_PHOTOS[selected.constituency]}
+                            alt={selected.mp_name}
+                            className="w-16 h-16 rounded-xl object-cover object-top mb-3 border border-slate-600"
+                          />
+                        ) : (
+                          <div className="w-16 h-16 rounded-xl bg-slate-700 flex items-center justify-center mb-3">
+                            <User className="w-7 h-7 text-slate-300" />
+                          </div>
+                        )}
                         <h2 className="text-xl font-bold text-white leading-tight mb-1">{selected.mp_name}</h2>
                         <p className="text-slate-400 text-sm mb-3">{selected.constituency} Constituency</p>
                         <PartyBadge party={selected.party} />
@@ -478,6 +498,16 @@ export function MPTracker() {
                       <p className="text-xs font-semibold tracking-widest uppercase text-slate-400 mb-1">Parliamentary Tenure</p>
                       <p className="text-sm font-bold text-slate-200">{selected.term}</p>
                     </div>
+                    {/* Brief link — shown only when brief exists */}
+                    {MP_BRIEFS[selected.constituency] && (
+                      <a
+                        href={MP_BRIEFS[selected.constituency]}
+                        className="mt-4 flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-xl bg-indigo-500/15 border border-indigo-500/30 text-indigo-400 text-xs font-semibold tracking-wide hover:bg-indigo-500/25 transition-colors"
+                      >
+                        <FileText className="w-3.5 h-3.5" />
+                        Read Full Legislative Brief →
+                      </a>
+                    )}
                   </div>
 
                   {/* Metrics */}
