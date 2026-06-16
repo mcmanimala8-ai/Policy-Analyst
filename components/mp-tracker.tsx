@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useMemo } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 import { Search, MapPin, User, TrendingUp, FileText, Award, ArrowUp, ArrowDown, Minus } from "lucide-react";
 
@@ -250,7 +250,7 @@ function CustomTooltip({ active, payload, label }: any) {
 }
 
 // ── Map ───────────────────────────────────────────────────────────────────────
-function TNMap({ data, selected, onSelect }: { data: ScoredMP[]; selected: ScoredMP | null; onSelect: (mp: ScoredMP) => void }) {
+const TNMap = React.memo(function TNMap({ data, selected, onSelect }: { data: ScoredMP[]; selected: ScoredMP | null; onSelect: (mp: ScoredMP) => void }) {
   const svgRef = useRef<SVGSVGElement>(null);
   const [tooltip, setTooltip] = useState<{ x: number; y: number; text: string } | null>(null);
   return (
@@ -263,7 +263,7 @@ function TNMap({ data, selected, onSelect }: { data: ScoredMP[]; selected: Score
         <svg ref={svgRef} viewBox="0 0 400 500" className="w-full" style={{ maxHeight: 480 }}>
           {TN_PATHS.map(({ name, d }) => {
             const mp = data.find(m => norm(m.constituency) === norm(name));
-            const isSelected = mp && selected?.constituency === mp.constituency;
+            const isSelected = Boolean(mp && selected?.constituency === mp.constituency);
             return (
               <path key={name} d={d}
                 fill={mp ? pc(mp.party).mapColor : "#334155"}
@@ -297,7 +297,7 @@ function TNMap({ data, selected, onSelect }: { data: ScoredMP[]; selected: Score
       </div>
     </div>
   );
-}
+});
 
 // ── Main ──────────────────────────────────────────────────────────────────────
 export function MPTracker() {
