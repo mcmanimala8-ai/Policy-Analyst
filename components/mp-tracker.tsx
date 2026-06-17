@@ -319,17 +319,17 @@ export default function MPTracker() {
   const activeMp = mps.find(mp => mp.constituency === selected) ?? null;
 
   if (loading) return (
-    <div className="flex min-h-screen items-center justify-center bg-slate-900 text-slate-400">Loading data…</div>
+    <div className="flex items-center justify-center py-20 text-slate-400">Loading data…</div>
   );
   if (error) return (
-    <div className="flex min-h-screen items-center justify-center bg-slate-900 text-red-400">Failed to load: {error}</div>
+    <div className="flex items-center justify-center py-20 text-red-400">Failed to load: {error}</div>
   );
   if (mps.length === 0) return (
-    <div className="flex min-h-screen items-center justify-center bg-slate-900 text-slate-400">No MP data found.</div>
+    <div className="flex items-center justify-center py-20 text-slate-400">No MP data found.</div>
   );
 
   return (
-    <div className="min-h-screen bg-slate-900 px-4 py-10 text-slate-100 sm:px-6 lg:px-8">
+    <div className="px-4 pb-10 text-slate-100 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl">
 
         {/* Header */}
