@@ -1,20 +1,11 @@
-import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
-import { MPTracker } from "@/components/mp-tracker"
+import MPTracker from "@/components/mp-tracker";
 
 export const metadata = {
-  title: "MP Watch | Manimala Chithamanan",
-  description: "Live legislative performance tracker for all 39 Tamil Nadu Lok Sabha MPs.",
-}
+  title: "MP Performance Tracker | Tamil Nadu Governance Desk",
+  description:
+    "Track the legislative performance of Tamil Nadu's 39 Lok Sabha MPs — attendance, questions, debates, bills, and MPLADS utilisation.",
+};
 
 export default function TrackerPage() {
-  return (
-    <main className="min-h-screen bg-background text-foreground">
-      <Navigation />
-      <div className="pt-20">
-        <MPTracker />
-      </div>
-      <Footer />
-    </main>
-  )
+  return <MPTracker />;
 }
