@@ -10,7 +10,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 45,
+    "tier": "Active",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 19
   },
   {
     "constituency": "Chennai North",
@@ -23,7 +27,11 @@
     "private_member_bills": 1,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 54,
+    "tier": "Active",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 9
   },
   {
     "constituency": "Chennai Central",
@@ -36,7 +44,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 37,
+    "tier": "Below Average",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 35
   },
   {
     "constituency": "Chennai South",
@@ -49,7 +61,11 @@
     "private_member_bills": 5,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 69,
+    "tier": "Active",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 4
   },
   {
     "constituency": "Sriperumbudur",
@@ -62,7 +78,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 41,
+    "tier": "Below Average",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 27
   },
   {
     "constituency": "Kancheepuram",
@@ -75,7 +95,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 70,
+    "tier": "High Performer",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 3
   },
   {
     "constituency": "Arakkonam",
@@ -88,7 +112,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 39,
+    "tier": "Below Average",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 31
   },
   {
     "constituency": "Vellore",
@@ -101,7 +129,11 @@
     "private_member_bills": 3,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 60,
+    "tier": "Active",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 8
   },
   {
     "constituency": "Arani",
@@ -114,7 +146,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 41,
+    "tier": "Below Average",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 28
   },
   {
     "constituency": "Tiruvannamalai",
@@ -127,7 +163,11 @@
     "private_member_bills": 3,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 72,
+    "tier": "High Performer",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 2
   },
   {
     "constituency": "Krishnagiri",
@@ -140,7 +180,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 34,
+    "tier": "Below Average",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 39
   },
   {
     "constituency": "Dharmapuri",
@@ -153,7 +197,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 35,
+    "tier": "Below Average",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 38
   },
   {
     "constituency": "Salem",
@@ -166,7 +214,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 52,
+    "tier": "Active",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 10
   },
   {
     "constituency": "Namakkal",
@@ -179,7 +231,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 39,
+    "tier": "Below Average",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 32
   },
   {
     "constituency": "Erode",
@@ -192,7 +248,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 44,
+    "tier": "Below Average",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 20
   },
   {
     "constituency": "Tiruppur",
@@ -205,7 +265,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 42,
+    "tier": "Below Average",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 24
   },
   {
     "constituency": "Nilgiris",
@@ -218,7 +282,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 44,
+    "tier": "Below Average",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 21
   },
   {
     "constituency": "Coimbatore",
@@ -231,7 +299,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 49,
+    "tier": "Active",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 14
   },
   {
     "constituency": "Pollachi",
@@ -244,7 +316,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 49,
+    "tier": "Active",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 15
   },
   {
     "constituency": "Karur",
@@ -257,7 +333,11 @@
     "private_member_bills": 3,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 65,
+    "tier": "Active",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 5
   },
   {
     "constituency": "Tiruchirappalli",
@@ -270,7 +350,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 44,
+    "tier": "Below Average",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 22
   },
   {
     "constituency": "Perambalur",
@@ -283,7 +367,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 42,
+    "tier": "Below Average",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 25
   },
   {
     "constituency": "Kallakurichi",
@@ -296,7 +384,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 51,
+    "tier": "Active",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 11
   },
   {
     "constituency": "Viluppuram",
@@ -309,7 +401,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 40,
+    "tier": "Below Average",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 29
   },
   {
     "constituency": "Cuddalore",
@@ -322,7 +418,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 51,
+    "tier": "Active",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 12
   },
   {
     "constituency": "Chidambaram",
@@ -335,7 +435,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 42,
+    "tier": "Below Average",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 26
   },
   {
     "constituency": "Mayiladuturai",
@@ -348,7 +452,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 47,
+    "tier": "Active",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 17
   },
   {
     "constituency": "Nagapattinam",
@@ -361,7 +469,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 51,
+    "tier": "Active",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 13
   },
   {
     "constituency": "Thanjavur",
@@ -374,7 +486,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 37,
+    "tier": "Below Average",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 36
   },
   {
     "constituency": "Sivaganga",
@@ -387,7 +503,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 39,
+    "tier": "Below Average",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 33
   },
   {
     "constituency": "Madurai",
@@ -400,7 +520,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 39,
+    "tier": "Below Average",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 34
   },
   {
     "constituency": "Dindigul",
@@ -413,7 +537,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 48,
+    "tier": "Active",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 16
   },
   {
     "constituency": "Theni",
@@ -426,7 +554,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 43,
+    "tier": "Below Average",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 23
   },
   {
     "constituency": "Virudhunagar",
@@ -439,7 +571,11 @@
     "private_member_bills": 3,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 65,
+    "tier": "Active",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 6
   },
   {
     "constituency": "Ramanathapuram",
@@ -452,7 +588,11 @@
     "private_member_bills": 3,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 87,
+    "tier": "High Performer",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 1
   },
   {
     "constituency": "Tenkasi",
@@ -465,7 +605,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 37,
+    "tier": "Below Average",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 37
   },
   {
     "constituency": "Tirunelveli",
@@ -478,7 +622,11 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 40,
+    "tier": "Below Average",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 30
   },
   {
     "constituency": "Thoothukudi",
@@ -491,7 +639,11 @@
     "private_member_bills": 3,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 47,
+    "tier": "Active",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 18
   },
   {
     "constituency": "Kanyakumari",
@@ -504,6 +656,10 @@
     "private_member_bills": 0,
     "mplads_utilized": null,
     "primary_spending_sector": null,
-    "policy_narrative": null
+    "policy_narrative": null,
+    "score": 62,
+    "tier": "Active",
+    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
+    "rank": 7
   }
 ]
