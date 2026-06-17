@@ -1,665 +1,372 @@
-[
-  {
-    "constituency": "Thiruvallur",
-    "mp_name": "Sasikanth Senthil",
-    "party": "Indian National Congress",
-    "term": "First Term",
-    "attendance": 86.7,
-    "questions_asked": 95,
-    "debates_participated": 14,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 45,
-    "tier": "Active",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 19
-  },
-  {
-    "constituency": "Chennai North",
-    "mp_name": "Kalanidhi Veeraswamy",
-    "party": "Dravida Munnetra Kazhagam",
-    "term": "Second Term",
-    "attendance": 85.2,
-    "questions_asked": 131,
-    "debates_participated": 21,
-    "private_member_bills": 1,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 54,
-    "tier": "Active",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 9
-  },
-  {
-    "constituency": "Chennai Central",
-    "mp_name": "Dayanidhi Maran",
-    "party": "Dravida Munnetra Kazhagam",
-    "term": "Fourth Term",
-    "attendance": 67.4,
-    "questions_asked": 87,
-    "debates_participated": 5,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 37,
-    "tier": "Below Average",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 35
-  },
-  {
-    "constituency": "Chennai South",
-    "mp_name": "T Sumathy Alias Thamizhachi Thangapandian",
-    "party": "Dravida Munnetra Kazhagam",
-    "term": "Second Term",
-    "attendance": 81.5,
-    "questions_asked": 149,
-    "debates_participated": 65,
-    "private_member_bills": 5,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 69,
-    "tier": "Active",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 4
-  },
-  {
-    "constituency": "Sriperumbudur",
-    "mp_name": "T R Baalu",
-    "party": "Dravida Munnetra Kazhagam",
-    "term": "Seventh Term",
-    "attendance": 74.8,
-    "questions_asked": 89,
-    "debates_participated": 15,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 41,
-    "tier": "Below Average",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 27
-  },
-  {
-    "constituency": "Kancheepuram",
-    "mp_name": "Selvam G",
-    "party": "Dravida Munnetra Kazhagam",
-    "term": "Second Term",
-    "attendance": 93.3,
-    "questions_asked": 224,
-    "debates_participated": 16,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 70,
-    "tier": "High Performer",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 3
-  },
-  {
-    "constituency": "Arakkonam",
-    "mp_name": "S Jagathratchakan",
-    "party": "Dravida Munnetra Kazhagam",
-    "term": "Fifth Term",
-    "attendance": 42.9,
-    "questions_asked": 141,
-    "debates_participated": 8,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 39,
-    "tier": "Below Average",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 31
-  },
-  {
-    "constituency": "Vellore",
-    "mp_name": "D M Kathir Anand",
-    "party": "Dravida Munnetra Kazhagam",
-    "term": "Second Term",
-    "attendance": 78.5,
-    "questions_asked": 144,
-    "debates_participated": 43,
-    "private_member_bills": 3,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 60,
-    "tier": "Active",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 8
-  },
-  {
-    "constituency": "Arani",
-    "mp_name": "Tharaniventhan M S",
-    "party": "Dravida Munnetra Kazhagam",
-    "term": "First Term",
-    "attendance": 68.1,
-    "questions_asked": 110,
-    "debates_participated": 7,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 41,
-    "tier": "Below Average",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 28
-  },
-  {
-    "constituency": "Tiruvannamalai",
-    "mp_name": "C N Annadurai",
-    "party": "Dravida Munnetra Kazhagam",
-    "term": "Second Term",
-    "attendance": 70.4,
-    "questions_asked": 231,
-    "debates_participated": 37,
-    "private_member_bills": 3,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 72,
-    "tier": "High Performer",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 2
-  },
-  {
-    "constituency": "Krishnagiri",
-    "mp_name": "K Gopinath",
-    "party": "Indian National Congress",
-    "term": "First Term",
-    "attendance": 74.8,
-    "questions_asked": 57,
-    "debates_participated": 6,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 34,
-    "tier": "Below Average",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 39
-  },
-  {
-    "constituency": "Dharmapuri",
-    "mp_name": "Mani A",
-    "party": "Dravida Munnetra Kazhagam",
-    "term": "First Term",
-    "attendance": 48.8,
-    "questions_asked": 110,
-    "debates_participated": 4,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 35,
-    "tier": "Below Average",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 38
-  },
-  {
-    "constituency": "Salem",
-    "mp_name": "Selvaganapathi T.M.",
-    "party": "Dravida Munnetra Kazhagam",
-    "term": "Second Term",
-    "attendance": 77.0,
-    "questions_asked": 145,
-    "debates_participated": 19,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 52,
-    "tier": "Active",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 10
-  },
-  {
-    "constituency": "Namakkal",
-    "mp_name": "Matheswaran V S",
-    "party": "Dravida Munnetra Kazhagam",
-    "term": "First Term",
-    "attendance": 70.4,
-    "questions_asked": 95,
-    "debates_participated": 7,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 39,
-    "tier": "Below Average",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 32
-  },
-  {
-    "constituency": "Erode",
-    "mp_name": "K E Prakash",
-    "party": "Dravida Munnetra Kazhagam",
-    "term": "First Term",
-    "attendance": 88.1,
-    "questions_asked": 85,
-    "debates_participated": 17,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 44,
-    "tier": "Below Average",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 20
-  },
-  {
-    "constituency": "Tiruppur",
-    "mp_name": "Subbarayan K",
-    "party": "Communist Party of India",
-    "term": "Third Term",
-    "attendance": 58.5,
-    "questions_asked": 121,
-    "debates_participated": 22,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 42,
-    "tier": "Below Average",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 24
-  },
-  {
-    "constituency": "Nilgiris",
-    "mp_name": "Raja A",
-    "party": "Dravida Munnetra Kazhagam",
-    "term": "Sixth Term",
-    "attendance": 68.9,
-    "questions_asked": 124,
-    "debates_participated": 7,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 44,
-    "tier": "Below Average",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 21
-  },
-  {
-    "constituency": "Coimbatore",
-    "mp_name": "Ganapathy Rajkumar P",
-    "party": "Dravida Munnetra Kazhagam",
-    "term": "First Term",
-    "attendance": 89.6,
-    "questions_asked": 112,
-    "debates_participated": 14,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 49,
-    "tier": "Active",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 14
-  },
-  {
-    "constituency": "Pollachi",
-    "mp_name": "Eswarasamy K",
-    "party": "Dravida Munnetra Kazhagam",
-    "term": "First Term",
-    "attendance": 81.5,
-    "questions_asked": 123,
-    "debates_participated": 19,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 49,
-    "tier": "Active",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 15
-  },
-  {
-    "constituency": "Karur",
-    "mp_name": "S Jothimani",
-    "party": "Indian National Congress",
-    "term": "Second Term",
-    "attendance": 94.8,
-    "questions_asked": 139,
-    "debates_participated": 42,
-    "private_member_bills": 3,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 65,
-    "tier": "Active",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 5
-  },
-  {
-    "constituency": "Tiruchirappalli",
-    "mp_name": "Durai Vaiko",
-    "party": "Marumalarchi Dravida Munnetra Kazhagam",
-    "term": "First Term",
-    "attendance": 82.9,
-    "questions_asked": 87,
-    "debates_participated": 23,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 44,
-    "tier": "Below Average",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 22
-  },
-  {
-    "constituency": "Perambalur",
-    "mp_name": "Arun Nehru",
-    "party": "Dravida Munnetra Kazhagam",
-    "term": "First Term",
-    "attendance": 82.9,
-    "questions_asked": 71,
-    "debates_participated": 30,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 42,
-    "tier": "Below Average",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 25
-  },
-  {
-    "constituency": "Kallakurichi",
-    "mp_name": "Malaiyarasan D",
-    "party": "Dravida Munnetra Kazhagam",
-    "term": "First Term",
-    "attendance": 88.9,
-    "questions_asked": 124,
-    "debates_participated": 14,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 51,
-    "tier": "Active",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 11
-  },
-  {
-    "constituency": "Viluppuram",
-    "mp_name": "D Ravi Kumar",
-    "party": "Viduthalai Chiruthaigal Katchi",
-    "term": "Second Term",
-    "attendance": 58.5,
-    "questions_asked": 115,
-    "debates_participated": 18,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 40,
-    "tier": "Below Average",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 29
-  },
-  {
-    "constituency": "Cuddalore",
-    "mp_name": "M K Vishnu Prasad",
-    "party": "Indian National Congress",
-    "term": "Second Term",
-    "attendance": 88.9,
-    "questions_asked": 123,
-    "debates_participated": 18,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 51,
-    "tier": "Active",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 12
-  },
-  {
-    "constituency": "Chidambaram",
-    "mp_name": "Thirumaavalavan Tholkappiyan",
-    "party": "Viduthalai Chiruthaigal Katchi",
-    "term": "Third Term",
-    "attendance": 64.4,
-    "questions_asked": 115,
-    "debates_participated": 16,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 42,
-    "tier": "Below Average",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 26
-  },
-  {
-    "constituency": "Mayiladuturai",
-    "mp_name": "Sudha R",
-    "party": "Indian National Congress",
-    "term": "First Term",
-    "attendance": 93.3,
-    "questions_asked": 88,
-    "debates_participated": 19,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 47,
-    "tier": "Active",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 17
-  },
-  {
-    "constituency": "Nagapattinam",
-    "mp_name": "Selvaraj V",
-    "party": "Communist Party of India",
-    "term": "First Term",
-    "attendance": 85.9,
-    "questions_asked": 126,
-    "debates_participated": 16,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 51,
-    "tier": "Active",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 13
-  },
-  {
-    "constituency": "Thanjavur",
-    "mp_name": "Murasoli S",
-    "party": "Dravida Munnetra Kazhagam",
-    "term": "First Term",
-    "attendance": 86.7,
-    "questions_asked": 46,
-    "debates_participated": 12,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 37,
-    "tier": "Below Average",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 36
-  },
-  {
-    "constituency": "Sivaganga",
-    "mp_name": "Karti P Chidambaram",
-    "party": "Indian National Congress",
-    "term": "Second Term",
-    "attendance": 85.2,
-    "questions_asked": 64,
-    "debates_participated": 13,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 39,
-    "tier": "Below Average",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 33
-  },
-  {
-    "constituency": "Madurai",
-    "mp_name": "S Venkatesan",
-    "party": "Communist Party of India (Marxist)",
-    "term": "Second Term",
-    "attendance": 65.9,
-    "questions_asked": 99,
-    "debates_participated": 13,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 39,
-    "tier": "Below Average",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 34
-  },
-  {
-    "constituency": "Dindigul",
-    "mp_name": "Sachithanantham R",
-    "party": "Communist Party of India (Marxist)",
-    "term": "First Term",
-    "attendance": 91.9,
-    "questions_asked": 96,
-    "debates_participated": 22,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 48,
-    "tier": "Active",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 16
-  },
-  {
-    "constituency": "Theni",
-    "mp_name": "Tamilselvan Thanga",
-    "party": "Dravida Munnetra Kazhagam",
-    "term": "First Term",
-    "attendance": 80.0,
-    "questions_asked": 86,
-    "debates_participated": 26,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 43,
-    "tier": "Below Average",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 23
-  },
-  {
-    "constituency": "Virudhunagar",
-    "mp_name": "Manickam Tagore B",
-    "party": "Indian National Congress",
-    "term": "Third Term",
-    "attendance": 88.9,
-    "questions_asked": 148,
-    "debates_participated": 47,
-    "private_member_bills": 3,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 65,
-    "tier": "Active",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 6
-  },
-  {
-    "constituency": "Ramanathapuram",
-    "mp_name": "Navaskani K",
-    "party": "Indian Union Muslim League",
-    "term": "Second Term",
-    "attendance": 82.9,
-    "questions_asked": 203,
-    "debates_participated": 187,
-    "private_member_bills": 3,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 87,
-    "tier": "High Performer",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 1
-  },
-  {
-    "constituency": "Tenkasi",
-    "mp_name": "Rani Srikumar",
-    "party": "Dravida Munnetra Kazhagam",
-    "term": "First Term",
-    "attendance": 90.4,
-    "questions_asked": 39,
-    "debates_participated": 19,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 37,
-    "tier": "Below Average",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 37
-  },
-  {
-    "constituency": "Tirunelveli",
-    "mp_name": "Robert Bruce C",
-    "party": "Indian National Congress",
-    "term": "First Term",
-    "attendance": 93.3,
-    "questions_asked": 51,
-    "debates_participated": 17,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 40,
-    "tier": "Below Average",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 30
-  },
-  {
-    "constituency": "Thoothukudi",
-    "mp_name": "Kanimozhi Karunanidhi",
-    "party": "Dravida Munnetra Kazhagam",
-    "term": "Second Term",
-    "attendance": 69.6,
-    "questions_asked": 93,
-    "debates_participated": 28,
-    "private_member_bills": 3,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 47,
-    "tier": "Active",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 18
-  },
-  {
-    "constituency": "Kanyakumari",
-    "mp_name": "Vijayakumar Alias Vijay Vasanth",
-    "party": "Indian National Congress",
-    "term": "Second Term",
-    "attendance": 91.1,
-    "questions_asked": 172,
-    "debates_participated": 29,
-    "private_member_bills": 0,
-    "mplads_utilized": null,
-    "primary_spending_sector": null,
-    "policy_narrative": null,
-    "score": 62,
-    "tier": "Active",
-    "data_as_of": "Session 4 — Budget 2025 (Jan-Mar 2025)",
-    "rank": 7
+"use client";
+
+import { useEffect, useState } from "react";
+
+// ── Types ──────────────────────────────────────────────────────────────────────
+
+interface MP {
+  constituency: string;
+  mp_name: string;
+  party: string;
+  term: string;
+  attendance: number;
+  questions_asked: number;
+  debates_participated: number;
+  private_member_bills: number;
+  mplads_utilized: string | null;
+  primary_spending_sector: string | null;
+  policy_narrative: string | null;
+  score: number;
+  rank: number;
+  tier: string;
+  data_as_of: string;
+}
+
+interface GeoFeature {
+  type: "Feature";
+  properties: { pc_name: string; [key: string]: unknown };
+  geometry: { type: string; coordinates: unknown };
+}
+
+// ── Constants ──────────────────────────────────────────────────────────────────
+
+const STATE_AVERAGES = { attendance: 78.8, questions: 114, debates: 25 };
+
+const PARTY_COLOURS: Record<string, string> = {
+  "Dravida Munnetra Kazhagam": "#ef4444",
+  "Indian National Congress": "#3b82f6",
+  "Viduthalai Chiruthaigal Katchi": "#6366f1",
+  "Communist Party of India (Marxist)": "#f43f5e",
+  "Communist Party of India": "#fb7185",
+  "Indian Union Muslim League": "#22c55e",
+  "Marumalarchi Dravida Munnetra Kazhagam": "#f97316",
+  "All India Anna Dravida Munnetra Kazhagam": "#94a3b8",
+};
+
+const PARTY_SHORT: Record<string, string> = {
+  "Dravida Munnetra Kazhagam": "DMK",
+  "Indian National Congress": "INC",
+  "Viduthalai Chiruthaigal Katchi": "VCK",
+  "Communist Party of India (Marxist)": "CPI(M)",
+  "Communist Party of India": "CPI",
+  "Indian Union Muslim League": "IUML",
+  "Marumalarchi Dravida Munnetra Kazhagam": "MDMK",
+  "All India Anna Dravida Munnetra Kazhagam": "AIADMK",
+};
+
+const TIER_STYLES: Record<string, { bg: string; text: string }> = {
+  "High Performer": { bg: "#14532d", text: "#4ade80" },
+  "Active":         { bg: "#1e3a5f", text: "#60a5fa" },
+  "Below Average":  { bg: "#4a1942", text: "#f0abfc" },
+};
+
+const MP_BRIEFS: Record<string, string> = {
+  Thoothukudi: "/tracker/kanimozhi-thoothukkudi",
+};
+
+// Normalise data.json constituency names → GeoJSON pc_name
+const TO_GEOJSON: Record<string, string> = {
+  "Tiruvallur":      "Thiruvallur",
+  "Villuppuram":     "Viluppuram",
+  "Villupuram":      "Viluppuram",
+  "Thoothukkudi":    "Thoothukudi",
+  "Mayiladuthurai":  "Mayiladuturai",
+  "Kanniyakumari":   "Kanyakumari",
+  "Vaniambadi":      "Thiruvallur",
+};
+
+function normalise(name: string): string {
+  return TO_GEOJSON[name] ?? name;
+}
+
+function partyColour(party: string) { return PARTY_COLOURS[party] ?? "#64748b"; }
+function partyShort(party: string) { return PARTY_SHORT[party] ?? party; }
+
+// ── GeoJSON projection ─────────────────────────────────────────────────────────
+
+const LNG_MIN = 76.2, LNG_MAX = 80.4, LAT_MIN = 8.0, LAT_MAX = 13.6;
+const SVG_W = 340, SVG_H = 500, PAD = 12;
+
+function project(lng: number, lat: number): [number, number] {
+  const x = PAD + ((lng - LNG_MIN) / (LNG_MAX - LNG_MIN)) * (SVG_W - 2 * PAD);
+  const y = PAD + ((LAT_MAX - lat) / (LAT_MAX - LAT_MIN)) * (SVG_H - 2 * PAD);
+  return [x, y];
+}
+
+function ringToPath(ring: number[][]): string {
+  return ring.map(([lng, lat], i) => {
+    const [x, y] = project(lng, lat);
+    return `${i === 0 ? "M" : "L"}${x.toFixed(1)},${y.toFixed(1)}`;
+  }).join(" ") + " Z";
+}
+
+function featureToPath(geometry: GeoFeature["geometry"]): string {
+  if (geometry.type === "Polygon") {
+    return (geometry.coordinates as number[][][]).map(ringToPath).join(" ");
   }
-]
+  if (geometry.type === "MultiPolygon") {
+    return (geometry.coordinates as number[][][][]).flatMap(p => p.map(ringToPath)).join(" ");
+  }
+  return "";
+}
+
+// ── MetricBar ──────────────────────────────────────────────────────────────────
+
+function MetricBar({ label, value, average, max, isPercent = false }: {
+  label: string; value: number; average: number; max: number; isPercent?: boolean;
+}) {
+  const pct = Math.min((value / max) * 100, 100);
+  const avgPct = Math.min((average / max) * 100, 100);
+  return (
+    <div className="mb-3">
+      <div className="mb-1 flex justify-between text-xs">
+        <span className="text-slate-400">{label}</span>
+        <span className="font-semibold text-slate-100">{isPercent ? `${value}%` : value}</span>
+      </div>
+      <div className="relative h-2 w-full rounded-full bg-slate-700">
+        <div className="absolute left-0 top-0 h-2 rounded-full transition-all duration-500"
+          style={{ width: `${pct}%`, backgroundColor: "#38bdf8" }} />
+        <div className="absolute top-0 h-2 w-0.5 bg-amber-400"
+          style={{ left: `${avgPct}%` }}
+          title={`State avg: ${isPercent ? `${average}%` : average}`} />
+      </div>
+      <p className="mt-0.5 text-right text-xs text-slate-600">avg {isPercent ? `${average}%` : average}</p>
+    </div>
+  );
+}
+
+// ── ProfileCard ────────────────────────────────────────────────────────────────
+
+function ProfileCard({ mp, total }: { mp: MP; total: number }) {
+  const briefUrl = MP_BRIEFS[normalise(mp.constituency)];
+  const tierStyle = TIER_STYLES[mp.tier] ?? TIER_STYLES["Active"];
+
+  return (
+    <div className="rounded-xl border border-slate-700 bg-slate-800 p-5">
+      {/* Header */}
+      <div className="mb-4">
+        <div className="flex items-start justify-between gap-2">
+          <div>
+            <h2 className="text-lg font-bold text-slate-100">{mp.mp_name}</h2>
+            <p className="text-sm text-slate-400">{mp.constituency}</p>
+          </div>
+          {/* Score circle */}
+          <div className="flex flex-col items-center rounded-lg border border-slate-700 px-3 py-1 text-center">
+            <span className="text-xl font-bold text-slate-100">{mp.score}</span>
+            <span className="text-xs text-slate-500">/100</span>
+          </div>
+        </div>
+
+        <div className="mt-2 flex flex-wrap items-center gap-2">
+          <span className="rounded px-2 py-0.5 text-xs font-semibold text-white"
+            style={{ backgroundColor: partyColour(mp.party) }}>
+            {partyShort(mp.party)}
+          </span>
+          <span className="text-xs text-slate-500">{mp.term}</span>
+          <span className="rounded px-2 py-0.5 text-xs font-semibold"
+            style={{ backgroundColor: tierStyle.bg, color: tierStyle.text }}>
+            {mp.tier}
+          </span>
+          <span className="text-xs text-slate-500">Rank #{mp.rank} of {total}</span>
+        </div>
+      </div>
+
+      {/* Metrics */}
+      <MetricBar label="Attendance" value={mp.attendance} average={STATE_AVERAGES.attendance} max={100} isPercent />
+      <MetricBar label="Questions Asked" value={mp.questions_asked} average={STATE_AVERAGES.questions} max={300} />
+      <MetricBar label="Debates" value={mp.debates_participated} average={STATE_AVERAGES.debates} max={80} />
+      <MetricBar label="Private Member Bills" value={mp.private_member_bills} average={0} max={10} />
+
+      {/* Details */}
+      <div className="mt-4 space-y-3 border-t border-slate-700 pt-4">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">MPLADS</p>
+          <p className="mt-0.5 text-xs text-slate-300">
+            {mp.mplads_utilized ?? <span className="italic text-slate-600">Data not yet available</span>}
+          </p>
+        </div>
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Primary Sector</p>
+          <p className="mt-0.5 text-xs text-slate-300">
+            {mp.primary_spending_sector ?? <span className="italic text-slate-600">Not yet analysed</span>}
+          </p>
+        </div>
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Legislative Stance</p>
+          <p className="mt-0.5 text-xs leading-relaxed text-slate-300">
+            {mp.policy_narrative ?? <span className="italic text-slate-600">Full brief in progress — check back soon.</span>}
+          </p>
+        </div>
+      </div>
+
+      {/* Footer: data currency + brief link */}
+      <div className="mt-4 flex items-center justify-between border-t border-slate-700 pt-3">
+        <p className="text-xs text-slate-600">Data as of {mp.data_as_of}</p>
+        {briefUrl && (
+          <a href={briefUrl}
+            className="inline-flex items-center gap-1 rounded-lg bg-sky-600 px-3 py-1.5 text-xs font-medium text-white transition hover:bg-sky-500">
+            Full Brief →
+          </a>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ── Stats Bar ──────────────────────────────────────────────────────────────────
+
+function StatsBar({ mps }: { mps: MP[] }) {
+  const topMp = mps.reduce((a, b) => a.score > b.score ? a : b);
+  const hp = mps.filter(m => m.tier === "High Performer").length;
+  const active = mps.filter(m => m.tier === "Active").length;
+  const below = mps.filter(m => m.tier === "Below Average").length;
+
+  return (
+    <div className="mb-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+      {[
+        { label: "State Avg Attendance", value: `${STATE_AVERAGES.attendance}%` },
+        { label: "State Avg Questions", value: STATE_AVERAGES.questions },
+        { label: "Top Performer", value: topMp.mp_name.split(" ").slice(-1)[0], sub: `Score ${topMp.score}` },
+        { label: "Tier Breakdown", value: `${hp} / ${active} / ${below}`, sub: "High / Active / Below" },
+      ].map(({ label, value, sub }) => (
+        <div key={label} className="rounded-lg border border-slate-700 bg-slate-800 px-4 py-3">
+          <p className="text-xs text-slate-500">{label}</p>
+          <p className="mt-1 text-base font-bold text-slate-100">{value}</p>
+          {sub && <p className="text-xs text-slate-600">{sub}</p>}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// ── TN Map ─────────────────────────────────────────────────────────────────────
+
+function TNMap({ mps, selected, onSelect }: {
+  mps: MP[]; selected: string; onSelect: (c: string) => void;
+}) {
+  const [features, setFeatures] = useState<GeoFeature[]>([]);
+
+  useEffect(() => {
+    fetch("/tn_constituencies.geojson")
+      .then(r => r.json())
+      .then(d => setFeatures(d.features ?? []))
+      .catch(() => {});
+  }, []);
+
+  const mpByConstituency = Object.fromEntries(mps.map(m => [normalise(m.constituency), m]));
+
+  return (
+    <div className="rounded-xl border border-slate-700 bg-slate-800 p-3">
+      <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
+        Tamil Nadu — 39 Constituencies
+      </p>
+      {features.length === 0 ? (
+        <div className="flex h-64 items-center justify-center text-xs text-slate-600">Loading map…</div>
+      ) : (
+        <svg viewBox={`0 0 ${SVG_W} ${SVG_H}`} className="w-full" style={{ maxHeight: "480px" }}>
+          {features.map(feat => {
+            const name = feat.properties.pc_name as string;
+            const mp = mpByConstituency[name];
+            const isSelected = name === selected;
+            return (
+              <g key={name} onClick={() => onSelect(name)} className="cursor-pointer">
+                <path
+                  d={featureToPath(feat.geometry)}
+                  fill={isSelected ? "#f8fafc" : (mp ? partyColour(mp.party) : "#334155")}
+                  fillOpacity={isSelected ? 1 : 0.75}
+                  stroke="#0f172a"
+                  strokeWidth={isSelected ? 1.5 : 0.6}
+                />
+                <title>{name}{mp ? ` — ${mp.mp_name} (${partyShort(mp.party)}) Score: ${mp.score}` : ""}</title>
+              </g>
+            );
+          })}
+        </svg>
+      )}
+      <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1">
+        {Object.entries(PARTY_SHORT).map(([full, short]) => (
+          <div key={short} className="flex items-center gap-1">
+            <div className="h-2 w-2 rounded-full" style={{ backgroundColor: PARTY_COLOURS[full] }} />
+            <span className="text-xs text-slate-500">{short}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ── Main ───────────────────────────────────────────────────────────────────────
+
+export default function MPTracker() {
+  const [mps, setMps] = useState<MP[]>([]);
+  const [selected, setSelected] = useState<string>("");
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetch("/data.json")
+      .then(res => { if (!res.ok) throw new Error(`HTTP ${res.status}`); return res.json(); })
+      .then((json: MP[]) => {
+        const list = Array.isArray(json) ? json : [];
+        setMps(list);
+        if (list.length > 0) setSelected(list[0].constituency);
+      })
+      .catch((err: Error) => setError(err.message))
+      .finally(() => setLoading(false));
+  }, []);
+
+  const activeMp = mps.find(mp => mp.constituency === selected) ?? null;
+
+  if (loading) return (
+    <div className="flex min-h-screen items-center justify-center bg-slate-900 text-slate-400">Loading data…</div>
+  );
+  if (error) return (
+    <div className="flex min-h-screen items-center justify-center bg-slate-900 text-red-400">Failed to load: {error}</div>
+  );
+  if (mps.length === 0) return (
+    <div className="flex min-h-screen items-center justify-center bg-slate-900 text-slate-400">No MP data found.</div>
+  );
+
+  return (
+    <div className="min-h-screen bg-slate-900 px-4 py-10 text-slate-100 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl">
+
+        {/* Header */}
+        <div className="mb-6">
+          <h1 className="text-2xl font-bold text-slate-100">Tamil Nadu MP Performance Tracker</h1>
+          <p className="mt-1 text-sm text-slate-500">
+            18th Lok Sabha · 39 constituencies · Source: PRS India &amp; Digital Sansad
+          </p>
+        </div>
+
+        {/* Stats bar */}
+        <StatsBar mps={mps} />
+
+        {/* Dropdown */}
+        <div className="mb-6">
+          <select
+            value={selected}
+            onChange={e => setSelected(e.target.value)}
+            className="w-full rounded-lg border border-slate-700 bg-slate-800 px-4 py-2 text-sm text-slate-200 outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 sm:max-w-xs"
+          >
+            {mps.map(mp => (
+              <option key={mp.constituency} value={mp.constituency}>
+                {mp.constituency} — {mp.mp_name}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* Map + Profile */}
+        <div className="mb-6 grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <TNMap mps={mps} selected={selected} onSelect={setSelected} />
+          {activeMp && <ProfileCard mp={activeMp} total={mps.length} />}
+        </div>
+
+        <p className="mt-8 text-center text-xs text-slate-600">
+          Score = Attendance (30%) + Questions (40%) + Debates (20%) + Bills (10%) · Amber marker = state average
+        </p>
+      </div>
+    </div>
+  );
+}
