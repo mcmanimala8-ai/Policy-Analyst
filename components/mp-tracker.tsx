@@ -66,13 +66,14 @@ const MP_BRIEFS: Record<string, string> = {
 
 // Normalise data.json constituency names → GeoJSON pc_name
 const TO_GEOJSON: Record<string, string> = {
-  "Tiruvallur":      "Thiruvallur",
-  "Villuppuram":     "Viluppuram",
-  "Villupuram":      "Viluppuram",
+  // data.json → GeoJSON spelling
+  "Thiruvallur":     "Vaniambadi",   // Thiruvallur data maps to Vaniambadi GeoJSON seat
+  "Tiruvallur":      "Vaniambadi",
+  "Viluppuram":      "Villupuram",
+  "Villuppuram":     "Villupuram",
   "Thoothukkudi":    "Thoothukudi",
-  "Mayiladuthurai":  "Mayiladuturai",
-  "Kanniyakumari":   "Kanyakumari",
-  "Vaniambadi":      "Thiruvallur",
+  "Mayiladuturai":   "Mayiladuthurai",
+  "Kanyakumari":     "Kanniyakumari",
 };
 
 function normalise(name: string): string {
