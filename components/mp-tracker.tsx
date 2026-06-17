@@ -64,6 +64,21 @@ const MP_BRIEFS: Record<string, string> = {
   Thoothukudi: "/tracker/kanimozhi-thoothukkudi",
 };
 
+// Normalise data.json constituency names → GeoJSON pc_name
+const TO_GEOJSON: Record<string, string> = {
+  "Tiruvallur":      "Thiruvallur",
+  "Villuppuram":     "Viluppuram",
+  "Villupuram":      "Viluppuram",
+  "Thoothukkudi":    "Thoothukudi",
+  "Mayiladuthurai":  "Mayiladuturai",
+  "Kanniyakumari":   "Kanyakumari",
+  "Vaniambadi":      "Thiruvallur",
+};
+
+function normalise(name: string): string {
+  return TO_GEOJSON[name] ?? name;
+}
+
 function partyColour(party: string) { return PARTY_COLOURS[party] ?? "#64748b"; }
 function partyShort(party: string) { return PARTY_SHORT[party] ?? party; }
 
@@ -123,7 +138,7 @@ function MetricBar({ label, value, average, max, isPercent = false }: {
 // ── ProfileCard ────────────────────────────────────────────────────────────────
 
 function ProfileCard({ mp, total }: { mp: MP; total: number }) {
-  const briefUrl = MP_BRIEFS[mp.constituency];
+  const briefUrl = MP_BRIEFS[normalise(mp.constituency)];
   const tierStyle = TIER_STYLES[mp.tier] ?? TIER_STYLES["Active"];
 
   return (
@@ -224,41 +239,6 @@ function StatsBar({ mps }: { mps: MP[] }) {
   );
 }
 
-// ── Leaderboard ────────────────────────────────────────────────────────────────
-
-function Leaderboard({ mps, onSelect }: { mps: MP[]; onSelect: (c: string) => void }) {
-  const sorted = [...mps].sort((a, b) => b.score - a.score);
-  const top5 = sorted.slice(0, 5);
-  const bot5 = sorted.slice(-5).reverse();
-
-  const Row = ({ mp, highlight }: { mp: MP; highlight: "top" | "bottom" }) => (
-    <button onClick={() => onSelect(mp.constituency)}
-      className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-left transition hover:bg-slate-700">
-      <div className="flex items-center gap-2">
-        <span className="w-5 text-xs text-slate-500">#{mp.rank}</span>
-        <span className="text-xs text-slate-200">{mp.mp_name.split(" ").slice(-1)[0]}</span>
-        <span className="text-xs" style={{ color: partyColour(mp.party) }}>{partyShort(mp.party)}</span>
-      </div>
-      <span className={`text-xs font-bold ${highlight === "top" ? "text-green-400" : "text-rose-400"}`}>
-        {mp.score}
-      </span>
-    </button>
-  );
-
-  return (
-    <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-      <div className="rounded-xl border border-slate-700 bg-slate-800 p-4">
-        <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-green-500">Top 5</p>
-        {top5.map(mp => <Row key={mp.constituency} mp={mp} highlight="top" />)}
-      </div>
-      <div className="rounded-xl border border-slate-700 bg-slate-800 p-4">
-        <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-rose-500">Bottom 5</p>
-        {bot5.map(mp => <Row key={mp.constituency} mp={mp} highlight="bottom" />)}
-      </div>
-    </div>
-  );
-}
-
 // ── TN Map ─────────────────────────────────────────────────────────────────────
 
 function TNMap({ mps, selected, onSelect }: {
@@ -273,7 +253,7 @@ function TNMap({ mps, selected, onSelect }: {
       .catch(() => {});
   }, []);
 
-  const mpByConstituency = Object.fromEntries(mps.map(m => [m.constituency, m]));
+  const mpByConstituency = Object.fromEntries(mps.map(m => [normalise(m.constituency), m]));
 
   return (
     <div className="rounded-xl border border-slate-700 bg-slate-800 p-3">
@@ -382,9 +362,6 @@ export default function MPTracker() {
           <TNMap mps={mps} selected={selected} onSelect={setSelected} />
           {activeMp && <ProfileCard mp={activeMp} total={mps.length} />}
         </div>
-
-        {/* Leaderboard */}
-        <Leaderboard mps={mps} onSelect={setSelected} />
 
         <p className="mt-8 text-center text-xs text-slate-600">
           Score = Attendance (30%) + Questions (40%) + Debates (20%) + Bills (10%) · Amber marker = state average
