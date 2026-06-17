@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { usePathname } from "next/navigation"
 import { Menu, X, Download, Sun, Moon } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
@@ -17,10 +18,10 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [isDark, setIsDark] = useState(true)
-  const [isHomePage, setIsHomePage] = useState(false)
+  const pathname = usePathname()
+  const isHomePage = pathname === "/"
 
   useEffect(() => {
-    setIsHomePage(window.location.pathname === "/")
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
     }
