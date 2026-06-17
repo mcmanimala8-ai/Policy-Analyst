@@ -17,8 +17,10 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [isDark, setIsDark] = useState(true)
+  const [isHomePage, setIsHomePage] = useState(false)
 
   useEffect(() => {
+    setIsHomePage(window.location.pathname === "/")
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
     }
@@ -34,7 +36,7 @@ export function Navigation() {
   return (
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+        scrolled || !isHomePage
           ? "bg-background/95 backdrop-blur-md border-b border-border shadow-lg"
           : "bg-transparent"
       }`}
