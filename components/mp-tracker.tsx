@@ -1,10 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import {
-  BarChart, Bar, XAxis, YAxis, CartesianGrid,
-  Tooltip, Legend, ResponsiveContainer,
-} from "recharts";
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 
@@ -20,6 +16,10 @@ interface MP {
   mplads_utilized: string | null;
   primary_spending_sector: string | null;
   policy_narrative: string | null;
+  score: number;
+  rank: number;
+  tier: string;
+  data_as_of: string;
 }
 
 interface GeoFeature {
@@ -30,7 +30,7 @@ interface GeoFeature {
 
 // ── Constants ──────────────────────────────────────────────────────────────────
 
-const STATE_AVERAGES = { attendance: 79.2, questions: 113, debates: 24 };
+const STATE_AVERAGES = { attendance: 78.8, questions: 114, debates: 25 };
 
 const PARTY_COLOURS: Record<string, string> = {
   "Dravida Munnetra Kazhagam": "#ef4444",
@@ -54,6 +54,12 @@ const PARTY_SHORT: Record<string, string> = {
   "All India Anna Dravida Munnetra Kazhagam": "AIADMK",
 };
 
+const TIER_STYLES: Record<string, { bg: string; text: string }> = {
+  "High Performer": { bg: "#14532d", text: "#4ade80" },
+  "Active":         { bg: "#1e3a5f", text: "#60a5fa" },
+  "Below Average":  { bg: "#4a1942", text: "#f0abfc" },
+};
+
 const MP_BRIEFS: Record<string, string> = {
   Thoothukudi: "/tracker/kanimozhi-thoothukkudi",
 };
@@ -61,14 +67,10 @@ const MP_BRIEFS: Record<string, string> = {
 function partyColour(party: string) { return PARTY_COLOURS[party] ?? "#64748b"; }
 function partyShort(party: string) { return PARTY_SHORT[party] ?? party; }
 
-// ── GeoJSON → SVG path projection ─────────────────────────────────────────────
-// Projects lng/lat to SVG x/y using a simple linear scale fitted to TN bounds
-// TN approx bounds: lng 76.2–80.4, lat 8.0–13.6
+// ── GeoJSON projection ─────────────────────────────────────────────────────────
 
-const LNG_MIN = 76.2, LNG_MAX = 80.4;
-const LAT_MIN = 8.0,  LAT_MAX = 13.6;
-const SVG_W = 340, SVG_H = 500;
-const PAD = 12;
+const LNG_MIN = 76.2, LNG_MAX = 80.4, LAT_MIN = 8.0, LAT_MAX = 13.6;
+const SVG_W = 340, SVG_H = 500, PAD = 12;
 
 function project(lng: number, lat: number): [number, number] {
   const x = PAD + ((lng - LNG_MIN) / (LNG_MAX - LNG_MIN)) * (SVG_W - 2 * PAD);
@@ -85,12 +87,10 @@ function ringToPath(ring: number[][]): string {
 
 function featureToPath(geometry: GeoFeature["geometry"]): string {
   if (geometry.type === "Polygon") {
-    const coords = geometry.coordinates as number[][][];
-    return coords.map(ringToPath).join(" ");
+    return (geometry.coordinates as number[][][]).map(ringToPath).join(" ");
   }
   if (geometry.type === "MultiPolygon") {
-    const coords = geometry.coordinates as number[][][][];
-    return coords.flatMap(poly => poly.map(ringToPath)).join(" ");
+    return (geometry.coordinates as number[][][][]).flatMap(p => p.map(ringToPath)).join(" ");
   }
   return "";
 }
@@ -122,25 +122,47 @@ function MetricBar({ label, value, average, max, isPercent = false }: {
 
 // ── ProfileCard ────────────────────────────────────────────────────────────────
 
-function ProfileCard({ mp }: { mp: MP }) {
+function ProfileCard({ mp, total }: { mp: MP; total: number }) {
   const briefUrl = MP_BRIEFS[mp.constituency];
+  const tierStyle = TIER_STYLES[mp.tier] ?? TIER_STYLES["Active"];
+
   return (
     <div className="rounded-xl border border-slate-700 bg-slate-800 p-5">
+      {/* Header */}
       <div className="mb-4">
-        <h2 className="text-lg font-bold text-slate-100">{mp.mp_name}</h2>
-        <p className="text-sm text-slate-400">{mp.constituency}</p>
-        <div className="mt-2 flex items-center gap-2">
+        <div className="flex items-start justify-between gap-2">
+          <div>
+            <h2 className="text-lg font-bold text-slate-100">{mp.mp_name}</h2>
+            <p className="text-sm text-slate-400">{mp.constituency}</p>
+          </div>
+          {/* Score circle */}
+          <div className="flex flex-col items-center rounded-lg border border-slate-700 px-3 py-1 text-center">
+            <span className="text-xl font-bold text-slate-100">{mp.score}</span>
+            <span className="text-xs text-slate-500">/100</span>
+          </div>
+        </div>
+
+        <div className="mt-2 flex flex-wrap items-center gap-2">
           <span className="rounded px-2 py-0.5 text-xs font-semibold text-white"
             style={{ backgroundColor: partyColour(mp.party) }}>
             {partyShort(mp.party)}
           </span>
           <span className="text-xs text-slate-500">{mp.term}</span>
+          <span className="rounded px-2 py-0.5 text-xs font-semibold"
+            style={{ backgroundColor: tierStyle.bg, color: tierStyle.text }}>
+            {mp.tier}
+          </span>
+          <span className="text-xs text-slate-500">Rank #{mp.rank} of {total}</span>
         </div>
       </div>
+
+      {/* Metrics */}
       <MetricBar label="Attendance" value={mp.attendance} average={STATE_AVERAGES.attendance} max={100} isPercent />
       <MetricBar label="Questions Asked" value={mp.questions_asked} average={STATE_AVERAGES.questions} max={300} />
       <MetricBar label="Debates" value={mp.debates_participated} average={STATE_AVERAGES.debates} max={80} />
       <MetricBar label="Private Member Bills" value={mp.private_member_bills} average={0} max={10} />
+
+      {/* Details */}
       <div className="mt-4 space-y-3 border-t border-slate-700 pt-4">
         <div>
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">MPLADS</p>
@@ -161,12 +183,78 @@ function ProfileCard({ mp }: { mp: MP }) {
           </p>
         </div>
       </div>
-      {briefUrl && (
-        <a href={briefUrl}
-          className="mt-4 inline-flex items-center gap-1 rounded-lg bg-sky-600 px-4 py-2 text-xs font-medium text-white transition hover:bg-sky-500">
-          Read Full Legislative Brief →
-        </a>
-      )}
+
+      {/* Footer: data currency + brief link */}
+      <div className="mt-4 flex items-center justify-between border-t border-slate-700 pt-3">
+        <p className="text-xs text-slate-600">Data as of {mp.data_as_of}</p>
+        {briefUrl && (
+          <a href={briefUrl}
+            className="inline-flex items-center gap-1 rounded-lg bg-sky-600 px-3 py-1.5 text-xs font-medium text-white transition hover:bg-sky-500">
+            Full Brief →
+          </a>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ── Stats Bar ──────────────────────────────────────────────────────────────────
+
+function StatsBar({ mps }: { mps: MP[] }) {
+  const topMp = mps.reduce((a, b) => a.score > b.score ? a : b);
+  const hp = mps.filter(m => m.tier === "High Performer").length;
+  const active = mps.filter(m => m.tier === "Active").length;
+  const below = mps.filter(m => m.tier === "Below Average").length;
+
+  return (
+    <div className="mb-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+      {[
+        { label: "State Avg Attendance", value: `${STATE_AVERAGES.attendance}%` },
+        { label: "State Avg Questions", value: STATE_AVERAGES.questions },
+        { label: "Top Performer", value: topMp.mp_name.split(" ").slice(-1)[0], sub: `Score ${topMp.score}` },
+        { label: "Tier Breakdown", value: `${hp} / ${active} / ${below}`, sub: "High / Active / Below" },
+      ].map(({ label, value, sub }) => (
+        <div key={label} className="rounded-lg border border-slate-700 bg-slate-800 px-4 py-3">
+          <p className="text-xs text-slate-500">{label}</p>
+          <p className="mt-1 text-base font-bold text-slate-100">{value}</p>
+          {sub && <p className="text-xs text-slate-600">{sub}</p>}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// ── Leaderboard ────────────────────────────────────────────────────────────────
+
+function Leaderboard({ mps, onSelect }: { mps: MP[]; onSelect: (c: string) => void }) {
+  const sorted = [...mps].sort((a, b) => b.score - a.score);
+  const top5 = sorted.slice(0, 5);
+  const bot5 = sorted.slice(-5).reverse();
+
+  const Row = ({ mp, highlight }: { mp: MP; highlight: "top" | "bottom" }) => (
+    <button onClick={() => onSelect(mp.constituency)}
+      className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-left transition hover:bg-slate-700">
+      <div className="flex items-center gap-2">
+        <span className="w-5 text-xs text-slate-500">#{mp.rank}</span>
+        <span className="text-xs text-slate-200">{mp.mp_name.split(" ").slice(-1)[0]}</span>
+        <span className="text-xs" style={{ color: partyColour(mp.party) }}>{partyShort(mp.party)}</span>
+      </div>
+      <span className={`text-xs font-bold ${highlight === "top" ? "text-green-400" : "text-rose-400"}`}>
+        {mp.score}
+      </span>
+    </button>
+  );
+
+  return (
+    <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <div className="rounded-xl border border-slate-700 bg-slate-800 p-4">
+        <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-green-500">Top 5</p>
+        {top5.map(mp => <Row key={mp.constituency} mp={mp} highlight="top" />)}
+      </div>
+      <div className="rounded-xl border border-slate-700 bg-slate-800 p-4">
+        <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-rose-500">Bottom 5</p>
+        {bot5.map(mp => <Row key={mp.constituency} mp={mp} highlight="bottom" />)}
+      </div>
     </div>
   );
 }
@@ -193,32 +281,28 @@ function TNMap({ mps, selected, onSelect }: {
         Tamil Nadu — 39 Constituencies
       </p>
       {features.length === 0 ? (
-        <div className="flex h-64 items-center justify-center text-xs text-slate-600">
-          Loading map…
-        </div>
+        <div className="flex h-64 items-center justify-center text-xs text-slate-600">Loading map…</div>
       ) : (
         <svg viewBox={`0 0 ${SVG_W} ${SVG_H}`} className="w-full" style={{ maxHeight: "480px" }}>
           {features.map(feat => {
             const name = feat.properties.pc_name as string;
             const mp = mpByConstituency[name];
             const isSelected = name === selected;
-            const pathD = featureToPath(feat.geometry);
             return (
               <g key={name} onClick={() => onSelect(name)} className="cursor-pointer">
                 <path
-                  d={pathD}
+                  d={featureToPath(feat.geometry)}
                   fill={isSelected ? "#f8fafc" : (mp ? partyColour(mp.party) : "#334155")}
                   fillOpacity={isSelected ? 1 : 0.75}
                   stroke="#0f172a"
                   strokeWidth={isSelected ? 1.5 : 0.6}
                 />
-                <title>{name}{mp ? ` — ${mp.mp_name} (${partyShort(mp.party)})` : ""}</title>
+                <title>{name}{mp ? ` — ${mp.mp_name} (${partyShort(mp.party)}) Score: ${mp.score}` : ""}</title>
               </g>
             );
           })}
         </svg>
       )}
-      {/* Party legend */}
       <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1">
         {Object.entries(PARTY_SHORT).map(([full, short]) => (
           <div key={short} className="flex items-center gap-1">
@@ -227,37 +311,6 @@ function TNMap({ mps, selected, onSelect }: {
           </div>
         ))}
       </div>
-    </div>
-  );
-}
-
-// ── Comparison Chart ───────────────────────────────────────────────────────────
-
-function ComparisonChart({ mps }: { mps: MP[] }) {
-  const data = mps.map(mp => ({
-    name: mp.mp_name.split(" ").slice(-1)[0],
-    Attendance: mp.attendance,
-    Questions: mp.questions_asked,
-    Debates: mp.debates_participated,
-  }));
-  return (
-    <div className="rounded-xl border border-slate-700 bg-slate-800 p-5">
-      <h2 className="mb-4 text-sm font-bold text-slate-300">All-MP Comparison</h2>
-      <ResponsiveContainer width="100%" height={300}>
-        <BarChart data={data} margin={{ top: 4, right: 8, left: -10, bottom: 50 }}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
-          <XAxis dataKey="name" tick={{ fontSize: 9, fill: "#64748b" }}
-            angle={-45} textAnchor="end" interval={0} axisLine={false} tickLine={false} />
-          <YAxis tick={{ fontSize: 10, fill: "#64748b" }} axisLine={false} tickLine={false} />
-          <Tooltip contentStyle={{ backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "8px", fontSize: "11px" }}
-            labelStyle={{ color: "#cbd5e1" }} />
-          <Legend iconType="circle" iconSize={7}
-            wrapperStyle={{ fontSize: "11px", color: "#94a3b8", paddingTop: "8px" }} />
-          <Bar dataKey="Attendance" fill="#38bdf8" radius={[2, 2, 0, 0]} />
-          <Bar dataKey="Questions" fill="#818cf8" radius={[2, 2, 0, 0]} />
-          <Bar dataKey="Debates" fill="#fbbf24" radius={[2, 2, 0, 0]} />
-        </BarChart>
-      </ResponsiveContainer>
     </div>
   );
 }
@@ -299,14 +352,17 @@ export default function MPTracker() {
       <div className="mx-auto max-w-6xl">
 
         {/* Header */}
-        <div className="mb-8">
+        <div className="mb-6">
           <h1 className="text-2xl font-bold text-slate-100">Tamil Nadu MP Performance Tracker</h1>
           <p className="mt-1 text-sm text-slate-500">
-            18th Lok Sabha · 39 constituencies · Digital Sansad &amp; Parliamentary records
+            18th Lok Sabha · 39 constituencies · Source: PRS India &amp; Digital Sansad
           </p>
         </div>
 
-        {/* Single dropdown */}
+        {/* Stats bar */}
+        <StatsBar mps={mps} />
+
+        {/* Dropdown */}
         <div className="mb-6">
           <select
             value={selected}
@@ -322,16 +378,16 @@ export default function MPTracker() {
         </div>
 
         {/* Map + Profile */}
-        <div className="mb-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div className="mb-6 grid grid-cols-1 gap-6 lg:grid-cols-2">
           <TNMap mps={mps} selected={selected} onSelect={setSelected} />
-          {activeMp && <ProfileCard mp={activeMp} />}
+          {activeMp && <ProfileCard mp={activeMp} total={mps.length} />}
         </div>
 
-        {/* Chart */}
-        <ComparisonChart mps={mps} />
+        {/* Leaderboard */}
+        <Leaderboard mps={mps} onSelect={setSelected} />
 
-        <p className="mt-6 text-center text-xs text-slate-600">
-          State averages — Attendance: {STATE_AVERAGES.attendance}% · Questions: {STATE_AVERAGES.questions} · Debates: {STATE_AVERAGES.debates} · Amber marker = state average
+        <p className="mt-8 text-center text-xs text-slate-600">
+          Score = Attendance (30%) + Questions (40%) + Debates (20%) + Bills (10%) · Amber marker = state average
         </p>
       </div>
     </div>
