@@ -14,39 +14,39 @@ interface Note {
 
 export const notes: Note[] = [
   {
-    title: "86 fishermen, 225 boats — and a bilateral mechanism that met six times in nine years",
+    title: "A bilateral mechanism that met six times in nine years",
     date: "June 2026",
     tag: "tamil-nadu" as const,
-    observation: "Between 2015 and 2025, 2,870 Tamil Nadu fishermen were arrested by Sri Lankan authorities. In 2024 alone, 526 were arrested — the highest in a decade. The Joint Working Group on Fisheries, the bilateral mechanism meant to resolve this, has met only six times in nine years. Kanimozhi raised the issue three times across three sessions, escalating to a Rule 197 Calling Attention Motion to force a ministerial response. As of March 2025, 86 fishermen remain in custody and 225 boats have not been returned. The mechanism exists. It simply does not meet.",
+    observation: "The Joint Working Group on Fisheries — the mechanism India and Sri Lanka established to resolve the Palk Strait crisis — has met six times in nine years. In 2024, 526 Tamil Nadu fishermen were arrested, the highest in a decade. 86 remain in custody. 225 boats have not been returned. The mechanism exists. It simply does not meet.",
     slug: "fishermen-bilateral-mechanism",
   },
   {
-    title: "86 Hindi teachers, 65 Sanskrit teachers, 24 Tamil teachers — in Tamil Nadu's Kendriya Vidyalayas",
+    title: "The three-language formula is a staffing decision",
     date: "June 2026",
     tag: "dravidian-politics" as const,
-    observation: "A parliamentary question on the three-language formula revealed this: Kendriya Vidyalayas in Tamil Nadu employ 86 Hindi teachers and 65 Sanskrit teachers — but only 24 Tamil teachers. The number did not make headlines. It did not need to. Placed on parliamentary record, it changes how the policy debate is framed. The three-language formula is not just an ideological dispute — it is a staffing decision, visible in a ratio, documented in an unstarred question.",
+    observation: "Kendriya Vidyalayas in Tamil Nadu employ 86 Hindi teachers and 65 Sanskrit teachers. Tamil teachers: 24. The three-language policy debate is usually framed as ideology. The staffing data frames it differently — as an allocation choice, already made, already operational, visible in a ratio that sits on parliamentary record.",
     slug: "kv-language-teacher-ratio",
   },
   {
-    title: "Three private member bills in one day — and why that matters even when bills do not pass",
+    title: "Parliament is a record, not just a legislature",
     date: "June 2026",
     tag: "political-communication" as const,
-    observation: "On 5th December 2025, Kanimozhi introduced three private member bills in a single day — the Salt Workers Welfare Bill, the Death Penalty Abolition Bill, and the Climate Change Bill. Private member bills almost never pass. She knows that. Introduction itself is the political act — a documented parliamentary position that says: this is where I stood, this is what I argued, this is the evidence I put before the House. Parliament is a record as much as it is a legislature.",
-    slug: "private-member-bills-as-political-act",
+    observation: "Private member bills almost never pass. That is not the point. Introduction is the political act — a documented position on the floor of the House that says: this is what I argued, this is the evidence I placed before the government. When we measure MPs only by legislation passed, we misunderstand what Parliament produces. Most of what it produces is record.",
+    slug: "parliament-as-record",
   },
   {
-    title: "Keezhadi and the non-answer that is itself an answer",
+    title: "Keezhadi: the non-answer is the answer",
     date: "June 2026",
     tag: "dravidian-politics" as const,
-    observation: "Kanimozhi asked why the Keezhadi excavation report had still not been published, citing carbon dating verified by international laboratories including US-based Beta Analytic Labs. The ASI cited deficiencies in methodology — in a report backed by international science. The question of whether Keezhadi has been recognised as a site of National Importance went unanswered. In parliamentary debate, what the government chooses not to answer is often more revealing than what it does.",
+    observation: "The ASI cited 'deficiencies in methodology' to withhold the Keezhadi excavation report — a report backed by carbon dating verified by international laboratories. The question of National Importance designation went unanswered. In parliamentary debate, what the government declines to answer is data. The silence is the position.",
     slug: "keezhadi-non-answer",
   },
   {
-    title: "A score of 44 is a starting point, not a verdict",
+    title: "What parliamentary scores don't measure",
     date: "June 2026",
     tag: "tamil-nadu" as const,
-    observation: "Parliamentary work disappears. A Chief Minister's decisions make front pages. An MLA's constituency work travels through local networks. But what an MP does in the Lok Sabha — the questions raised, the bills introduced, the Ministers confronted — rarely reaches the people who elected them. Kanimozhi's composite score of 44 out of 100 is what most people will see. What they will not see is three years of consistent pressure on fishermen's rights, a civilisational argument made on the floor of Parliament, and three private member bills introduced in a single day. A score is a starting point, not a verdict.",
-    slug: "score-starting-point-not-verdict",
+    observation: "Composite performance scores capture questions asked, debates attended, bills introduced. They do not capture issue consistency — whether an MP returned to the same problem across sessions until a minister had to respond. They do not capture what a question forces into the public record even without an answer. A score is a starting point for analysis, not a conclusion.",
+    slug: "what-scores-dont-measure",
   },
 ]
 
