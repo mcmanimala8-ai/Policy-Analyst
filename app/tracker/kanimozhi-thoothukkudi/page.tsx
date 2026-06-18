@@ -158,6 +158,33 @@ export default function KanimozhiBriefPage() {
 
           <hr className="border-border my-10" />
 
+          <h2 className="font-serif text-2xl font-bold text-foreground mt-12 mb-4 pb-3 border-b border-border">Score Methodology</h2>
+          <div className="border border-border p-5 mb-6 space-y-3">
+            <p className="text-sm text-muted-foreground">
+              The composite score (0–100) is calculated from four parliamentary activity metrics, weighted by their relative importance to legislative engagement:
+            </p>
+            <div className="grid grid-cols-2 gap-3 text-sm">
+              {[
+                { metric: "Questions Asked", weight: "40%", note: "Starred + Unstarred — primary measure of executive accountability" },
+                { metric: "Debates Participated", weight: "20%", note: "Zero Hour, Special Mention, and substantive debate interventions" },
+                { metric: "Attendance", weight: "30%", note: "Sessions attended as % of total sessions held" },
+                { metric: "Private Member Bills", weight: "10%", note: "Bills introduced — measures legislative initiative" },
+              ].map(({ metric, weight, note }) => (
+                <div key={metric} className="border border-border p-3">
+                  <p className="font-medium text-foreground text-xs uppercase tracking-wider">{metric}</p>
+                  <p className="text-accent font-mono text-lg">{weight}</p>
+                  <p className="text-xs text-muted-foreground mt-1">{note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-muted-foreground pt-2 border-t border-border">
+              <strong className="text-foreground">What the score does not capture:</strong> issue consistency across sessions, quality of interventions, Zero Hour urgency motions, Rule 197 Calling Attention Motions, or whether a question forced a change in policy. The score is a starting point for analysis — not a verdict on a parliamentarian's work.
+            </p>
+            <p className="text-xs text-muted-foreground">
+              Data source: PRS Legislative Research · Digital Sansad · Lok Sabha Secretariat. Scores are updated after each parliamentary session.
+            </p>
+          </div>
+
           <h2 className="font-serif text-2xl font-bold text-foreground mt-12 mb-4 pb-3 border-b border-border">Sources</h2>
           <ul className="list-disc list-inside space-y-2 text-muted-foreground mb-6 text-sm">
             <li>PRS India — 18th Lok Sabha MP Tracker</li>
