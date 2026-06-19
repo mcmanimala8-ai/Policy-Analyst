@@ -227,7 +227,7 @@ function StatsBar({ mps }: { mps: MP[] }) {
       {[
         { label: "State Avg Attendance", value: `${STATE_AVERAGES.attendance}%` },
         { label: "State Avg Questions", value: STATE_AVERAGES.questions },
-        { label: "Top Performer", value: topMp.mp_name.split(" ").slice(-1)[0], sub: `Score ${topMp.score}` },
+        { label: "Top Performer", value: topMp.mp_name.split(" ")[0], sub: `Score ${topMp.score}` },
         { label: "Tier Breakdown", value: `${hp} / ${active} / ${below}`, sub: "High / Active / Below" },
       ].map(({ label, value, sub }) => (
         <div key={label} className="rounded-lg border border-slate-700 bg-slate-800 px-4 py-3">
@@ -310,7 +310,8 @@ export default function MPTracker() {
       .then((json: MP[]) => {
         const list = Array.isArray(json) ? json : [];
         setMps(list);
-        if (list.length > 0) setSelected(list[0].constituency);
+        const thoothukudi = list.find(m => m.constituency === "Thoothukudi");
+        setSelected(thoothukudi ? thoothukudi.constituency : list[0].constituency);
       })
       .catch((err: Error) => setError(err.message))
       .finally(() => setLoading(false));
