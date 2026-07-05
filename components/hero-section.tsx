@@ -4,12 +4,9 @@ import { motion } from "framer-motion"
 import { Download, ArrowRight, Database } from "lucide-react"
 
 const topics = [
-  "Sub-National Governance",
-  "Tamil Nadu Data",
-  "Operational Blueprints",
-  "Political Risk",
-  "Policy Performance",
-  "District Execution",
+  "39 MPs tracked",
+  "37,000+ school units coordinated",
+  "108 seats won by TVK, 2026",
 ]
 
 export function HeroSection() {
@@ -47,7 +44,7 @@ export function HeroSection() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            Founder, Tamil Nadu Governance Desk
+            Tracking the space between policy announcement and public outcome.
           </motion.p>
 
           <motion.div 

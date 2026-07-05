@@ -266,7 +266,7 @@ export function DataSection() {
         <div className="mt-6 p-4 border border-border bg-secondary/30">
           <p className="text-sm text-muted-foreground">
             <span className="text-accent font-medium">Note: </span>
-            This is a growing data lab. Charts are updated as I learn new visualisation techniques and as new data becomes available. All data is sourced from official government publications and peer-reviewed research.
+            This is an expanding data lab, updated as new official data becomes available. All data is sourced from official government publications and peer-reviewed research.
           </p>
         </div>
       </div>

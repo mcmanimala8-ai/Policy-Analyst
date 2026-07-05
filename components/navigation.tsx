@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { usePathname } from "next/navigation"
 import { Menu, X, Download, Sun, Moon } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+import { getLatestNoteDate } from "@/components/notes-section"
 
 const navLinks = [
   { href: "/#about", label: "About" },
@@ -13,6 +14,15 @@ const navLinks = [
   { href: "/#notes", label: "Notes" },
   { href: "/#contact", label: "Contact" },
 ]
+
+// Returns true if the latest note was published within the last 14 days
+function hasRecentNote(): boolean {
+  const latest = getLatestNoteDate()
+  if (!latest) return false
+  const latestDate = new Date(latest)
+  const daysSince = (Date.now() - latestDate.getTime()) / (1000 * 60 * 60 * 24)
+  return daysSince >= 0 && daysSince <= 14
+}
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -66,6 +76,9 @@ export function Navigation() {
               transition={{ delay: index * 0.1 }}
             >
               {link.label}
+              {link.label === "Notes" && hasRecentNote() && (
+                <span className="absolute -top-1 -right-2 w-1.5 h-1.5 rounded-full bg-accent" aria-label="New note published recently" />
+              )}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full" />
             </motion.a>
           ))}

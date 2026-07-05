@@ -35,6 +35,27 @@ export function AboutSection() {
                 I am an IMPRI Data Analytics Fellow (2026), based in Chennai, with experience inside a Government of Tamil Nadu programme coordinating across 37,000+ school units. MA in Politics & International Relations, Central University of Gujarat. BA in History, Stella Maris College.
               </p>
 
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <a
+                  href="/writing/algorithm-beat-alliance"
+                  className="inline-flex items-center gap-2 px-5 py-3 bg-accent text-accent-foreground text-sm font-medium hover:bg-accent/90 transition-colors"
+                >
+                  Start here: When the Algorithm Beat the Alliance →
+                </a>
+                <a
+                  href="/data"
+                  className="inline-flex items-center gap-2 px-5 py-3 border border-border text-sm font-medium hover:bg-secondary hover:border-accent transition-colors"
+                >
+                  Explore the Data Lab →
+                </a>
+                <a
+                  href="/tracker"
+                  className="inline-flex items-center gap-2 px-5 py-3 border border-border text-sm font-medium hover:bg-secondary hover:border-accent transition-colors"
+                >
+                  View MP Watch →
+                </a>
+              </div>
+
               <a 
                 href="https://www.linkedin.com/in/manimala-c-29205b223/" 
                 target="_blank" 

@@ -7,9 +7,16 @@ type NoteTag = "all" | "political-communication" | "dravidian-politics" | "tamil
 interface Note {
   title: string
   date: string
+  publishedAt: string // ISO date (YYYY-MM-DD), used for "new" indicator logic — not displayed directly
   tag: Exclude<NoteTag, "all">
   observation: string
   slug: string
+}
+
+// Exported so Navigation can show a "new" indicator when the latest note is recent
+export function getLatestNoteDate(): string | null {
+  if (notes.length === 0) return null
+  return notes.reduce((latest, n) => (n.publishedAt > latest ? n.publishedAt : latest), notes[0].publishedAt)
 }
 
 export const notes: Note[] = []
@@ -37,9 +44,14 @@ export function NotesSection() {
             <p className="text-sm uppercase tracking-widest text-muted-foreground mb-4">
               Observations
             </p>
-            <h2 className="font-serif text-3xl md:text-4xl tracking-tight">
-              Notes
-            </h2>
+            <div className="flex items-center gap-3">
+              <h2 className="font-serif text-3xl md:text-4xl tracking-tight">
+                Notes
+              </h2>
+              <span className="text-xs text-muted-foreground uppercase tracking-wider">
+                Notes archive — new entries added regularly
+              </span>
+            </div>
             <p className="text-muted-foreground text-sm mt-3 max-w-xl">
               Short observations on Tamil Nadu politics, political communication, and governance. Things worth saying before they become full articles.
             </p>

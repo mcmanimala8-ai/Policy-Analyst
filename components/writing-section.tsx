@@ -12,6 +12,7 @@ interface WritingItem {
   date: string
   excerpt: string
   link: string
+  readTime?: string // omitted for external/off-site pieces where full text isn't measurable here
 }
 
 const writings: WritingItem[] = [
@@ -22,6 +23,7 @@ const writings: WritingItem[] = [
     date: "May 2026",
     excerpt: "The 2026 election results shocked Tamil Nadu. DMK fell from 159 to 59 seats. TVK swept Chennai. MK Stalin lost Kolathur. This piece examines the communication failure, the startup-style campaign that beat a governing party, and what the Dravidian movement must do before 2031.",
     link: "/writing/algorithm-beat-alliance",
+    readTime: "13 min read",
   },
   {
     title: "The Success Trap: Performance, Population and the Future of Indian Federalism",
@@ -30,6 +32,7 @@ const writings: WritingItem[] = [
     date: "April 2026",
     excerpt: "The defeat of the 131st Amendment Bill on April 17, 2026 was not just about women's reservation — it was an institutional veto against a population penalty. This article argues that delimitation and reservation are separate policy problems that must never be conflated into a single constitutional instrument.",
     link: "/writing/success-trap",
+    readTime: "3 min read",
   },
   {
     title: "Platform Economy and Youth Employment: Structural Gaps in India's Development Model",
@@ -38,6 +41,7 @@ const writings: WritingItem[] = [
     date: "March 2026",
     excerpt: "India's educated youth are caught between a gig economy that offers income but no security, and a formal sector that isn't growing fast enough. Drawing on ground-level observations from Tamil Nadu's industrial ecosystem, this piece analyses the structural gaps that policy must urgently address.",
     link: "/writing/platform-economy",
+    readTime: "3 min read",
   },
   {
     title: "The 2026 Governance Crisis: Are We Bypassing the State?",
@@ -121,6 +125,11 @@ export function WritingSection() {
                     <span className="text-xs text-muted-foreground">
                       {item.date}
                     </span>
+                    {item.readTime && (
+                      <span className="text-xs text-muted-foreground">
+                        · {item.readTime}
+                      </span>
+                    )}
                   </div>
                   <h3 className="font-serif text-xl md:text-2xl mb-2 group-hover:text-accent transition-colors">
                     {item.title}
