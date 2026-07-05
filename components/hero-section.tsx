@@ -38,15 +38,6 @@ export function HeroSection() {
             Manimala Chithamanan
           </motion.h1>
 
-          <motion.p
-            className="text-2xl md:text-3xl text-accent font-serif max-w-4xl"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
-            Tracking the space between policy announcement and public outcome.
-          </motion.p>
-
           <motion.div 
             className="max-w-3xl"
             initial={{ opacity: 0, y: 20 }}

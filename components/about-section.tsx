@@ -26,13 +26,10 @@ export function AboutSection() {
           <div className="md:col-span-8">
             <div className="prose prose-lg max-w-none">
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Manimalachithamanan.in is an independent Tamil Nadu governance desk — tracking the space between policy announcement and public outcome. The work combines public data, field-level administrative understanding, and direct political analysis.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                My focus is the space between policy announcement and public outcome: fiscal flows, district implementation, school and welfare delivery systems, and the operational bottlenecks that shape political trust. The aim is to produce technical briefs that are useful to think tanks, public sector professionals, journalists, and political consultancy teams.
+                This is an independent research project on Tamil Nadu's governance — the space between what policy promises and what actually reaches people. I bring together public data, administrative context, and political analysis to try to make sense of that gap.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                I am an IMPRI Data Analytics Fellow (2026), based in Chennai, with experience inside a Government of Tamil Nadu programme coordinating across 37,000+ school units. MA in Politics & International Relations, Central University of Gujarat. BA in History, Stella Maris College.
+                Based in Chennai, I previously supported a Government of Tamil Nadu programme working with school-level administrative data, which shaped how I think about implementation and delivery. I hold an MA in Politics & International Relations from Central University of Gujarat, and a BA in History from Stella Maris College.
               </p>
 
               <div className="flex flex-wrap items-center gap-3 mb-6">
