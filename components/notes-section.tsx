@@ -12,43 +12,7 @@ interface Note {
   slug: string
 }
 
-export const notes: Note[] = [
-  {
-    title: "A bilateral mechanism that met six times in nine years",
-    date: "June 2026",
-    tag: "tamil-nadu" as const,
-    observation: "The Joint Working Group on Fisheries — the mechanism India and Sri Lanka established to resolve the Palk Strait crisis — has met six times in nine years. In 2024, 526 Tamil Nadu fishermen were arrested, the highest in a decade. 86 remain in custody. 225 boats have not been returned. The mechanism exists. It simply does not meet.",
-    slug: "fishermen-bilateral-mechanism",
-  },
-  {
-    title: "The three-language formula is a staffing decision",
-    date: "June 2026",
-    tag: "dravidian-politics" as const,
-    observation: "Kendriya Vidyalayas in Tamil Nadu employ 86 Hindi teachers and 65 Sanskrit teachers. Tamil teachers: 24. The three-language policy debate is usually framed as ideology. The staffing data frames it differently — as an allocation choice, already made, already operational, visible in a ratio that sits on parliamentary record.",
-    slug: "kv-language-teacher-ratio",
-  },
-  {
-    title: "Parliament is a record, not just a legislature",
-    date: "June 2026",
-    tag: "political-communication" as const,
-    observation: "Private member bills almost never pass. That is not the point. Introduction is the political act — a documented position on the floor of the House that says: this is what I argued, this is the evidence I placed before the government. When we measure MPs only by legislation passed, we misunderstand what Parliament produces. Most of what it produces is record.",
-    slug: "parliament-as-record",
-  },
-  {
-    title: "Keezhadi: the non-answer is the answer",
-    date: "June 2026",
-    tag: "dravidian-politics" as const,
-    observation: "The ASI cited 'deficiencies in methodology' to withhold the Keezhadi excavation report — a report backed by carbon dating verified by international laboratories. The question of National Importance designation went unanswered. In parliamentary debate, what the government declines to answer is data. The silence is the position.",
-    slug: "keezhadi-non-answer",
-  },
-  {
-    title: "What parliamentary scores don't measure",
-    date: "June 2026",
-    tag: "tamil-nadu" as const,
-    observation: "Composite performance scores capture questions asked, debates attended, bills introduced. They do not capture issue consistency — whether an MP returned to the same problem across sessions until a minister had to respond. They do not capture what a question forces into the public record even without an answer. A score is a starting point for analysis, not a conclusion.",
-    slug: "what-scores-dont-measure",
-  },
-]
+export const notes: Note[] = []
 
 const tags: { value: NoteTag; label: string }[] = [
   { value: "all", label: "All" },
