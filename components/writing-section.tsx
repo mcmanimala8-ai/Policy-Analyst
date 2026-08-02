@@ -17,6 +17,15 @@ interface WritingItem {
 
 const writings: WritingItem[] = [
   {
+    title: "Tamil Nadu Data Policy 2022: Gaps and Recommendations",
+    category: "explainer",
+    publication: "Policy Analysis",
+    date: "August 2026",
+    excerpt: "TNDP 2022 pre-dates the DPDP Act 2023 and shows it — no statutory force, an outdated privacy framework, unaddressed commercialisation risk, and no AI governance layer. A gap-by-gap breakdown of what a revision would need to fix, and why Tamil Nadu still has time to do it before DPDP's core provisions take full effect in 2027.",
+    link: "/writing/tndp-2022-gaps-and-recommendations",
+    readTime: "5 min read",
+  },
+  {
     title: "When the Algorithm Beat the Alliance: Tamil Nadu 2026",
     category: "essay",
     publication: "Political Analysis",
