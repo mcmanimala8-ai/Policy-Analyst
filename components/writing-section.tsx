@@ -26,15 +26,6 @@ const writings: WritingItem[] = [
     readTime: "5 min read",
   },
   {
-    title: "When the Algorithm Beat the Alliance: Tamil Nadu 2026",
-    category: "essay",
-    publication: "Political Analysis",
-    date: "May 2026",
-    excerpt: "The 2026 election results shocked Tamil Nadu. DMK fell from 159 to 59 seats. TVK swept Chennai. MK Stalin lost Kolathur. This piece examines the communication failure, the startup-style campaign that beat a governing party, and what the Dravidian movement must do before 2031.",
-    link: "/writing/algorithm-beat-alliance",
-    readTime: "13 min read",
-  },
-  {
     title: "The Success Trap: Performance, Population and the Future of Indian Federalism",
     category: "essay",
     publication: "Research Paper",

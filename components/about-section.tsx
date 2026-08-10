@@ -34,10 +34,10 @@ export function AboutSection() {
 
               <div className="flex flex-wrap items-center gap-3 mb-6">
                 <a
-                  href="/writing/algorithm-beat-alliance"
+                  href="/writing/tndp-2022-gaps-and-recommendations"
                   className="inline-flex items-center gap-2 px-5 py-3 bg-accent text-accent-foreground text-sm font-medium hover:bg-accent/90 transition-colors"
                 >
-                  Start here: When the Algorithm Beat the Alliance →
+                  Start here: Tamil Nadu Data Policy 2022 →
                 </a>
                 <a
                   href="/data"
