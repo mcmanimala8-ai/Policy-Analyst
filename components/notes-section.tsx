@@ -19,7 +19,17 @@ export function getLatestNoteDate(): string | null {
   return notes.reduce((latest, n) => (n.publishedAt > latest ? n.publishedAt : latest), notes[0].publishedAt)
 }
 
-export const notes: Note[] = []
+export const notes: Note[] = [
+  {
+    title: "Parliament is doing less of its own accountability work",
+    date: "July 2026",
+    publishedAt: "2026-08-10",
+    tag: "national",
+    observation:
+      "Sitting days in the Lok Sabha have fallen from roughly 135 a year in the 1st Lok Sabha to about 55 a year in the 17th. Standing Committees — which scrutinise Bills clause by clause, bringing in outside experts — examined 71% of Bills in the 15th Lok Sabha. That fell to 25% in the 16th, and 16% in the 17th. Fewer sitting days and fewer Bills sent to committee mean less of a government's reasoning ends up on the public record. It's also why external tracking — sites like this one — matters more, not less, as Parliament's own capacity to self-scrutinise shrinks.",
+    slug: "parliament-shrinking-scrutiny",
+  },
+]
 
 const tags: { value: NoteTag; label: string }[] = [
   { value: "all", label: "All" },
