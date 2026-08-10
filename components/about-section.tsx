@@ -11,7 +11,7 @@ export function AboutSection() {
               About
             </p>
             <h2 className="font-serif text-3xl md:text-4xl tracking-tight mb-8">
-              Founder, Tamil Nadu Governance Desk
+              Independent Researcher — Tamil Nadu Politics, Policy & Governance
             </h2>
             <div className="relative w-48 h-48 md:w-full md:h-72 overflow-hidden border border-border">
               <Image

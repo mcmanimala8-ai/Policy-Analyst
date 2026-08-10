@@ -25,7 +25,7 @@ export function HeroSection() {
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/30 text-accent text-sm font-medium">
               <Database className="w-4 h-4" />
-              Independent Tamil Nadu Governance Desk
+              Independent Researcher — Tamil Nadu Politics, Policy & Governance
             </span>
           </motion.div>
 

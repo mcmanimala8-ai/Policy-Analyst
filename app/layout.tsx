@@ -11,30 +11,30 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://manimalachithamanan.in'),
-  title: 'Manimala Chithamanan | Tamil Nadu Governance Data & Political Risk Strategy',
-  description: 'Independent Tamil Nadu governance desk focused on sub-national public sector data, operational frameworks, technical policy briefs, and political risk strategy.',
+  title: 'Manimala Chithamanan | Independent Researcher — Tamil Nadu Politics, Policy & Governance',
+  description: 'Independent researcher focused on Tamil Nadu politics, policy, and governance — public sector data, policy analysis, and political research.',
   keywords: [
     'Manimala Chithamanan',
+    'Tamil Nadu politics',
     'Tamil Nadu governance',
-    'sub-national governance data',
-    'political risk strategy',
-    'policy performance dashboard',
-    'operational blueprints',
-    'public sector delivery',
     'Tamil Nadu policy analysis',
+    'sub-national governance data',
+    'policy performance dashboard',
+    'public sector delivery',
+    'political research',
   ],
   authors: [{ name: 'Manimala Chithamanan' }],
   openGraph: {
-    title: 'Manimala Chithamanan | Tamil Nadu Governance Data & Political Risk Strategy',
-    description: 'Technical policy briefs, operational frameworks, and strategic data analysis on Tamil Nadu public sector delivery.',
+    title: 'Manimala Chithamanan | Independent Researcher — Tamil Nadu Politics, Policy & Governance',
+    description: 'Policy analysis, political research, and public sector data on Tamil Nadu governance.',
     url: 'https://manimalachithamanan.in',
     siteName: 'Manimala Chithamanan',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Manimala Chithamanan | Tamil Nadu Governance Data & Political Risk Strategy',
-    description: 'Sub-national governance data, operational frameworks, and political risk strategy for Tamil Nadu.',
+    title: 'Manimala Chithamanan | Independent Researcher — Tamil Nadu Politics, Policy & Governance',
+    description: 'Independent research on Tamil Nadu politics, policy, and governance.',
   },
 }
 

@@ -7,8 +7,8 @@ import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 
 export const metadata = {
-  title: "Manimala Chithamanan | Tamil Nadu Governance Data & Political Risk Strategy",
-  description: "Independent Tamil Nadu governance desk focused on sub-national public sector data, operational frameworks, technical policy briefs, and political risk strategy.",
+  title: "Manimala Chithamanan | Independent Researcher — Tamil Nadu Politics, Policy & Governance",
+  description: "Independent researcher focused on Tamil Nadu politics, policy, and governance — public sector data, policy analysis, and political research.",
 }
 
 export default function Home() {
