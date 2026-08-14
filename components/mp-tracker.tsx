@@ -30,7 +30,86 @@ interface GeoFeature {
 
 // ── Constants ──────────────────────────────────────────────────────────────────
 
-const STATE_AVERAGES = { attendance: 78.8, questions: 114, debates: 25 };
+// Computed live from the current 39-MP dataset rather than hardcoded, so the
+// "avg" markers always reflect the actual data on screen — not a stale snapshot.
+function computeStateAverages(mps: MP[]) {
+  const n = mps.length || 1;
+  return {
+    attendance: mps.reduce((s, m) => s + m.attendance, 0) / n,
+    questions: mps.reduce((s, m) => s + m.questions_asked, 0) / n,
+    debates: mps.reduce((s, m) => s + m.debates_participated, 0) / n,
+    bills: mps.reduce((s, m) => s + m.private_member_bills, 0) / n,
+  };
+}
+
+// ── Scoring methodology ──────────────────────────────────────────────────────
+// Composite score (0–100) = weighted sum of each MP's percentile rank on four metrics.
+// Percentile rank means: what share of the other 38 TN MPs does this MP outperform
+// on this metric? A raw number alone (e.g. "124 questions") means little without
+// knowing where it sits relative to peers — percentile rank fixes that.
+const SCORE_WEIGHTS = {
+  questions_asked: 0.40,        // Executive accountability — starred + unstarred
+  attendance: 0.30,             // Sessions attended as % of sessions held
+  debates_participated: 0.20,   // Zero Hour, Special Mention, substantive debate
+  private_member_bills: 0.10,   // Bills introduced — legislative initiative
+} as const;
+
+type ScoreMetric = keyof typeof SCORE_WEIGHTS;
+
+// Percentile rank of `value` within `allValues`: share of the group strictly below it,
+// with ties splitting the difference (standard percentile-rank convention).
+function percentileRank(value: number, allValues: number[]): number {
+  const n = allValues.length;
+  if (n <= 1) return 100;
+  const below = allValues.filter(v => v < value).length;
+  const equal = allValues.filter(v => v === value).length;
+  // Ties share the percentile band they fall in, rather than all ranking identically at the bottom or top of that band.
+  return ((below + 0.5 * equal) / n) * 100;
+}
+
+interface ScoreBreakdown {
+  score: number;
+  tier: string;
+  components: { metric: ScoreMetric; label: string; raw: number; percentile: number; weight: number; contribution: number }[];
+}
+
+const METRIC_LABELS: Record<ScoreMetric, string> = {
+  questions_asked: "Questions Asked",
+  attendance: "Attendance",
+  debates_participated: "Debates Participated",
+  private_member_bills: "Private Member Bills",
+};
+
+function tierForScore(score: number): string {
+  if (score >= 60) return "High Performer";
+  if (score >= 35) return "Active";
+  return "Below Average";
+}
+
+// Computes every MP's composite score against the full 39-MP cohort in one pass,
+// so percentiles are always relative to the current dataset — not hardcoded.
+function computeScores(mps: MP[]): Map<string, ScoreBreakdown> {
+  const metrics = Object.keys(SCORE_WEIGHTS) as ScoreMetric[];
+  const valuesByMetric: Record<ScoreMetric, number[]> = {
+    questions_asked: mps.map(m => m.questions_asked),
+    attendance: mps.map(m => m.attendance),
+    debates_participated: mps.map(m => m.debates_participated),
+    private_member_bills: mps.map(m => m.private_member_bills),
+  };
+
+  const result = new Map<string, ScoreBreakdown>();
+  for (const mp of mps) {
+    const components = metrics.map(metric => {
+      const raw = mp[metric] as number;
+      const percentile = percentileRank(raw, valuesByMetric[metric]);
+      const weight = SCORE_WEIGHTS[metric];
+      return { metric, label: METRIC_LABELS[metric], raw, percentile, weight, contribution: percentile * weight };
+    });
+    const score = Math.round(components.reduce((sum, c) => sum + c.contribution, 0));
+    result.set(mp.constituency, { score, tier: tierForScore(score), components });
+  }
+  return result;
+}
 
 const PARTY_COLOURS: Record<string, string> = {
   "Dravida Munnetra Kazhagam": "#ef4444",
@@ -136,9 +215,10 @@ function MetricBar({ label, value, average, max, isPercent = false }: {
 
 // ── ProfileCard ────────────────────────────────────────────────────────────────
 
-function ProfileCard({ mp, total }: { mp: MP; total: number }) {
+function ProfileCard({ mp, total, breakdown, averages }: { mp: MP; total: number; breakdown?: ScoreBreakdown; averages: ReturnType<typeof computeStateAverages> }) {
   const briefUrl = MP_BRIEFS[normalise(mp.constituency)];
   const tierStyle = TIER_STYLES[mp.tier] ?? TIER_STYLES["Active"];
+  const [showBreakdown, setShowBreakdown] = useState(false);
 
   return (
     <div className="rounded-xl border border-slate-700 bg-slate-800 p-5">
@@ -150,11 +230,35 @@ function ProfileCard({ mp, total }: { mp: MP; total: number }) {
             <p className="text-sm text-slate-400">{mp.constituency}</p>
           </div>
           {/* Score circle */}
-          <div className="flex flex-col items-center rounded-lg border border-slate-700 px-3 py-1 text-center">
+          <button
+            onClick={() => setShowBreakdown(v => !v)}
+            className="flex flex-col items-center rounded-lg border border-slate-700 px-3 py-1 text-center hover:border-sky-500 transition-colors"
+            title="Click to see how this score is calculated"
+          >
             <span className="text-xl font-bold text-slate-100">{mp.score}</span>
             <span className="text-xs text-slate-500">/100</span>
-          </div>
+          </button>
         </div>
+
+        {showBreakdown && breakdown && (
+          <div className="mt-3 rounded-lg border border-slate-700 bg-slate-900/60 p-3 space-y-2">
+            <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">Score breakdown</p>
+            {breakdown.components.map(c => (
+              <div key={c.metric} className="text-xs">
+                <div className="flex items-center justify-between text-slate-300">
+                  <span>{c.label} <span className="text-slate-500">({Math.round(c.weight * 100)}% weight)</span></span>
+                  <span className="font-mono text-slate-400">{Math.round(c.percentile)}th percentile</span>
+                </div>
+                <div className="mt-1 h-1 w-full rounded-full bg-slate-800">
+                  <div className="h-1 rounded-full bg-sky-500" style={{ width: `${c.percentile}%` }} />
+                </div>
+              </div>
+            ))}
+            <p className="pt-1 text-[11px] text-slate-500">
+              Raw value → percentile among all 39 TN MPs → weighted and summed. See Methodology below for what this does and doesn&apos;t capture.
+            </p>
+          </div>
+        )}
 
         <div className="mt-2 flex flex-wrap items-center gap-2">
           <span className="rounded px-2 py-0.5 text-xs font-semibold text-white"
@@ -171,10 +275,10 @@ function ProfileCard({ mp, total }: { mp: MP; total: number }) {
       </div>
 
       {/* Metrics */}
-      <MetricBar label="Attendance" value={mp.attendance} average={STATE_AVERAGES.attendance} max={100} isPercent />
-      <MetricBar label="Questions Asked" value={mp.questions_asked} average={STATE_AVERAGES.questions} max={300} />
-      <MetricBar label="Debates" value={mp.debates_participated} average={STATE_AVERAGES.debates} max={80} />
-      <MetricBar label="Private Member Bills" value={mp.private_member_bills} average={0} max={10} />
+      <MetricBar label="Attendance" value={mp.attendance} average={averages.attendance} max={100} isPercent />
+      <MetricBar label="Questions Asked" value={mp.questions_asked} average={averages.questions} max={300} />
+      <MetricBar label="Debates" value={mp.debates_participated} average={averages.debates} max={80} />
+      <MetricBar label="Private Member Bills" value={mp.private_member_bills} average={averages.bills} max={10} />
 
       {/* Details */}
       <div className="mt-4 space-y-3 border-t border-slate-700 pt-4">
@@ -219,12 +323,13 @@ function StatsBar({ mps }: { mps: MP[] }) {
   const hp = mps.filter(m => m.tier === "High Performer").length;
   const active = mps.filter(m => m.tier === "Active").length;
   const below = mps.filter(m => m.tier === "Below Average").length;
+  const averages = computeStateAverages(mps);
 
   return (
     <div className="mb-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
       {[
-        { label: "State Avg Attendance", value: `${STATE_AVERAGES.attendance}%` },
-        { label: "State Avg Questions", value: STATE_AVERAGES.questions },
+        { label: "State Avg Attendance", value: `${averages.attendance.toFixed(1)}%` },
+        { label: "State Avg Questions", value: averages.questions.toFixed(0) },
         { label: "Top Performer", value: topMp.mp_name.split(" ")[0], sub: `Score ${topMp.score}` },
         { label: "Tier Breakdown", value: `${hp} / ${active} / ${below}`, sub: "High / Active / Below" },
       ].map(({ label, value, sub }) => (
@@ -298,6 +403,7 @@ function TNMap({ mps, selected, onSelect }: {
 
 export default function MPTracker() {
   const [mps, setMps] = useState<MP[]>([]);
+  const [scores, setScores] = useState<Map<string, ScoreBreakdown>>(new Map());
   const [selected, setSelected] = useState<string>("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -307,14 +413,26 @@ export default function MPTracker() {
       .then(res => { if (!res.ok) throw new Error(`HTTP ${res.status}`); return res.json(); })
       .then((json: MP[]) => {
         const list = Array.isArray(json) ? json : [];
-        setMps(list);
-        setSelected(list.length > 0 ? list[0].constituency : "");
+        const scoreMap = computeScores(list);
+        // Live-computed score/tier replace any static values from data.json, and rank
+        // is derived from the freshly computed scores so it always matches what's shown.
+        const withComputedScores = list
+          .map(mp => {
+            const breakdown = scoreMap.get(mp.constituency);
+            return breakdown ? { ...mp, score: breakdown.score, tier: breakdown.tier } : mp;
+          })
+          .sort((a, b) => b.score - a.score)
+          .map((mp, i) => ({ ...mp, rank: i + 1 }));
+        setMps(withComputedScores);
+        setScores(scoreMap);
+        setSelected(withComputedScores.length > 0 ? withComputedScores[0].constituency : "");
       })
       .catch((err: Error) => setError(err.message))
       .finally(() => setLoading(false));
   }, []);
 
   const activeMp = mps.find(mp => mp.constituency === selected) ?? null;
+  const averages = computeStateAverages(mps);
 
   if (loading) return (
     <div className="flex items-center justify-center py-20 text-slate-400">Loading data…</div>
@@ -359,7 +477,7 @@ export default function MPTracker() {
         {/* Map + Profile */}
         <div className="mb-6 grid grid-cols-1 gap-6 lg:grid-cols-2">
           <TNMap mps={mps} selected={selected} onSelect={setSelected} />
-          {activeMp && <ProfileCard mp={activeMp} total={mps.length} />}
+          {activeMp && <ProfileCard mp={activeMp} total={mps.length} breakdown={scores.get(activeMp.constituency)} averages={averages} />}
         </div>
 
         <p className="mt-8 text-center text-xs text-slate-600">
