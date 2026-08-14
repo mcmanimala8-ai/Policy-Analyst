@@ -60,9 +60,7 @@ const TIER_STYLES: Record<string, { bg: string; text: string }> = {
   "Below Average":  { bg: "#4a1942", text: "#f0abfc" },
 };
 
-const MP_BRIEFS: Record<string, string> = {
-  Thoothukudi: "/tracker/kanimozhi-thoothukkudi",
-};
+const MP_BRIEFS: Record<string, string> = {};
 
 // Normalise data.json constituency names → GeoJSON pc_name
 const TO_GEOJSON: Record<string, string> = {
@@ -310,8 +308,7 @@ export default function MPTracker() {
       .then((json: MP[]) => {
         const list = Array.isArray(json) ? json : [];
         setMps(list);
-        const thoothukudi = list.find(m => m.constituency === "Thoothukudi");
-        setSelected(thoothukudi ? thoothukudi.constituency : list[0].constituency);
+        setSelected(list.length > 0 ? list[0].constituency : "");
       })
       .catch((err: Error) => setError(err.message))
       .finally(() => setLoading(false));
