@@ -10,6 +10,7 @@ const navLinks = [
   { href: "/#about", label: "About" },
   { href: "/data", label: "Data" },
   { href: "/tracker", label: "MP Watch" },
+  { href: "/tech-tracker", label: "Tech Tracker" },
   { href: "/#writing", label: "Writing" },
   { href: "/#notes", label: "Notes" },
   { href: "/#contact", label: "Contact" },
