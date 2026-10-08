@@ -6,7 +6,6 @@ import { Download, ArrowRight, Database } from "lucide-react"
 const topics = [
   "39 MPs tracked",
   "37,000+ school units coordinated",
-  "108 seats won by TVK, 2026",
 ]
 
 export function HeroSection() {
