@@ -24,7 +24,7 @@ export function HeroSection() {
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/30 text-accent text-sm font-medium">
               <Database className="w-4 h-4" />
-              Public Policy | Governance | Data & Monitoring & Evaluation
+              PUBLIC POLICY · GOVERNANCE · PROGRAMME ANALYSIS
             </span>
           </motion.div>
 
@@ -44,7 +44,7 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Policy research and programme analysis focused on government delivery, governance, public data, and evidence-based decision-making.
+              Policy researcher working on government programmes, governance, public data, and evidence-based policy.
             </p>
           </motion.div>
 
