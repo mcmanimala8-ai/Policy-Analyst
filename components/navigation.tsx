@@ -1,8 +1,8 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { usePathname } from "next/navigation"
-import { Menu, X, Download, Sun, Moon } from "lucide-react"
+import { Menu, X, Download } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { getLatestNoteDate } from "@/components/notes-section"
 
@@ -27,9 +27,8 @@ function hasRecentNote(): boolean {
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [isDark, setIsDark] = useState(true)
   const pathname = usePathname()
-  const isHomePage = pathname === "/"
+  const isHomePage = pathname === "/"\n  const menuButtonRef = useRef<HTMLButtonElement>(null)\n  const menuRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,10 +38,44 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const toggleTheme = () => {
-    setIsDark(!isDark)
-    document.documentElement.classList.toggle("light")
-  }
+  useEffect(() => {
+    if (!isOpen) {
+      menuButtonRef.current?.focus()
+      return
+    }
+
+    const panel = menuRef.current
+    const firstLink = panel?.querySelector<HTMLElement>("a, button")
+    firstLink?.focus()
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault()
+        setIsOpen(false)
+        return
+      }
+
+      if (event.key === "Tab" && panel) {
+        const focusable = Array.from(
+          panel.querySelectorAll<HTMLElement>("a[href], button:not([disabled])")
+        )
+        if (!focusable.length) return
+        const first = focusable[0]
+        const last = focusable[focusable.length - 1]
+
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault()
+          last.focus()
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault()
+          first.focus()
+        }
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyDown)
+    return () => document.removeEventListener("keydown", handleKeyDown)
+  }, [isOpen])
 
   return (
     <motion.nav
@@ -82,18 +115,6 @@ export function Navigation() {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full" />
             </motion.a>
           ))}
-
-          <div className="w-px h-6 bg-border mx-2" />
-
-          <motion.button
-            onClick={toggleTheme}
-            className="p-2 text-muted-foreground hover:text-foreground transition-colors"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            aria-label="Toggle theme"
-          >
-            {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-          </motion.button>
 
 <motion.a
             href="/Manimala_C_Resume.pdf"
@@ -137,7 +158,7 @@ export function Navigation() {
             >
               <div className="flex items-center justify-between px-6 py-4 border-b border-border">
                 <span className="font-serif text-xl">MC</span>
-                <button onClick={() => setIsOpen(false)} aria-label="Close menu">
+                <button onClick={() => setIsOpen(false)} className="focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent" aria-label="Close navigation menu">
                   <X className="w-5 h-5" />
                 </button>
               </div>
