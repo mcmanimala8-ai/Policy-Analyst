@@ -66,6 +66,55 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 
 const charts = ["ASER: TN vs States", "ASER: TN Trends", "TFR by State", "TFR Trend"]
 
+
+function AccessibleDataTable({ chart }: { chart: string }) {
+  if (chart === "TFR by State") {
+    return (
+      <table className="w-full text-sm text-left">
+        <caption className="sr-only">Total fertility rate by state, 2019–21</caption>
+        <thead><tr><th scope="col" className="px-3 py-2">State</th><th scope="col" className="px-3 py-2">TFR</th></tr></thead>
+        <tbody>{tfrData.map((row) => (
+          <tr key={row.state} className="border-t border-border"><th scope="row" className="px-3 py-2 font-medium">{row.state}</th><td className="px-3 py-2">{row.tfr}</td></tr>
+        ))}</tbody>
+      </table>
+    )
+  }
+
+  if (chart === "TFR Trend") {
+    return (
+      <table className="w-full text-sm text-left">
+        <caption className="sr-only">Tamil Nadu and India total fertility rate trend</caption>
+        <thead><tr><th scope="col" className="px-3 py-2">Year</th><th scope="col" className="px-3 py-2">India</th><th scope="col" className="px-3 py-2">Tamil Nadu</th></tr></thead>
+        <tbody>{tfrTrend.map((row) => (
+          <tr key={row.year} className="border-t border-border"><th scope="row" className="px-3 py-2 font-medium">{row.year}</th><td className="px-3 py-2">{row.india}</td><td className="px-3 py-2">{row.tn}</td></tr>
+        ))}</tbody>
+      </table>
+    )
+  }
+
+  if (chart === "ASER: TN Trends") {
+    return (
+      <table className="w-full text-sm text-left">
+        <caption className="sr-only">ASER Tamil Nadu learning trend data</caption>
+        <thead><tr><th scope="col" className="px-3 py-2">Year</th><th scope="col" className="px-3 py-2">Government</th><th scope="col" className="px-3 py-2">Private</th><th scope="col" className="px-3 py-2">All</th></tr></thead>
+        <tbody>{aserStd5TrendData.map((row) => (
+          <tr key={row.year} className="border-t border-border"><th scope="row" className="px-3 py-2 font-medium">{row.year}</th><td className="px-3 py-2">{row.govt}%</td><td className="px-3 py-2">{row.pvt}%</td><td className="px-3 py-2">{row.all}%</td></tr>
+        ))}</tbody>
+      </table>
+    )
+  }
+
+  return (
+    <table className="w-full text-sm text-left">
+      <caption className="sr-only">ASER 2024 learning levels by state</caption>
+      <thead><tr><th scope="col" className="px-3 py-2">State</th><th scope="col" className="px-3 py-2">Std III</th><th scope="col" className="px-3 py-2">Std V</th><th scope="col" className="px-3 py-2">Std VIII</th></tr></thead>
+      <tbody>{aserReadingData.map((row) => (
+        <tr key={row.state} className="border-t border-border"><th scope="row" className="px-3 py-2 font-medium">{row.state}</th><td className="px-3 py-2">{row.std3}%</td><td className="px-3 py-2">{row.std5}%</td><td className="px-3 py-2">{row.std8}%</td></tr>
+      ))}</tbody>
+    </table>
+  )
+}
+
 export function DataSection() {
   const [activeChart, setActiveChart] = useState("ASER: TN vs States")
 
@@ -86,16 +135,30 @@ export function DataSection() {
         </div>
 
         {/* Chart Tabs */}
-        <div className="flex flex-wrap gap-2 mb-8">
+        <div className="flex flex-wrap gap-2 mb-8" role="tablist" aria-label="Data Lab charts">
           {charts.map((chart) => (
             <button
               key={chart}
+              id={"tab-" + chart.toLowerCase().replace(/[^a-z0-9]+/g, "-")}
+              role="tab"
+              aria-selected={activeChart === chart}
+              aria-controls="data-chart-panel"
+              tabIndex={activeChart === chart ? 0 : -1}
               onClick={() => setActiveChart(chart)}
-              className={`px-4 py-2 text-sm font-medium transition-all border ${
-                activeChart === chart
+              onKeyDown={(event) => {
+                const currentIndex = charts.indexOf(chart)
+                if (event.key === "ArrowRight") {
+                  event.preventDefault()
+                  setActiveChart(charts[(currentIndex + 1) % charts.length])
+                } else if (event.key === "ArrowLeft") {
+                  event.preventDefault()
+                  setActiveChart(charts[(currentIndex - 1 + charts.length) % charts.length])
+                }
+              }}
+              className={"px-4 py-2 text-sm font-medium transition-all border focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent " +
+                (activeChart === chart
                   ? "bg-accent text-accent-foreground border-accent"
-                  : "bg-secondary text-secondary-foreground border-border hover:border-accent"
-              }`}
+                  : "bg-secondary text-secondary-foreground border-border hover:border-accent")}
             >
               {chart}
             </button>
@@ -103,7 +166,7 @@ export function DataSection() {
         </div>
 
         {/* Chart Area */}
-        <div className="bg-card border border-border p-6 md:p-8">
+        <div id="data-chart-panel" role="tabpanel" tabIndex={0} aria-labelledby={"tab-" + activeChart.toLowerCase().replace(/[^a-z0-9]+/g, "-")} className="bg-card border border-border p-6 md:p-8">
 
           {activeChart === "TFR by State" && (
             <div>
@@ -166,7 +229,7 @@ export function DataSection() {
                   <Bar dataKey="std8" name="Std VIII" fill="#f39c12" radius={[2,2,0,0]} />
                 </BarChart>
               </ResponsiveContainer>
-              <p className="text-xs text-muted-foreground mt-4">Tamil Nadu puts nearly every child in school. But learning outcomes lag behind Kerala and the national average at Std III and Std V.</p>
+              <p className="text-xs text-muted-foreground mt-4">In this comparison, Tamil Nadu is below Kerala and the all-India figures at Std III and Std V.</p>
             </div>
           )}
 
@@ -187,11 +250,20 @@ export function DataSection() {
                   <Line type="monotone" dataKey="all" name="All Children" stroke="#f39c12" strokeWidth={2} strokeDasharray="5 5" dot={{ r: 3 }} />
                 </LineChart>
               </ResponsiveContainer>
-              <p className="text-xs text-muted-foreground mt-4">Learning outcomes collapsed in 2022 — likely pandemic fallout — and have partially recovered by 2024.</p>
+              <p className="text-xs text-muted-foreground mt-4">The series falls in 2022 and partially recovers by 2024.</p>
             </div>
           )}
 
         </div>
+
+        <details className="mt-4 border border-border bg-secondary/20">
+          <summary className="cursor-pointer px-4 py-3 text-sm font-medium focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
+            View data table
+          </summary>
+          <div className="overflow-x-auto px-4 pb-4 pt-2">
+            <AccessibleDataTable chart={activeChart} />
+          </div>
+        </details>
 
         {/* Bottom note */}
         <div className="mt-6 p-4 border border-border bg-secondary/30">
