@@ -19,18 +19,6 @@ const tfrData = [
   { state: "Tamil Nadu", tfr: 1.8, color: "#f59e0b" },
 ]
 
-// Delimitation: Seats vs Population share
-const delimData = [
-  { state: "UP", population: 16.5, currentSeats: 14.7, fairSeats: 16.5 },
-  { state: "Bihar", population: 8.6, currentSeats: 7.3, fairSeats: 8.6 },
-  { state: "Maharashtra", population: 9.3, currentSeats: 9.3, fairSeats: 9.3 },
-  { state: "Tamil Nadu", population: 6.0, currentSeats: 7.3, fairSeats: 6.0 },
-  { state: "Kerala", population: 2.8, currentSeats: 3.6, fairSeats: 2.8 },
-  { state: "Karnataka", population: 5.2, currentSeats: 5.5, fairSeats: 5.2 },
-  { state: "AP+TS", population: 7.0, currentSeats: 8.5, fairSeats: 7.0 },
-]
-
-// TFR trend over time — Tamil Nadu vs India
 const tfrTrend = [
   { year: "1992", india: 3.4, tn: 2.5 },
   { year: "1998", india: 3.1, tn: 2.2 },
@@ -68,16 +56,6 @@ const aserStd5TrendData = [
   { year: "2024", govt: 37.0, pvt: 32.3, all: 35.6 },
 ]
 
-// 2026 TN Election: Seat swing from 2021 to 2026
-const electionSwingData = [
-  { party: "TVK", seats2021: 0, seats2026: 108 },
-  { party: "DMK", seats2021: 133, seats2026: 59 },
-  { party: "AIADMK", seats2021: 66, seats2026: 47 },
-  { party: "INC", seats2021: 18, seats2026: 5 },
-  { party: "PMK", seats2021: 5, seats2026: 4 },
-  { party: "Others", seats2021: 12, seats2026: 11 },
-]
-
 const CustomTooltip = ({ active, payload, label }: any) => {
   if (active && payload && payload.length) {
     return (
@@ -94,7 +72,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
   return null
 }
 
-const charts = ["2026 Election", "ASER: TN vs States", "ASER: TN Trends", "TFR by State", "TFR Trend", "Delimitation"]
+const charts = ["ASER: TN vs States", "ASER: TN Trends", "TFR by State", "TFR Trend"]
 
 export function DataSection() {
   const [activeChart, setActiveChart] = useState("2026 Election")
@@ -111,7 +89,7 @@ export function DataSection() {
             Data Lab
           </h1>
           <p className="text-muted-foreground max-w-xl leading-relaxed">
-            Tamil Nadu in numbers — elections, education, demographics, and federal equity. All charts sourced from official government data.
+            Tamil Nadu in numbers — education, demographics, and federal policy. Sources are listed with each chart.
           </p>
         </div>
 
@@ -139,7 +117,7 @@ export function DataSection() {
             <div>
               <h3 className="font-serif text-xl mb-2">Total Fertility Rate by State (2019–21)</h3>
               <p className="text-sm text-muted-foreground mb-6">
-                Tamil Nadu and Kerala have achieved TFR of 1.8 — well under the 2.1 replacement level, a milestone reached decades ahead of most Indian states. Yet this success may cost them seats in Parliament under Delimitation 2026.
+                Tamil Nadu and Kerala recorded TFR of 1.8 in NFHS-5, below the replacement level of 2.1.
               </p>
               <ResponsiveContainer width="100%" height={380}>
                 <BarChart data={tfrData} margin={{ top: 10, right: 20, left: 0, bottom: 60 }}>
@@ -159,9 +137,9 @@ export function DataSection() {
 
           {activeChart === "TFR Trend" && (
             <div>
-              <h3 className="font-serif text-xl mb-2">Tamil Nadu vs India: TFR Decline (1992–2023)</h3>
+              <h3 className="font-serif text-xl mb-2">Tamil Nadu vs India: TFR Decline (1992–2019)</h3>
               <p className="text-sm text-muted-foreground mb-6">
-                Tamil Nadu reached replacement level (2.1) by the late 1990s — nearly two decades ahead of the national average.
+                Tamil Nadu reached replacement-level fertility earlier than the national average.
               </p>
               <ResponsiveContainer width="100%" height={380}>
                 <LineChart data={tfrTrend} margin={{ top: 10, right: 30, left: 0, bottom: 10 }}>
@@ -221,52 +199,13 @@ export function DataSection() {
             </div>
           )}
 
-          {activeChart === "2026 Election" && (
-            <div>
-              <h3 className="font-serif text-xl mb-2">Polarization and Pluralism: 2026 TN Electoral Projections</h3>
-              <p className="text-sm text-muted-foreground mb-6">Seat count comparison: 2021 vs 2026. TVK did not contest in 2021.</p>
-              <ResponsiveContainer width="100%" height={320}>
-                <BarChart data={electionSwingData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
-                  <XAxis dataKey="party" tick={{ fill: "var(--muted-foreground)", fontSize: 12 }} />
-                  <YAxis tick={{ fill: "var(--muted-foreground)", fontSize: 12 }} />
-                  <Tooltip content={<CustomTooltip />} />
-                  <Legend />
-                  <Bar dataKey="seats2021" name="2021" fill="#6b7280" radius={[2,2,0,0]} />
-                  <Bar dataKey="seats2026" name="2026" fill="var(--accent)" radius={[2,2,0,0]} />
-                </BarChart>
-              </ResponsiveContainer>
-              <p className="text-xs text-muted-foreground mt-4">Source: Election Commission of India, Tamil Nadu 2021 & 2026 General Assembly Results</p>
-            </div>
-          )}
-
-          {activeChart === "Delimitation" && (
-            <div>
-              <h3 className="font-serif text-xl mb-2">Delimitation 2026: Who Gains, Who Loses?</h3>
-              <p className="text-sm text-muted-foreground mb-6">
-                If seats are redrawn purely on population, southern states that controlled their fertility rates stand to lose representation.
-              </p>
-              <ResponsiveContainer width="100%" height={380}>
-                <BarChart data={delimData} margin={{ top: 10, right: 20, left: 0, bottom: 60 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
-                  <XAxis dataKey="state" tick={{ fill: "#94a3b8", fontSize: 12 }} angle={-35} textAnchor="end" interval={0} />
-                  <YAxis tick={{ fill: "#94a3b8", fontSize: 12 }} label={{ value: "% Share", angle: -90, position: "insideLeft", fill: "#94a3b8", fontSize: 12 }} />
-                  <Tooltip content={<CustomTooltip />} />
-                  <Legend wrapperStyle={{ color: "#94a3b8", fontSize: 12, paddingTop: 16 }} />
-                  <Bar dataKey="currentSeats" name="Current Seat Share (%)" fill="#f59e0b" radius={[3, 3, 0, 0]} />
-                  <Bar dataKey="population" name="Population Share (%)" fill="#6b7280" radius={[3, 3, 0, 0]} />
-                </BarChart>
-              </ResponsiveContainer>
-              <p className="text-xs text-muted-foreground mt-4">Source: Delimitation Commission Reports, Census 2011, Population projections 2026</p>
-            </div>
-          )}
         </div>
 
         {/* Bottom note */}
         <div className="mt-6 p-4 border border-border bg-secondary/30">
           <p className="text-sm text-muted-foreground">
             <span className="text-accent font-medium">Note: </span>
-            This is an expanding data lab, updated as new official data becomes available. All data is sourced from official government publications and peer-reviewed research.
+            This is an expanding data lab. Sources are identified for each chart and dataset.
           </p>
         </div>
       </div>
