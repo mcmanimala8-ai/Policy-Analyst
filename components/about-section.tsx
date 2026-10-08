@@ -11,7 +11,7 @@ export function AboutSection() {
               About
             </p>
             <h2 className="font-serif text-3xl md:text-4xl tracking-tight mb-8">
-              Public Policy & Government Consulting — Policy Research, Data & M&E
+              Policy Researcher & Public Policy Analyst
             </h2>
             <div className="relative w-48 h-48 md:w-full md:h-72 overflow-hidden border border-border">
               <Image
@@ -26,10 +26,10 @@ export function AboutSection() {
           <div className="md:col-span-8">
             <div className="prose prose-lg max-w-none">
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Policy and programme professional with experience supporting Government of Tamil Nadu programme delivery, monitoring, stakeholder coordination, and CSR partnerships. My work combines policy research, administrative context, and data to understand how public programmes are implemented and where delivery gaps emerge.
+                I work at the intersection of public policy, governance, and programme implementation. My experience includes supporting a Government of Tamil Nadu education initiative, coordinating programme reporting, developing monitoring frameworks, and working with government, CSR, and implementation partners.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Based in Chennai, I coordinated reporting and compliance across 37,000+ school units and built SOPs and monitoring frameworks for a Government of Tamil Nadu education initiative. I also run the Tamil Nadu Governance Desk, an independent governance research platform. I hold an MA in Politics & International Relations from Central University of Gujarat and a BA in History & Tourism from Stella Maris College. I am currently strengthening my skills in Excel, GIS, Power BI, SQL, and Monitoring & Evaluation for public-sector and government consulting work.
+                I coordinated reporting and compliance across 37,000+ school units and developed SOPs and reporting frameworks to strengthen programme monitoring. I also founded the Tamil Nadu Governance Desk, an independent platform for governance research, public data analysis, and parliamentary accountability. I hold an MA in Politics & International Relations from Central University of Gujarat and a BA in History & Tourism from Stella Maris College. My current focus is building stronger capabilities in data analytics, GIS, Power BI, SQL, and Monitoring & Evaluation, with the goal of applying them to public-sector and government consulting problems.
               </p>
 
               <div className="flex flex-wrap items-center gap-3 mb-6">
