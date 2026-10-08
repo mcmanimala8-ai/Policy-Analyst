@@ -11,11 +11,12 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://manimalachithamanan.in'),
-  title: 'Manimala Chithamanan | Independent Researcher — Tamil Nadu Politics, Policy & Governance',
-  description: 'Independent researcher focused on Tamil Nadu politics, policy, and governance — public sector data, policy analysis, and political research.',
+  title: 'Manimala Chithamanan | Public Policy & Governance',
+  description: 'Policy researcher focused on government programmes, governance, public data, programme analysis, and evidence-based policy.',
   keywords: [
     'Manimala Chithamanan',
-    'Tamil Nadu politics',
+    'public policy',
+    'government consulting',
     'Tamil Nadu governance',
     'Tamil Nadu policy analysis',
     'sub-national governance data',
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Manimala Chithamanan' }],
   openGraph: {
     title: 'Manimala Chithamanan | Independent Researcher — Tamil Nadu Politics, Policy & Governance',
-    description: 'Policy analysis, political research, and public sector data on Tamil Nadu governance.',
+    description: 'Policy research, programme analysis, and public-sector data on Tamil Nadu governance.',
     url: 'https://manimalachithamanan.in',
     siteName: 'Manimala Chithamanan',
     type: 'website',
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Manimala Chithamanan | Independent Researcher — Tamil Nadu Politics, Policy & Governance',
-    description: 'Independent research on Tamil Nadu politics, policy, and governance.',
+    description: 'Public policy research, programme analysis, and governance data.',
   },
 }
 
