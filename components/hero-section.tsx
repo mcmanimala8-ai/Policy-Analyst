@@ -82,7 +82,7 @@ export function HeroSection() {
       </div>
 
       {/* Topic Marquee */}
-      <div className="border-y border-border overflow-hidden py-4">
+      <div className="border-y border-border overflow-hidden py-4" aria-hidden="true">
         <div className="animate-marquee flex items-center gap-8 whitespace-nowrap">
           {[...topics, ...topics, ...topics, ...topics].map((topic, i) => (
             <span key={i} className="flex items-center gap-8">
