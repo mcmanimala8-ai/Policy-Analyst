@@ -39,14 +39,6 @@ const aserReadingData = [
 ]
 
 // ASER Tamil Nadu Trends: % children reading at Std II level - Std III
-const aserTNTrendData = [
-  { year: "2014", govt: 16.8, pvt: 14.4, all: 15.9 },
-  { year: "2016", govt: 20.2, pvt: 13.5, all: 17.7 },
-  { year: "2018", govt: 11.6, pvt: 7.6, all: 10.2 },
-  { year: "2022", govt: 4.7, pvt: 5.0, all: 4.8 },
-  { year: "2024", govt: 13.2, pvt: 9.4, all: 12.0 },
-]
-
 // ASER Tamil Nadu: % Std V children reading at Std II level
 const aserStd5TrendData = [
   { year: "2014", govt: 49.9, pvt: 40.2, all: 46.9 },
@@ -75,7 +67,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 const charts = ["ASER: TN vs States", "ASER: TN Trends", "TFR by State", "TFR Trend"]
 
 export function DataSection() {
-  const [activeChart, setActiveChart] = useState("2026 Election")
+  const [activeChart, setActiveChart] = useState("ASER: TN vs States")
 
   return (
     <section id="data" className="py-24 border-b border-border">
@@ -89,7 +81,7 @@ export function DataSection() {
             Data Lab
           </h1>
           <p className="text-muted-foreground max-w-xl leading-relaxed">
-            Tamil Nadu in numbers — education, demographics, and federal policy. Sources are listed with each chart.
+            Tamil Nadu in numbers — education and demographics. Sources are listed with each chart.
           </p>
         </div>
 
