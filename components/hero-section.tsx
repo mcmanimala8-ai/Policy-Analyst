@@ -24,7 +24,7 @@ export function HeroSection() {
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/30 text-accent text-sm font-medium">
               <Database className="w-4 h-4" />
-              Independent Researcher — Tamil Nadu Politics, Policy & Governance
+              Public Policy | Governance | Data & Monitoring & Evaluation
             </span>
           </motion.div>
 
@@ -44,7 +44,7 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Independent research on Tamil Nadu's governance systems — data, policy, and political analysis.
+              Policy research and programme analysis focused on government delivery, governance, public data, and evidence-based decision-making.
             </p>
           </motion.div>
 
