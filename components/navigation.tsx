@@ -28,7 +28,10 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
-  const isHomePage = pathname === "/"\n  const menuButtonRef = useRef<HTMLButtonElement>(null)\n  const menuRef = useRef<HTMLDivElement>(null)\n  const wasOpenRef = useRef(false)
+  const isHomePage = pathname === "/"
+  const menuButtonRef = useRef<HTMLButtonElement>(null)
+  const menuRef = useRef<HTMLDivElement>(null)
+  const wasOpenRef = useRef(false)
 
   useEffect(() => {
     const handleScroll = () => {
