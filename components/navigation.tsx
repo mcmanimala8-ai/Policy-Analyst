@@ -28,7 +28,7 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
-  const isHomePage = pathname === "/"\n  const menuButtonRef = useRef<HTMLButtonElement>(null)\n  const menuRef = useRef<HTMLDivElement>(null)
+  const isHomePage = pathname === "/"\n  const menuButtonRef = useRef<HTMLButtonElement>(null)\n  const menuRef = useRef<HTMLDivElement>(null)\n  const wasOpenRef = useRef(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,10 +40,12 @@ export function Navigation() {
 
   useEffect(() => {
     if (!isOpen) {
-      menuButtonRef.current?.focus()
+      if (wasOpenRef.current) menuButtonRef.current?.focus()
+      wasOpenRef.current = false
       return
     }
 
+    wasOpenRef.current = true
     const panel = menuRef.current
     const firstLink = panel?.querySelector<HTMLElement>("a, button")
     firstLink?.focus()
