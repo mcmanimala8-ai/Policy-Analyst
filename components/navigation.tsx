@@ -129,9 +129,12 @@ export function Navigation() {
         </div>
 
         <button
+          ref={menuButtonRef}
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 -mr-2"
-          aria-label="Toggle menu"
+          className="md:hidden p-2 -mr-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isOpen}
+          aria-controls="mobile-navigation"
         >
           {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
@@ -150,6 +153,11 @@ export function Navigation() {
             />
             {/* Menu panel */}
             <motion.div
+              ref={menuRef}
+              id="mobile-navigation"
+              role="dialog"
+              aria-label="Site navigation"
+              aria-modal="true"
               className="fixed top-0 left-0 right-0 bg-background border-b border-border z-50 md:hidden"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
